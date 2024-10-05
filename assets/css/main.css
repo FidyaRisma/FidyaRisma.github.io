@@ -2376,7 +2376,7 @@ input, select, textarea {
 	ul.feature-icons {
 		list-style: none;
 		padding-left: 0;
-	
+	}
 
 		ul.feature-icons li {
 			text-decoration: none;
@@ -2700,8 +2700,8 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background:#ffdfdf;
-		color: #f785aa;
+		background:#f875aa;
+		color: #aedefc;
 		height: 100%;
 		overflow-y: auto;
 		position: fixed;
