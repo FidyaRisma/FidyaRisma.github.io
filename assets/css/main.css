@@ -3397,88 +3397,74 @@ input, select, textarea {
 
 /* Modal styles (hidden by default) */
 .modal {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
-    z-index: 10; /* Increased z-index to ensure modal elements are on top */
+    z-index: 1000; /* Ensure modal is above everything */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
-    
-    /* Flexbox for centering */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background with opacity */
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Prevents content from overflowing the modal */
+    overflow: hidden;
 }
 
 /* Show modal when active */
 .modal.active {
-    display: flex; /* Only show flexbox when the modal is active */
+    display: flex;
 }
 
 /* Modal content (image) */
 .modal-content {
-    max-width: 60%; /* Ensure the image takes a smaller portion */
-    max-height: 70%; /* Reduce height slightly to leave space for caption */
+    max-width: 90%;
+    max-height: 80%;
     display: block;
     margin: 0 auto;
-    object-fit: contain; /* Ensure the image scales without distortion */
+    object-fit: contain;
 }
 
-/* Modal caption */
+/* Caption below the image */
 #imageCaption {
     color: #ccc;
     padding: 10px;
-    font-size: 18px; /* Increased for better readability */
-    word-wrap: break-word; /* Ensure long words wrap to the next line */
-    overflow-wrap: break-word; /* Ensure long words break properly */
-    max-width: 35%; /* Ensure description has more space next to the image */
-    max-height: 100%; /* Allow the caption to occupy the full height */
-    overflow-y: auto; /* Allow scrolling if the caption is too long */
+    font-size: 16px;
+    text-align: center;
+    max-width: 90%;
+    max-height: 20%;
+    overflow-y: auto;
+    word-wrap: break-word;
 }
 
-/* Flexbox layout for desktop view - Image and caption side by side */
-.modal-body {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Align items to the top */
-    max-height: 80%; /* Give space for the caption */
-}
-
-/* The Close Button */
+/* Close Button */
 .close {
     position: absolute;
-    top: 10px; /* Adjusted for visibility on mobile */
-    right: 10px; /* Adjusted for mobile visibility */
-    color: #f1f1f1;
-    font-size: 30px;
+    top: 20px; /* Adjusted from the very top */
+    right: 20px; /* Pulled slightly away from the corner */
+    color: #fff;
+    background-color: rgba(255, 0, 0, 0.9); /* Red background for visibility */
+    padding: 15px; /* Increased padding for better tap area */
+    font-size: 24px;
     font-weight: bold;
-    transition: 0.3s;
-    z-index: 15; /* Ensure close button is above everything else */
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
+    border-radius: 50%;
+    z-index: 2000; /* Ensure it's above the modal content */
     cursor: pointer;
 }
 
-/* Modal navigation buttons */
+/* Navigation buttons */
 .prev-modal, .next-modal {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
+    transform: translateY(-50%);
     padding: 16px;
     color: white;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 24px;
     transition: 0.6s ease;
     user-select: none;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 12; /* Ensure buttons are on top of the image */
+    z-index: 999; /* Ensure buttons are above modal content */
 }
 
 .prev-modal {
@@ -3496,32 +3482,26 @@ input, select, textarea {
 /* Adjustments for smaller screens (mobile view) */
 @media screen and (max-width: 768px) {
     .modal-content {
-        max-width: 90%; /* Use more screen space for mobile */
-        max-height: 60%; /* Reduce image height for more caption space */
-        object-fit: contain; /* Ensure the image fits without distortion */
+        max-width: 100%; /* Use the entire screen width on mobile */
+        max-height: 60%; /* Ensure it doesn't take up too much space */
     }
 
-    .modal-body {
-        display: block; /* Stack the content vertically */
-        text-align: center;
-        max-height: 80%; /* Ensure enough space for the caption */
-    }
-
-    .modal-body #imageCaption {
-        margin-top: 10px;
-        padding-left: 0; /* Remove padding */
-        overflow-y: auto; /* Allow scrolling if the caption is too long */
-        max-height: 30%; /* Ensure enough space for scrolling text */
-    }
-
-    .prev-modal, .next-modal {
-        font-size: 14px;
-        padding: 12px;
+    #imageCaption {
+        font-size: 14px; /* Slightly smaller caption on mobile */
+        padding: 10px;
     }
 
     .close {
-        font-size: 30px;
-        top: 10px;
-        right: 10px; /* Ensure close button is visible on mobile */
+        font-size: 30px; /* Bigger button for mobile */
+        top: 25px;
+        right: 25px;
+        padding: 15px;
+        background-color: rgba(255, 0, 0, 0.9); /* Bright red for visibility */
+        color: #ffffff;
+    }
+
+    .prev-modal, .next-modal {
+        font-size: 20px;
+        padding: 12px;
     }
 }
