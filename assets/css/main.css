@@ -3411,23 +3411,27 @@ input, select, textarea {
     padding: 20px;
 }
 
-/* Flex container to hold image and caption for desktop */
+/* Flex container for image and caption */
 .modal-flex-container {
     display: flex;
-    flex-direction: row; /* Caption on the right-hand side by default */
+    flex-direction: row; /* Caption on the right by default (desktop) */
+    justify-content: center;
     align-items: center;
+    max-width: 90%; /* Limits the width to avoid stretching */
+    margin: auto;
 }
 
 /* Modal content (image) */
 .modal-content {
-    max-width: 70%; /* Image takes up 70% of modal width on desktop */
-    max-height: 90%; /* Limit the height */
-    object-fit: contain;
+    max-width: 60%; /* Image takes 60% of container width on desktop */
+    max-height: 80%; /* Prevent image from overflowing the viewport */
+    display: block;
+    object-fit: contain; /* Keep aspect ratio */
 }
 
-/* Modal caption */
+/* Modal caption (on the right by default) */
 #imageCaption {
-    width: 30%; /* Caption takes up 30% of modal width on desktop */
+    max-width: 35%; /* Caption takes 35% of container width on desktop */
     color: #ccc;
     padding-left: 20px;
     text-align: left;
@@ -3480,19 +3484,19 @@ input, select, textarea {
 /* Adjustments for smaller screens */
 @media screen and (max-width: 768px) {
     .modal-flex-container {
-        flex-direction: column; /* Caption below the image on mobile */
+        flex-direction: column; /* Caption below image for mobile */
     }
 
     .modal-content {
-        max-width: 90%; /* Use more screen space for mobile */
-        max-height: 60%; /* Reduce height slightly for better fit */
+        max-width: 90%; /* Image takes full width on mobile */
+        max-height: 60%; /* Keep aspect ratio, avoid overflowing */
     }
 
     #imageCaption {
-        width: 100%; /* Caption takes full width below the image */
+        max-width: 100%; /* Caption takes full width below the image */
         padding-left: 0;
-        text-align: center;
         padding-top: 10px;
+        text-align: center; /* Center caption text on mobile */
     }
 
     .prev-modal, .next-modal {
