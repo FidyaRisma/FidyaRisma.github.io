@@ -3399,86 +3399,77 @@ input, select, textarea {
 .modal {
     display: none; /* Hidden by default */
     position: fixed;
-    z-index: 10; /* Increased z-index to ensure modal elements are on top */
+    z-index: 999; /* Ensure modal has the highest z-index */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background with slight transparency */
     
-    /* Flexbox for centering */
+    /* Flexbox for centering content */
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Prevents content from overflowing the modal */
+    overflow: hidden; /* Prevent overflow issues */
 }
 
 /* Show modal when active */
 .modal.active {
-    display: flex; /* Only show flexbox when the modal is active */
+    display: flex; /* Display modal content when active */
 }
 
 /* Modal content (image) */
 .modal-content {
-    max-width: 60%; /* Ensure the image takes a smaller portion */
-    max-height: 70%; /* Reduce height slightly to leave space for caption */
+    max-width: 90%; /* Ensure the image uses more screen space */
+    max-height: 70%; /* Leave space for the caption */
     display: block;
     margin: 0 auto;
-    object-fit: contain; /* Ensure the image scales without distortion */
+    object-fit: contain; /* Maintain aspect ratio */
 }
 
 /* Modal caption */
 #imageCaption {
     color: #ccc;
     padding: 10px;
-    font-size: 18px; /* Increased for better readability */
-    word-wrap: break-word; /* Ensure long words wrap to the next line */
-    overflow-wrap: break-word; /* Ensure long words break properly */
-    max-width: 35%; /* Ensure description has more space next to the image */
-    max-height: 100%; /* Allow the caption to occupy the full height */
-    overflow-y: auto; /* Allow scrolling if the caption is too long */
+    font-size: 16px;
+    word-wrap: break-word; /* Ensure long words wrap properly */
+    max-width: 90%;
+    max-height: 20%; /* Limit caption height */
+    overflow-y: auto; /* Scroll if caption overflows */
+    text-align: center;
 }
 
-/* Flexbox layout for desktop view - Image and caption side by side */
-.modal-body {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Align items to the top */
-    max-height: 80%; /* Give space for the caption */
-}
-
-/* The Close Button */
+/* Close Button */
 .close {
     position: absolute;
-    top: 10px; /* Adjusted for visibility on mobile */
-    right: 10px; /* Adjusted for mobile visibility */
-    color: #f1f1f1;
-    font-size: 30px;
+    top: 20px; /* Slightly adjusted for mobile */
+    right: 20px;
+    color: #ffffff; /* White text color */
+    background-color: rgba(255, 0, 0, 0.9); /* Bright red background */
+    padding: 10px;
+    font-size: 24px;
     font-weight: bold;
-    transition: 0.3s;
-    z-index: 15; /* Ensure close button is above everything else */
+    border-radius: 50%; /* Make it round */
+    z-index: 1000; /* Ensure close button is on top of everything */
+    cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
+    color: #fff;
+    background-color: rgba(255, 0, 0, 1); /* Fully opaque red on hover */
 }
 
-/* Modal navigation buttons */
+/* Navigation buttons */
 .prev-modal, .next-modal {
-    cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
+    transform: translateY(-50%);
     padding: 16px;
     color: white;
-    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
     font-size: 18px;
-    transition: 0.6s ease;
-    user-select: none;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 12; /* Ensure buttons are on top of the image */
+    cursor: pointer;
+    z-index: 999; /* Ensure above modal content */
 }
 
 .prev-modal {
@@ -3489,39 +3480,21 @@ input, select, textarea {
     right: 10px;
 }
 
-.prev-modal:hover, .next-modal:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Adjustments for smaller screens (mobile view) */
+/* Adjustments for mobile view */
 @media screen and (max-width: 768px) {
     .modal-content {
-        max-width: 90%; /* Use more screen space for mobile */
-        max-height: 60%; /* Reduce image height for more caption space */
-        object-fit: contain; /* Ensure the image fits without distortion */
+        max-width: 90%; /* Use more space on mobile */
+        max-height: 60%; /* Leave space for caption */
     }
 
-    .modal-body {
-        display: block; /* Stack the content vertically */
-        text-align: center;
-        max-height: 80%; /* Ensure enough space for the caption */
-    }
-
-    .modal-body #imageCaption {
-        margin-top: 10px;
-        padding-left: 0; /* Remove padding */
-        overflow-y: auto; /* Allow scrolling if the caption is too long */
-        max-height: 30%; /* Ensure enough space for scrolling text */
-    }
-
-    .prev-modal, .next-modal {
-        font-size: 14px;
-        padding: 12px;
+    #imageCaption {
+        max-width: 90%;
+        max-height: 30%; /* More space for caption */
     }
 
     .close {
-        font-size: 30px;
+        font-size: 30px; /* Larger button on mobile */
         top: 10px;
-        right: 10px; /* Ensure close button is visible on mobile */
+        right: 10px;
     }
 }
