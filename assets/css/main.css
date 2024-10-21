@@ -3405,46 +3405,32 @@ input, select, textarea {
     background-color: rgba(0, 0, 0, 0.9); /* Dark background */
     
     /* Flexbox for centering */
+    display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
-/* Show modal when active */
-.modal.active {
-    display: flex; /* Only show flexbox when the modal is active */
+/* Flex container to hold image and caption for desktop */
+.modal-flex-container {
+    display: flex;
+    flex-direction: row; /* Caption on the right-hand side by default */
+    align-items: center;
 }
 
 /* Modal content (image) */
 .modal-content {
-    max-width: 90%; /* Limit the width */
+    max-width: 70%; /* Image takes up 70% of modal width on desktop */
     max-height: 90%; /* Limit the height */
-    display: block;
-    margin: 0 auto;
-    object-fit: contain; /* Ensure the image scales without distortion */
-    transform: translateY(-50%);
-    top: 50%;
-    position: relative;
+    object-fit: contain;
 }
 
 /* Modal caption */
 #imageCaption {
-    margin: auto;
-    display: block;
-    width: 90%;
-    max-width: 700px;
-    text-align: center;
+    width: 30%; /* Caption takes up 30% of modal width on desktop */
     color: #ccc;
-    padding: 10px 0;
-}
-
-.modal-content, #imageCaption {
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-    from {transform: scale(0)}
-    to {transform: scale(1)}
+    padding-left: 20px;
+    text-align: left;
 }
 
 /* The Close Button */
@@ -3472,7 +3458,6 @@ input, select, textarea {
     top: 50%;
     width: auto;
     padding: 16px;
-    margin-top: -22px;
     color: white;
     font-weight: bold;
     font-size: 18px;
@@ -3494,12 +3479,20 @@ input, select, textarea {
 
 /* Adjustments for smaller screens */
 @media screen and (max-width: 768px) {
+    .modal-flex-container {
+        flex-direction: column; /* Caption below the image on mobile */
+    }
+
     .modal-content {
-        max-width: 95%; /* Use more screen space for mobile */
-        max-height: 70%; /* Limit the height more for better fit */
-        transform: translateY(0); /* Remove the translateY for mobile */
-        top: initial; /* No need for top positioning on mobile */
-        position: static; /* Allow normal static positioning */
+        max-width: 90%; /* Use more screen space for mobile */
+        max-height: 60%; /* Reduce height slightly for better fit */
+    }
+
+    #imageCaption {
+        width: 100%; /* Caption takes full width below the image */
+        padding-left: 0;
+        text-align: center;
+        padding-top: 10px;
     }
 
     .prev-modal, .next-modal {
@@ -3511,3 +3504,4 @@ input, select, textarea {
         font-size: 30px;
     }
 }
+

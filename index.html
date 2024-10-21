@@ -129,11 +129,14 @@
 <div id="imageModal" class="modal">
     <span class="close" onclick="closeModal()">&times;</span>
     
-    <!-- Modal content (enlarged image) -->
-    <img class="modal-content" id="fullImage">
-    
-    <!-- Caption for the enlarged image -->
-    <div id="imageCaption"></div>
+    <!-- Flex container for image and caption -->
+    <div class="modal-flex-container">
+        <!-- Modal content (enlarged image) -->
+        <img class="modal-content" id="fullImage" src="" alt="Enlarged image">
+        
+        <!-- Caption for the enlarged image -->
+        <div id="imageCaption">Description goes here...</div>
+    </div>
 
     <!-- Next and Previous Buttons for the modal -->
     <a class="prev-modal" onclick="plusSlidesModal(-1)">&#10094;</a>
