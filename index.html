@@ -57,40 +57,48 @@
 								<p>Geospatial Analyst<br />
 					with strong interest in Climate,  Agriculture, and Biosphere</p>
 									</header>
-									<p>I am a dedicated geospatial specialist with a master’s degree in Remote Sensing Science and Technology and a bachelor’s degree in Geography. With several years of education and experience in geospatial data analysis, satellite remote sensing, GIS integration, and research writing, I have developed a robust skill set in spatial – temporal analysis, satellite image processing, climate data processing, geographic attributes management, and spatial data visualization. My expertise in GIS/RS software, coupled with my strong analytical and problem-solving abilities, has allowed me to contribute effectively to various environmental and industrial projects. I am passionate about leveraging geospatial technologies to address real-world challenges and am eager to bring my skills for further understanding of our beloved Earth.</p>
+								<p class="about-text">I am a dedicated remote sensing and GIS specialist with a master’s degree in Remote Sensing Science and Technology and a bachelor’s degree in Geography. With several years of education and experience in geospatial data analysis, satellite remote sensing, GIS integration, and research writing, I have developed a robust skill set in spatial – temporal analysis, satellite image processing, climate data processing, geographic attributes management, and spatial data visualization. My expertise in GIS/RS software, coupled with my strong analytical and problem-solving abilities, has allowed me to contribute effectively to various environmental and industrial projects. I am passionate about leveraging geospatial technologies to address real-world challenges and am eager to bring my skills for further understanding of our beloved Earth.</p>
 								</div>
 							</section>
 
 					<!-- Two -->
+<!-- Geospatial Portfolio Section -->
 <section id="two">
     <div class="container">
         <h3>Geospatial Portfolio</h3>
-        <p>This section lists the geospatial analysis I have done in the past. Most of them were my projects from college assignments.</p>
-        <div class="features">
-            <!-- Thumbnail Image Gallery -->
-            <article>
-                <img src="images/pic01_thumb.jpg" alt="Thumbnail" class="thumbnail" onclick="openModal(this.src)" />
-                <div class="inner">
-                    <h4>Project Title 1</h4>
-                    <p>Brief description of the project goes here.</p>
+        <p>This section lists the geospatial analysis I have done in the past. Each project includes multiple images.</p>
+        
+        <!-- Portfolio Grid -->
+        <div class="portfolio-grid">
+            <!-- Project 1 -->
+            <div class="project">
+                <h4>Project Title 1</h4>
+                <div class="image-grid">
+                    <img src="images/project1_img1_thumb.jpg" alt="Project 1 Image 1" class="thumbnail" onclick="openModal(this.src, 'Project 1 - Image 1: Description')" />
+                    <img src="images/project1_img2_thumb.jpg" alt="Project 1 Image 2" class="thumbnail" onclick="openModal(this.src, 'Project 1 - Image 2: Description')" />
+                    <img src="images/project1_img3_thumb.jpg" alt="Project 1 Image 3" class="thumbnail" onclick="openModal(this.src, 'Project 1 - Image 3: Description')" />
                 </div>
-            </article>
-
-            <article>
-                <img src="images/pic02_thumb.jpg" alt="Thumbnail" class="thumbnail" onclick="openModal(this.src)" />
-                <div class="inner">
-                    <h4>Project Title 2</h4>
-                    <p>Brief description of the project goes here.</p>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project">
+                <h4>Project Title 2</h4>
+                <div class="image-grid">
+                    <img src="images/project2_img1_thumb.jpg" alt="Project 2 Image 1" class="thumbnail" onclick="openModal(this.src, 'Project 2 - Image 1: Description')" />
+                    <img src="images/project2_img2_thumb.jpg" alt="Project 2 Image 2" class="thumbnail" onclick="openModal(this.src, 'Project 2 - Image 2: Description')" />
+                    <img src="images/project2_img3_thumb.jpg" alt="Project 2 Image 3" class="thumbnail" onclick="openModal(this.src, 'Project 2 - Image 3: Description')" />
                 </div>
-            </article>
-
-            <article>
-                <img src="images/pic03_thumb.jpg" alt="Thumbnail" class="thumbnail" onclick="openModal(this.src)" />
-                <div class="inner">
-                    <h4>Project Title 3</h4>
-                    <p>Brief description of the project goes here.</p>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="project">
+                <h4>Project Title 3</h4>
+                <div class="image-grid">
+                    <img src="images/project3_img1_thumb.jpg" alt="Project 3 Image 1" class="thumbnail" onclick="openModal(this.src, 'Project 3 - Image 1: Description')" />
+                    <img src="images/project3_img2_thumb.jpg" alt="Project 3 Image 2" class="thumbnail" onclick="openModal(this.src, 'Project 3 - Image 2: Description')" />
+                    <img src="images/project3_img3_thumb.jpg" alt="Project 3 Image 3" class="thumbnail" onclick="openModal(this.src, 'Project 3 - Image 3: Description')" />
                 </div>
-            </article>
+            </div>
         </div>
     </div>
 </section>
@@ -99,7 +107,9 @@
 <div id="imageModal" class="modal">
     <span class="close" onclick="closeModal()">&times;</span>
     <img class="modal-content" id="fullImage">
+    <div id="imageCaption" class="caption"></div>
 </div>
+
 
 						<!-- Three -->
 							<section id="three">
@@ -507,11 +517,14 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 <script>
-    function openModal(src) {
+
+    function openModal(src, captionText) {
         var modal = document.getElementById('imageModal');
         var modalImage = document.getElementById('fullImage');
+        var caption = document.getElementById('imageCaption');
         modal.style.display = "flex";
-        modalImage.src = src.replace('_thumb', ''); // Replace thumbnail with full-size image path
+        modalImage.src = src.replace('_thumb', ''); // Use the full-sized image
+        caption.textContent = captionText;
     }
 
     function closeModal() {
@@ -519,6 +532,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
         modal.style.display = "none";
     }
 </script>
+
 
 	</body>
 </html>
