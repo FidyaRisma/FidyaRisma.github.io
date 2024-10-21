@@ -3393,7 +3393,6 @@ input, select, textarea {
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
-
 /* Modal styles (hidden by default) */
 .modal {
     display: none; /* Hidden by default */
@@ -3422,6 +3421,9 @@ input, select, textarea {
     display: block;
     margin: 0 auto;
     object-fit: contain; /* Ensure the image scales without distortion */
+    transform: translateY(-50%);
+    top: 50%;
+    position: relative;
 }
 
 /* Modal caption */
@@ -3494,8 +3496,10 @@ input, select, textarea {
 @media screen and (max-width: 768px) {
     .modal-content {
         max-width: 95%; /* Use more screen space for mobile */
-        max-height: 70%; /* Reduce height slightly for better fit */
-        object-fit: contain;
+        max-height: 70%; /* Limit the height more for better fit */
+        transform: translateY(0); /* Remove the translateY for mobile */
+        top: initial; /* No need for top positioning on mobile */
+        position: static; /* Allow normal static positioning */
     }
 
     .prev-modal, .next-modal {
@@ -3506,20 +3510,4 @@ input, select, textarea {
     .close {
         font-size: 30px;
     }
-}
-
-/* Fix hover effects - only apply when actually hovered */
-.button, .prev-modal, .next-modal {
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.button:hover, .prev-modal:hover, .next-modal:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Hover effect for buttons */
-    color: white;
-}
-
-/* Prevent initial hover on page load */
-.button, .prev-modal, .next-modal {
-    opacity: 1;
-    pointer-events: all;
 }

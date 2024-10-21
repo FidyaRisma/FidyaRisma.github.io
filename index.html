@@ -633,6 +633,22 @@ function closeModal() {
     modal.classList.remove("active"); // Remove the 'active' class to hide the modal
 }
 
+// Function to navigate between slides inside the modal
+function plusSlidesModal(n) {
+    projectIndices[currentProject] += n;
+    if (projectIndices[currentProject] >= projects[currentProject].length) {
+        projectIndices[currentProject] = 0; // Loop back to the first image
+    }
+    if (projectIndices[currentProject] < 0) {
+        projectIndices[currentProject] = projects[currentProject].length - 1; // Loop back to the last image
+    }
+
+    // Update modal with new image
+    var modalImg = document.getElementById("fullImage");
+    var captionText = document.getElementById("imageCaption");
+    modalImg.src = projects[currentProject][projectIndices[currentProject]].modalSrc;
+    captionText.innerHTML = projects[currentProject][projectIndices[currentProject]].caption;
+}
 
 </script>
 
