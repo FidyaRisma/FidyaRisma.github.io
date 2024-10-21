@@ -3435,6 +3435,16 @@ input, select, textarea {
     padding: 10px 0;
 }
 
+/* Hover behavior for desktop */
+.modal-content:hover + #imageCaption {
+    display: block;
+}
+
+/* Hide caption by default */
+#imageCaption {
+    display: none;
+}
+
 .modal-content, #imageCaption {
     animation-name: zoom;
     animation-duration: 0.6s;
@@ -3454,6 +3464,7 @@ input, select, textarea {
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
+    z-index: 2; /* Ensure it appears above other content */
 }
 
 .close:hover,
@@ -3461,6 +3472,32 @@ input, select, textarea {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .modal-content {
+        max-width: 95%; /* Use more screen space for mobile */
+        max-height: 70%; /* Reduce height slightly for better fit */
+    }
+
+    /* On mobile, always show caption below image */
+    #imageCaption {
+        display: block;
+        margin-top: 15px;
+        color: white;
+    }
+
+    .prev-modal, .next-modal {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .close {
+        font-size: 30px; /* Make close button smaller */
+        top: 10px; /* Adjust position for mobile */
+        right: 20px; /* Adjust position for mobile */
+    }
 }
 
 /* Modal navigation buttons */
@@ -3490,12 +3527,18 @@ input, select, textarea {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Adjustments for smaller screens */
+/* Mobile-specific styles */
 @media screen and (max-width: 768px) {
     .modal-content {
         max-width: 95%; /* Use more screen space for mobile */
         max-height: 70%; /* Reduce height slightly for better fit */
-        object-fit: contain;
+    }
+
+    /* On mobile, always show caption below image */
+    #imageCaption {
+        display: block;
+        margin-top: 15px;
+        color: white;
     }
 
     .prev-modal, .next-modal {
@@ -3506,20 +3549,4 @@ input, select, textarea {
     .close {
         font-size: 30px;
     }
-}
-
-/* Fix hover effects - only apply when actually hovered */
-.button, .prev-modal, .next-modal {
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.button:hover, .prev-modal:hover, .next-modal:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Hover effect for buttons */
-    color: white;
-}
-
-/* Prevent initial hover on page load */
-.button, .prev-modal, .next-modal {
-    opacity: 1;
-    pointer-events: all;
 }
