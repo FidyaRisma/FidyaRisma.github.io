@@ -615,14 +615,20 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+// Track current slide and project
+var currentProject = 0;
+var currentSlideIndex = 0;
+
 // Function to open the modal
 function openModal(project, slideIndex) {
-    currentProject = project; // Track the current project
+    currentProject = project;
+    currentSlideIndex = slideIndex;
+
     var modal = document.getElementById("imageModal");
     var modalImg = document.getElementById("fullImage");
     var captionText = document.getElementById("imageCaption");
 
-    modal.classList.add("active"); // Add the 'active' class to show the modal
+    modal.classList.add("active");
     modalImg.src = projects[project][slideIndex].modalSrc;
     captionText.innerHTML = projects[project][slideIndex].caption;
 }
@@ -630,24 +636,26 @@ function openModal(project, slideIndex) {
 // Function to close the modal
 function closeModal() {
     var modal = document.getElementById("imageModal");
-    modal.classList.remove("active"); // Remove the 'active' class to hide the modal
+    modal.classList.remove("active");
 }
 
 // Function to navigate between slides inside the modal
 function plusSlidesModal(n) {
-    projectIndices[currentProject] += n;
-    if (projectIndices[currentProject] >= projects[currentProject].length) {
-        projectIndices[currentProject] = 0; // Loop back to the first image
+    currentSlideIndex += n;
+
+    // Ensure slide index loops within available images
+    if (currentSlideIndex >= projects[currentProject].length) {
+        currentSlideIndex = 0;
     }
-    if (projectIndices[currentProject] < 0) {
-        projectIndices[currentProject] = projects[currentProject].length - 1; // Loop back to the last image
+    if (currentSlideIndex < 0) {
+        currentSlideIndex = projects[currentProject].length - 1;
     }
 
-    // Update modal with new image
     var modalImg = document.getElementById("fullImage");
     var captionText = document.getElementById("imageCaption");
-    modalImg.src = projects[currentProject][projectIndices[currentProject]].modalSrc;
-    captionText.innerHTML = projects[currentProject][projectIndices[currentProject]].caption;
+
+    modalImg.src = projects[currentProject][currentSlideIndex].modalSrc;
+    captionText.innerHTML = projects[currentProject][currentSlideIndex].caption;
 }
 
 </script>
