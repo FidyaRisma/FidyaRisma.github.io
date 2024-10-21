@@ -3463,3 +3463,31 @@ input, select, textarea {
     display: none; /* Hidden by default */
 }
 
+/* Modal navigation buttons */
+.prev-modal, .next-modal {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+.prev-modal {
+    left: 10px;
+}
+
+.next-modal {
+    right: 10px;
+}
+
+/* Add a background color to the buttons on hover */
+.prev-modal:hover, .next-modal:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
