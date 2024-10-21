@@ -3399,7 +3399,7 @@ input, select, textarea {
 .modal {
     display: none; /* Hidden by default */
     position: fixed;
-    z-index: 10; /* Increased z-index to ensure modal elements are on top */
+    z-index: 100; /* Ensure modal has the highest z-index */
     left: 0;
     top: 0;
     width: 100%;
@@ -3430,7 +3430,7 @@ input, select, textarea {
 #imageCaption {
     color: #ccc;
     padding: 10px;
-    font-size: 18px; /* Increased for better readability */
+    font-size: 18px;
     word-wrap: break-word; /* Ensure long words wrap to the next line */
     overflow-wrap: break-word; /* Ensure long words break properly */
     max-width: 35%; /* Ensure description has more space next to the image */
@@ -3449,18 +3449,20 @@ input, select, textarea {
 /* The Close Button */
 .close {
     position: absolute;
-    top: 10px; /* Adjusted for visibility on mobile */
-    right: 10px; /* Adjusted for mobile visibility */
-    color: #f1f1f1;
-    font-size: 30px;
+    top: 15px; /* Adjusted for mobile visibility */
+    right: 15px; /* Adjusted for mobile visibility */
+    color: #ffffff; /* White color for visibility */
+    background-color: rgba(255, 0, 0, 0.8); /* Red background for visibility */
+    padding: 10px;
+    border-radius: 50%; /* Round the button */
+    font-size: 24px; /* Adjust the size */
     font-weight: bold;
-    transition: 0.3s;
-    z-index: 15; /* Ensure close button is above everything else */
+    z-index: 1000; /* Ensure the close button is on top of everything */
 }
 
 .close:hover,
 .close:focus {
-    color: #bbb;
+    color: #000; /* Black color on hover */
     text-decoration: none;
     cursor: pointer;
 }
@@ -3478,7 +3480,7 @@ input, select, textarea {
     transition: 0.6s ease;
     user-select: none;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 12; /* Ensure buttons are on top of the image */
+    z-index: 100; /* Ensure buttons are above the modal content */
 }
 
 .prev-modal {
@@ -3521,7 +3523,10 @@ input, select, textarea {
 
     .close {
         font-size: 30px;
-        top: 10px;
-        right: 10px; /* Ensure close button is visible on mobile */
+        top: 15px;
+        right: 15px;
+        background-color: rgba(255, 0, 0, 0.8); /* Bright red background for better visibility */
+        color: #ffffff; /* White text for contrast */
+        z-index: 1000; /* Ensure the close button is on top of everything */
     }
 }
