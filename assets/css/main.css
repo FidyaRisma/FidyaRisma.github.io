@@ -3403,28 +3403,28 @@ input, select, textarea {
     top: 0;
     width: 100%;
     height: 100%;
+    overflow: auto;
     background-color: rgba(0, 0, 0, 0.9); /* Dark background */
-    
-    /* Flexbox for centering */
-    display: flex;
     justify-content: center;
     align-items: center;
+    display: flex;
 }
 
 /* Modal content (image) */
 .modal-content {
-    max-width: 90%; /* Limit the width */
-    max-height: 90%; /* Limit the height */
+    max-width: 80%; /* Limit the width */
+    max-height: 80%; /* Limit the height */
+    margin: auto;
     display: block;
-    margin: 0 auto;
-    object-fit: contain; /* Ensure the image scales without distortion */
+    width: auto;
+    height: auto;
 }
 
 /* Modal caption */
 #imageCaption {
     margin: auto;
     display: block;
-    width: 90%;
+    width: 80%;
     max-width: 700px;
     text-align: center;
     color: #ccc;
@@ -3459,6 +3459,10 @@ input, select, textarea {
     cursor: pointer;
 }
 
+.modal {
+    display: none; /* Hidden by default */
+}
+
 /* Modal navigation buttons */
 .prev-modal, .next-modal {
     cursor: pointer;
@@ -3482,25 +3486,8 @@ input, select, textarea {
     right: 10px;
 }
 
+/* Add a background color to the buttons on hover */
 .prev-modal:hover, .next-modal:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
-
-/* Adjustments for smaller screens */
-@media screen and (max-width: 768px) {
-    .modal-content {
-        max-width: 100%; /* Use more screen space for mobile */
-        max-height: 80%; /* Reduce height slightly for better fit */
-    }
-
-    .prev-modal, .next-modal {
-        font-size: 14px;
-        padding: 12px;
-    }
-
-    .close {
-        font-size: 30px;
-    }
-}
-
 
