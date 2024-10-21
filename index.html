@@ -642,9 +642,10 @@ function closeModal() {
 
 // Function to navigate between slides inside the modal
 function plusSlidesModal(n) {
+    // Update the current slide index based on user navigation (next/prev)
     currentSlideIndex += n;
 
-    // Ensure slide index loops within available images
+    // Ensure slide index loops within available images for the project
     if (currentSlideIndex >= projects[currentProject].length) {
         currentSlideIndex = 0; // Loop back to the first image
     }
@@ -652,6 +653,7 @@ function plusSlidesModal(n) {
         currentSlideIndex = projects[currentProject].length - 1; // Loop to the last image
     }
 
+    // Update the modal image and caption
     var modalImg = document.getElementById("fullImage");
     var captionText = document.getElementById("imageCaption");
 
