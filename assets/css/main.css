@@ -3406,9 +3406,13 @@ input, select, textarea {
     background-color: rgba(0, 0, 0, 0.9); /* Dark background */
     
     /* Flexbox for centering */
-    display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Show modal when active */
+.modal.active {
+    display: flex; /* Only show flexbox when the modal is active */
 }
 
 /* Modal content (image) */
@@ -3503,4 +3507,7 @@ input, select, textarea {
     }
 }
 
+.prev-modal:hover, .next-modal:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
 
