@@ -2589,29 +2589,29 @@ input, select, textarea {
 		.button.alt {
 			background-color: transparent;
 			box-shadow: inset 0 0 0 2px #e4e4e4;
-			color: #777 !important;
+			color: #f875aa !important;
 		}
 
 			input[type="submit"].alt:hover,
 			input[type="reset"].alt:hover,
 			input[type="button"].alt:hover,
 			.button.alt:hover {
-				background-color: #f4f4f4;
-				color: #777 !important;
+				background-color: #f875aa;
+				color: #ffdfdf !important;
 			}
 
 			input[type="submit"].alt:active,
 			input[type="reset"].alt:active,
 			input[type="button"].alt:active,
 			.button.alt:active {
-				background-color: #eaeaea;
+				background-color: #ffdfdf;
 			}
 
 			input[type="submit"].alt.icon:before,
 			input[type="reset"].alt.icon:before,
 			input[type="button"].alt.icon:before,
 			.button.alt.icon:before {
-				color: #aaa;
+				color: #f875aa;
 			}
 
 		input[type="submit"].primary,
@@ -2619,7 +2619,7 @@ input, select, textarea {
 		input[type="button"].primary,
 		.button.primary {
 			background-color: #f875aa;
-			color: #ffffff !important;
+			color: #ffdfdf !important;
 		}
 
 			input[type="submit"].primary:hover,
