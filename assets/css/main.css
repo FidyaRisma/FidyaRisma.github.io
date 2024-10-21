@@ -3459,3 +3459,7 @@ input, select, textarea {
     cursor: pointer;
 }
 
+.modal {
+    display: none; /* Hidden by default */
+}
+
