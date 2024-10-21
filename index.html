@@ -125,23 +125,20 @@
     </div>
 </div>
 
-<!-- Modal Structure -->
+<!-- Modal for Enlarged Image -->
 <div id="imageModal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span> <!-- Close button -->
-
-    <div class="modal-body">
-        <!-- Modal content (enlarged image) -->
-        <img class="modal-content" id="fullImage">
-        
-        <!-- Caption for the enlarged image -->
-        <div id="imageCaption"></div>
-    </div>
+    <span class="close" onclick="closeModal()">&times;</span>
+    
+    <!-- Modal content (enlarged image) -->
+    <img class="modal-content" id="fullImage">
+    
+    <!-- Caption for the enlarged image -->
+    <div id="imageCaption"></div>
 
     <!-- Next and Previous Buttons for the modal -->
     <a class="prev-modal" onclick="plusSlidesModal(-1)">&#10094;</a>
     <a class="next-modal" onclick="plusSlidesModal(1)">&#10095;</a>
 </div>
-
 
 
 
@@ -645,6 +642,7 @@ function closeModal() {
 
 // Function to navigate between slides inside the modal
 function plusSlidesModal(n) {
+    // Update the current slide index based on user navigation (next/prev)
     currentSlideIndex += n;
 
     // Ensure slide index loops within available images for the project
@@ -655,13 +653,13 @@ function plusSlidesModal(n) {
         currentSlideIndex = projects[currentProject].length - 1; // Loop to the last image
     }
 
+    // Update the modal image and caption
     var modalImg = document.getElementById("fullImage");
     var captionText = document.getElementById("imageCaption");
 
     modalImg.src = projects[currentProject][currentSlideIndex].modalSrc;
     captionText.innerHTML = projects[currentProject][currentSlideIndex].caption;
 }
-
 
 </script>
 
