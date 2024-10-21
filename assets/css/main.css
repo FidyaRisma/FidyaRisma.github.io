@@ -3346,12 +3346,7 @@ input, select, textarea {
     transform: scale(1.05);
 }
 
-
-.about-text {
-    text-align: justify;
-}
-
-/* Slideshow */
+/* Slideshow Container */
 .slideshow-container {
     position: relative;
     max-width: 100%;
@@ -3363,9 +3358,11 @@ input, select, textarea {
     cursor: pointer;
 }
 
-.fade {
-    display: none; /* Hide all slides initially */
-    transition: opacity 0.5s ease-in-out;
+.caption {
+    text-align: center;
+    color: #777;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
 /* Buttons for Next and Previous */
@@ -3430,6 +3427,12 @@ input, select, textarea {
     color: white;
     text-align: center;
     margin-top: 10px;
+}
+
+
+
+.about-text {
+    text-align: justify;
 }
 
 
