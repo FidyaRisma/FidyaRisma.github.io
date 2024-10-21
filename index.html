@@ -82,7 +82,7 @@
                     <p class="caption">LULC Map of Jepara Regency</p>
                 </div>
 
-                  <!-- Next and Previous Buttons -->
+                <!-- Next and Previous Buttons -->
                 <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
             </div>
@@ -93,11 +93,11 @@
             <h4>Project Title 2</h4>
             <div class="slideshow-container">
                 <!-- Slides -->
-                <div class="mySlides2 fade">
+                <div class="mySlides2">
                     <img src="images/pic02_1_thumb.jpg" class="slide-image" onclick="openModal('images/pic02_1.jpg', 'Description for Image 1')">
                     <p class="caption">Description for Image 1</p>
                 </div>
-                <div class="mySlides2 fade">
+                <div class="mySlides2">
                     <img src="images/pic02_2_thumb.jpg" class="slide-image" onclick="openModal('images/pic02_2.jpg', 'Description for Image 2')">
                     <p class="caption">Description for Image 2</p>
                 </div>
@@ -113,11 +113,11 @@
             <h4>Project Title 3</h4>
             <div class="slideshow-container">
                 <!-- Slides -->
-                <div class="mySlides3 fade">
+                <div class="mySlides3">
                     <img src="images/pic03_1_thumb.jpg" class="slide-image" onclick="openModal('images/pic03_1.jpg', 'Description for Image 1')">
                     <p class="caption">Description for Image 1</p>
                 </div>
-                <div class="mySlides3 fade">
+                <div class="mySlides3">
                     <img src="images/pic03_2_thumb.jpg" class="slide-image" onclick="openModal('images/pic03_2.jpg', 'Description for Image 2')">
                     <p class="caption">Description for Image 2</p>
                 </div>
@@ -127,6 +127,7 @@
                 <a class="next" onclick="plusSlides(1, 3)">&#10095;</a>
             </div>
         </div>
+
     </div>
 </section>
 
@@ -570,20 +571,21 @@ showSlides(1, 1);
 showSlides(1, 2);
 showSlides(1, 3);
 
-<script>
-    function openModal(src) {
-        var modal = document.getElementById('imageModal');
-        var modalImage = document.getElementById('fullImage');
-        modal.style.display = "flex";
-        modalImage.src = src.replace('_thumb', ''); // Replace thumbnail with full-size image path
-    }
+// Modal Functionality
+function openModal(src, captionText) {
+    var modal = document.getElementById('imageModal');
+    var modalImage = document.getElementById('fullImage');
+    var modalCaption = document.getElementById('imageCaption');
+    modal.style.display = "flex";
+    modalImage.src = src;
+    modalCaption.innerHTML = captionText;
+}
 
-    function closeModal() {
-        var modal = document.getElementById('imageModal');
-        modal.style.display = "none";
-    }
+function closeModal() {
+    var modal = document.getElementById('imageModal');
+    modal.style.display = "none";
+}
 </script>
-
 
 
 
