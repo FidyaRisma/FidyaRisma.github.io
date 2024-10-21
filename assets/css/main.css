@@ -3399,7 +3399,7 @@ input, select, textarea {
 .modal {
     display: none; /* Hidden by default */
     position: fixed;
-    z-index: 1;
+    z-index: 10; /* Increased z-index to ensure modal elements are on top */
     left: 0;
     top: 0;
     width: 100%;
@@ -3409,6 +3409,7 @@ input, select, textarea {
     /* Flexbox for centering */
     justify-content: center;
     align-items: center;
+    overflow: hidden; /* Prevents content from overflowing the modal */
 }
 
 /* Show modal when active */
@@ -3418,46 +3419,54 @@ input, select, textarea {
 
 /* Modal content (image) */
 .modal-content {
-    max-width: 90%; /* Limit the width */
-    max-height: 90%; /* Limit the height */
+    max-width: 80%; /* Limit the width */
+    max-height: 70%; /* Reduce height slightly to leave space for caption */
     display: block;
     margin: 0 auto;
     object-fit: contain; /* Ensure the image scales without distortion */
-    transform: translateY(-50%);
-    top: 50%;
-    position: relative;
 }
 
 /* Modal caption */
 #imageCaption {
-    margin: auto;
-    display: block;
-    width: 90%;
-    max-width: 700px;
-    text-align: center;
     color: #ccc;
-    padding: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    word-wrap: break-word; /* Ensure long words wrap to the next line */
+    overflow-wrap: break-word; /* Ensure long words break properly */
+    max-width: 100%;
 }
 
-.modal-content, #imageCaption {
-    animation-name: zoom;
-    animation-duration: 0.6s;
+/* Flexbox layout for desktop view - Image and caption side by side */
+.modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    max-height: 80%; /* Give space for the caption */
 }
 
-@keyframes zoom {
-    from {transform: scale(0)}
-    to {transform: scale(1)}
+/* Flexbox for caption on the right for desktop */
+.modal-body .modal-content {
+    flex: 1;
+    max-height: 80%; /* Ensure image doesn’t take too much space */
+}
+
+.modal-body #imageCaption {
+    flex: 1;
+    padding-left: 20px;
+    text-align: left;
+    overflow-y: auto; /* Ensure the caption scrolls if it overflows */
 }
 
 /* The Close Button */
 .close {
     position: absolute;
     top: 15px;
-    right: 35px;
+    right: 15px; /* Adjusted for mobile */
     color: #f1f1f1;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     transition: 0.3s;
+    z-index: 15; /* Ensure close button is above everything else */
 }
 
 .close:hover,
@@ -3474,12 +3483,13 @@ input, select, textarea {
     top: 50%;
     width: auto;
     padding: 16px;
-    margin-top: -22px;
     color: white;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
     user-select: none;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 12; /* Ensure buttons are on top of the image */
 }
 
 .prev-modal {
@@ -3494,14 +3504,25 @@ input, select, textarea {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Adjustments for smaller screens */
+/* Adjustments for smaller screens (mobile view) */
 @media screen and (max-width: 768px) {
     .modal-content {
-        max-width: 95%; /* Use more screen space for mobile */
-        max-height: 70%; /* Limit the height more for better fit */
-        transform: translateY(0); /* Remove the translateY for mobile */
-        top: initial; /* No need for top positioning on mobile */
-        position: static; /* Allow normal static positioning */
+        max-width: 90%; /* Use more screen space for mobile */
+        max-height: 60%; /* Reduce image height for more caption space */
+        object-fit: contain; /* Ensure the image fits without distortion */
+    }
+
+    .modal-body {
+        display: block; /* Stack the content vertically */
+        text-align: center;
+        max-height: 80%; /* Ensure enough space for the caption */
+    }
+
+    .modal-body #imageCaption {
+        margin-top: 10px;
+        padding-left: 0; /* Remove padding */
+        overflow-y: auto; /* Allow scrolling if the caption is too long */
+        max-height: 30%; /* Ensure enough space for scrolling text */
     }
 
     .prev-modal, .next-modal {
@@ -3511,5 +3532,7 @@ input, select, textarea {
 
     .close {
         font-size: 30px;
+        top: 10px;
+        right: 10px; /* Ensure close button is visible on mobile */
     }
 }
