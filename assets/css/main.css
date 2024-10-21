@@ -3315,19 +3315,6 @@ input, select, textarea {
 
 	}
 	
-	/* Thumbnail Image */
-.thumbnail {
-    width: 150px;
-    height: 100px;
-    object-fit: cover;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.thumbnail:hover {
-    transform: scale(1.05);
-}
-
 /* Portfolio Grid */
 .portfolio-grid {
     display: grid;
@@ -3349,7 +3336,7 @@ input, select, textarea {
 
 .thumbnail {
     width: 100%;
-    height: 150px;
+    height: 100%;
     object-fit: cover;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -3359,7 +3346,56 @@ input, select, textarea {
     transform: scale(1.05);
 }
 
-/* Modal Styles */
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.slide-image {
+    width: 100%;
+    cursor: pointer;
+}
+
+.caption {
+    text-align: center;
+    color: #777;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Buttons for Next and Previous */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 3px 0 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Modal */
 .modal {
     display: none;
     position: fixed;
@@ -3375,13 +3411,7 @@ input, select, textarea {
 
 .modal-content {
     max-width: 90%;
-    max-height: 80%;
-}
-
-.caption {
-    color: white;
-    text-align: center;
-    padding: 15px;
+    max-height: 90%;
 }
 
 .close {
@@ -3392,6 +3422,13 @@ input, select, textarea {
     font-size: 30px;
     cursor: pointer;
 }
+
+#imageCaption {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
 
 
 .about-text {
