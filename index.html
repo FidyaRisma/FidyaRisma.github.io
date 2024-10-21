@@ -128,14 +128,12 @@
 <!-- Modal for Enlarged Image -->
 <div id="imageModal" class="modal">
     <span class="close" onclick="closeModal()">&times;</span>
-
-    <div class="modal-body">
-        <!-- Modal content (enlarged image) -->
-        <img class="modal-content" id="fullImage">
-        
-        <!-- Caption for the enlarged image -->
-        <div id="imageCaption"></div>
-    </div>
+    
+    <!-- Modal content (enlarged image) -->
+    <img class="modal-content" id="fullImage">
+    
+    <!-- Caption for the enlarged image -->
+    <div id="imageCaption"></div>
 
     <!-- Next and Previous Buttons for the modal -->
     <a class="prev-modal" onclick="plusSlidesModal(-1)">&#10094;</a>
@@ -617,21 +615,14 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// Track the current slide and project
-var currentProject = 0;
-var currentSlideIndex = 0;
-
-// Function to open the modal and show the selected image
+// Function to open the modal
 function openModal(project, slideIndex) {
-    currentProject = project;
-    currentSlideIndex = slideIndex;
-
+    currentProject = project; // Track the current project
     var modal = document.getElementById("imageModal");
     var modalImg = document.getElementById("fullImage");
     var captionText = document.getElementById("imageCaption");
 
-    // Set the image and caption based on the current project and slide index
-    modal.classList.add("active");
+    modal.classList.add("active"); // Add the 'active' class to show the modal
     modalImg.src = projects[project][slideIndex].modalSrc;
     captionText.innerHTML = projects[project][slideIndex].caption;
 }
@@ -639,30 +630,25 @@ function openModal(project, slideIndex) {
 // Function to close the modal
 function closeModal() {
     var modal = document.getElementById("imageModal");
-    modal.classList.remove("active");
+    modal.classList.remove("active"); // Remove the 'active' class to hide the modal
 }
 
 // Function to navigate between slides inside the modal
 function plusSlidesModal(n) {
-    // Update the current slide index based on user navigation (next/prev)
-    currentSlideIndex += n;
-
-    // Ensure slide index loops within available images for the project
-    if (currentSlideIndex >= projects[currentProject].length) {
-        currentSlideIndex = 0; // Loop back to the first image
+    projectIndices[currentProject] += n;
+    if (projectIndices[currentProject] >= projects[currentProject].length) {
+        projectIndices[currentProject] = 0; // Loop back to the first image
     }
-    if (currentSlideIndex < 0) {
-        currentSlideIndex = projects[currentProject].length - 1; // Loop to the last image
+    if (projectIndices[currentProject] < 0) {
+        projectIndices[currentProject] = projects[currentProject].length - 1; // Loop back to the last image
     }
 
-    // Update the modal image and caption
+    // Update modal with new image
     var modalImg = document.getElementById("fullImage");
     var captionText = document.getElementById("imageCaption");
-
-    modalImg.src = projects[currentProject][currentSlideIndex].modalSrc;
-    captionText.innerHTML = projects[currentProject][currentSlideIndex].caption;
+    modalImg.src = projects[currentProject][projectIndices[currentProject]].modalSrc;
+    captionText.innerHTML = projects[currentProject][projectIndices[currentProject]].caption;
 }
-
 
 </script>
 
