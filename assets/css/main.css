@@ -3428,9 +3428,9 @@ input, select, textarea {
 /* Modal content (image) for desktop view */
 .modal-content {
     flex: 0 0 70%; /* Image takes up 70% of the modal */
-    max-height: 100%; /* Ensure it fits without overflowing */
-    width: auto; /* Ensure the width adjusts naturally */
-    object-fit: contain; /* Ensure image scales correctly without zooming */
+    max-height: 100%; /* Restrict image height to fit inside modal */
+    max-width: 100%; /* Ensure image never exceeds its container */
+    object-fit: contain; /* Ensure image scales correctly */
     margin-right: 10px;
 }
 
@@ -3441,7 +3441,7 @@ input, select, textarea {
     padding: 10px;
     font-size: 16px;
     max-height: 100%;
-    overflow-y: auto;
+    overflow-y: auto; /* Enable scrolling if caption overflows */
     word-wrap: break-word;
 }
 
@@ -3491,12 +3491,13 @@ input, select, textarea {
     .modal-body {
         flex-direction: column; /* Stack image and description vertically on mobile */
         max-width: 90%;
+        max-height: 90%;
     }
 
     .modal-content {
         max-width: 100%; /* Image takes full width on mobile */
         max-height: 60%; /* Restrict height */
-        width: auto; /* Allow width to adjust naturally */
+        object-fit: contain; /* Ensure the image fits without zooming */
         margin-right: 0;
     }
 
