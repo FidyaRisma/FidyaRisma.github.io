@@ -3617,19 +3617,20 @@ input, select, textarea {
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    height: 500px; /* Increased height for larger thumbnail */
+    height: 550px; /* Fixed height for the container */
     padding: 20px;
     box-sizing: border-box;
     overflow: hidden;
 }
 
-/* Slideshow container to handle image size */
+/* Slideshow container with fixed size */
 .slideshow-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 85%; /* Increase the height for a larger thumbnail */
+    height: 85%; /* Fixed height for the slideshow container */
+    max-height: 85%; /* Prevents shifting when the image changes */
     position: relative;
 }
 
@@ -3637,7 +3638,7 @@ input, select, textarea {
 .image-container .slideshow-container img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain;
+    object-fit: contain; /* Ensure image fits without changing the container size */
     display: block;
 }
 
@@ -3687,6 +3688,27 @@ input, select, textarea {
     color: #333;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
-    height: 15%; /* Reduce height of description to allow more space for the image */
+    height: 15%; /* Reduced height for more space for the image */
     box-sizing: border-box;
+}
+
+/* General styling remains the same for desktop */
+
+/* Mobile view adjustments for navigation buttons */
+@media screen and (max-width: 768px) {
+    .prev-modal, .next-modal {
+        font-size: 16px; /* Reduce the button size for mobile */
+        padding: 8px; /* Smaller padding for mobile buttons */
+        left: 15%; /* Adjust button position to prevent overlap */
+        right: 15%;
+        background: rgba(0, 0, 0, 0.4); /* Adjust background transparency for less intrusive buttons */
+    }
+
+    /* Further reduce button size on very small screens */
+    @media screen and (max-width: 480px) {
+        .prev-modal, .next-modal {
+            font-size: 14px; /* Even smaller for very small screens */
+            padding: 6px; /* Reduce padding further */
+        }
+    }
 }
