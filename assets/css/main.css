@@ -3427,21 +3427,22 @@ input, select, textarea {
 
 /* Modal content (image) for desktop view */
 .modal-content {
-    flex: 0 0 50%; /* Image takes up 50% of the modal */
-    height: auto; /* Allow the image to adjust its height */
-    width: 100%; /* Ensure the image fills 50% of its container */
-    object-fit: contain; /* Ensure the image scales correctly */
+    flex: 1;
+    max-width: 50%; /* Ensure the image takes up 50% of the modal */
+    max-height: 100%;
+    object-fit: contain; /* Ensure image scales correctly */
     margin-right: 10px;
 }
 
 /* Caption/description for desktop view */
 #imageCaption {
-    flex: 0 0 50%; /* Description takes up 50% of the modal */
+    flex: 1;
     color: #ccc;
     padding: 10px;
     font-size: 16px;
+    max-width: 50%; /* Ensure the caption takes up 50% of the modal */
     max-height: 100%;
-    overflow-y: auto; /* Enable scrolling if caption overflows */
+    overflow-y: auto;
     word-wrap: break-word;
 }
 
@@ -3490,14 +3491,12 @@ input, select, textarea {
 @media screen and (max-width: 768px) {
     .modal-body {
         flex-direction: column; /* Stack image and description vertically on mobile */
-        max-width: 90%;
-        max-height: 90%;
+        max-width: 90%; /* Ensure it fits well on mobile */
     }
 
     .modal-content {
         max-width: 100%; /* Image takes full width on mobile */
-        max-height: 60%; /* Restrict height */
-        object-fit: contain; /* Ensure the image fits without zooming */
+        max-height: 60%;
         margin-right: 0;
     }
 
