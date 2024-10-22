@@ -3509,3 +3509,8 @@ input, select, textarea {
     }
 }
 
+/* Ensure "Fidya Rismayatika" stays on one line */
+#logo a {
+    white-space: nowrap; /* Prevent line breaks */
+}
+
