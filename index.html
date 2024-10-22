@@ -560,27 +560,28 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 <!-- JavaScript -->
 <script>
     // Object to store the images and captions for all projects
-    var projects = {
-        1: [
-            { src: "images/pic01_thumb.jpg", caption: "Description for Image 1", modalSrc: "images/pic01.jpg" },
-            { src: "images/pic02_thumb.jpg", caption: "Description for Image 2", modalSrc: "images/pic02.jpg" },
-            { src: "images/pic01_3_thumb.jpg", caption: "Description for Image 3", modalSrc: "images/pic01_3.jpg" }
-        ],
-        2: [
-            { src: "images/pic02_1_thumb.jpg", caption: "Description for Image 1", modalSrc: "images/pic02_1.jpg" },
-            { src: "images/pic02_2_thumb.jpg", caption: "Description for Image 2", modalSrc: "images/pic02_2.jpg" },
-            { src: "images/pic02_3_thumb.jpg", caption: "Description for Image 3", modalSrc: "images/pic02_3.jpg" }
-        ],
+var projects = {
+    1: [
+        { src: "images/pic01_thumb.jpg", title: "Title 1", caption: "Description for Image 1", modalSrc: "images/pic01.jpg" },
+        { src: "images/pic02_thumb.jpg", title: "Title 2", caption: "Description for Image 2", modalSrc: "images/pic02.jpg" },
+        { src: "images/pic01_3_thumb.jpg", title: "Title 3", caption: "Description for Image 3", modalSrc: "images/pic01_3.jpg" }
+    ],
+    2: [
+        { src: "images/pic02_1_thumb.jpg", title: "Title 1", caption: "Description for Image 1", modalSrc: "images/pic02_1.jpg" },
+        { src: "images/pic02_2_thumb.jpg", title: "Title 2", caption: "Description for Image 2", modalSrc: "images/pic02_2.jpg" },
+        { src: "images/pic02_3_thumb.jpg", title: "Title 3", caption: "Description for Image 3", modalSrc: "images/pic02_3.jpg" }
+    ],
+ 
         3: [
-            { src: "images/pic03_1_thumb.jpg", caption: "Description for Image 1", modalSrc: "images/pic03_1.jpg" },
-            { src: "images/pic03_2_thumb.jpg", caption: "Description for Image 2", modalSrc: "images/pic03_2.jpg" },
-            { src: "images/pic03_3_thumb.jpg", caption: "Description for Image 3", modalSrc: "images/pic03_3.jpg" }
-        ],
+        { src: "images/pic02_1_thumb.jpg", title: "Title 1", caption: "Description for Image 1", modalSrc: "images/pic02_1.jpg" },
+        { src: "images/pic02_2_thumb.jpg", title: "Title 2", caption: "Description for Image 2", modalSrc: "images/pic02_2.jpg" },
+        { src: "images/pic02_3_thumb.jpg", title: "Title 3", caption: "Description for Image 3", modalSrc: "images/pic02_3.jpg" }
+    ],
         4: [
-            { src: "images/pic04_1_thumb.jpg", caption: "Description for Image 1", modalSrc: "images/pic04_1.jpg" },
-            { src: "images/pic04_2_thumb.jpg", caption: "Description for Image 2", modalSrc: "images/pic04_2.jpg" },
-            { src: "images/pic04_3_thumb.jpg", caption: "Description for Image 3", modalSrc: "images/pic04_3.jpg" }
-        ]
+        { src: "images/pic02_1_thumb.jpg", title: "Title 1", caption: "Description for Image 1", modalSrc: "images/pic02_1.jpg" },
+        { src: "images/pic02_2_thumb.jpg", title: "Title 2", caption: "Description for Image 2", modalSrc: "images/pic02_2.jpg" },
+        { src: "images/pic02_3_thumb.jpg", title: "Title 3", caption: "Description for Image 3", modalSrc: "images/pic02_3.jpg" }
+    ]
     };
 
 
@@ -604,16 +605,19 @@ function plusSlides(n, project) {
 function updateSlide(project) {
     var imageElement = document.getElementById("currentImage" + project);
     var captionElement = document.getElementById("caption" + project);
+    var titleElement = document.getElementById("title" + project);  // Add this to manage the title
 
-    // Update image source and caption
+    // Update image source, title, and caption
     imageElement.src = projects[project][projectIndices[project]].src;
     captionElement.innerHTML = projects[project][projectIndices[project]].caption;
+    titleElement.innerHTML = projects[project][projectIndices[project]].title; // Update the title
 
     // Open the image in the modal when clicked
     imageElement.onclick = function() {
         openModal(project, projectIndices[project]);
     };
 }
+
 
 // Initialize the first image for each project on page load
 document.addEventListener("DOMContentLoaded", function() {
