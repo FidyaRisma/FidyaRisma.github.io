@@ -135,7 +135,7 @@
     <span class="close" onclick="closeModal()">&times;</span> <!-- Close button -->
 
     <div class="modal-body">
-        <!-- Modal content (image) -->
+        <!-- Modal content (enlarged image) -->
         <img class="modal-content" id="fullImage">
         
         <!-- Caption for the enlarged image -->
@@ -633,7 +633,6 @@ function openModal(project, slideIndex) {
     var modalImg = document.getElementById("fullImage");
     var captionText = document.getElementById("imageCaption");
 
-    // Set the image and caption based on the current project and slide index
     modal.classList.add("active");
     modalImg.src = projects[project][slideIndex].modalSrc;
     captionText.innerHTML = projects[project][slideIndex].caption;
@@ -649,12 +648,11 @@ function closeModal() {
 function plusSlidesModal(n) {
     currentSlideIndex += n;
 
-    // Ensure slide index loops within available images for the project
     if (currentSlideIndex >= projects[currentProject].length) {
-        currentSlideIndex = 0; // Loop back to the first image
+        currentSlideIndex = 0;
     }
     if (currentSlideIndex < 0) {
-        currentSlideIndex = projects[currentProject].length - 1; // Loop to the last image
+        currentSlideIndex = projects[currentProject].length - 1;
     }
 
     var modalImg = document.getElementById("fullImage");
