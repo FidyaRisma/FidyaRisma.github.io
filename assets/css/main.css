@@ -3428,7 +3428,7 @@ input, select, textarea {
 /* Modal content (image) for desktop view */
 .modal-content {
     flex: 1;
-    max-width: 50%; /* Ensure the image takes up 50% of the modal */
+    max-width: 70%; /* Ensure the image takes up 50% of the modal */
     max-height: 100%;
     object-fit: contain; /* Ensure image scales correctly */
     margin-right: 10px;
@@ -3440,7 +3440,7 @@ input, select, textarea {
     color: #ccc;
     padding: 10px;
     font-size: 16px;
-    max-width: 50%; /* Ensure the caption takes up 50% of the modal */
+    max-width: 30%; /* Ensure the caption takes up 50% of the modal */
     max-height: 100%;
     overflow-y: auto;
     word-wrap: break-word;
