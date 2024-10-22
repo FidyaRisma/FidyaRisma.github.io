@@ -3509,37 +3509,3 @@ input, select, textarea {
     }
 }
 
-/* Container for the slideshow and its description */
-.image-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%; /* Adjust width as needed */
-    height: 400px; /* Set a fixed height for the container */
-    padding: 20px;
-    box-sizing: border-box; /* Include padding in the total height */
-    overflow: hidden; /* Prevent content overflow */
-}
-
-/* Slideshow image styling */
-.image-container .slideshow-container img {
-    max-width: 100%;
-    max-height: 100%; /* Ensure the image fits within the container */
-    display: block;
-    object-fit: contain; /* Keep aspect ratio without stretching */
-}
-
-/* Description styling (fixed position relative to the container) */
-.image-container .image-description {
-    position: relative;
-    text-align: center;
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    background-color: #f9f9f9;
-    color: #333;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    flex-shrink: 0; /* Prevent the description from resizing */
-}
