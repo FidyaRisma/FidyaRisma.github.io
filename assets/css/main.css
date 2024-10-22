@@ -3623,24 +3623,25 @@ input, select, textarea {
     overflow: hidden;
 }
 
-/* Full container and image styling */
+/* Slideshow container to handle image size */
 .slideshow-container {
-    width: 100%;
-    height: 400px; /* Fixed height */
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Prevent the content from overflowing */
+    width: 100%;
+    height: 85%; /* Increase the height for a larger thumbnail */
+    position: relative;
 }
 
-.slideshow-container img {
+/* Slideshow image styling */
+.image-container .slideshow-container img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain; /* Ensure the image fits within the container */
+    object-fit: contain;
+    display: block;
 }
 
-/* Navigation buttons styling */
+/* Navigation buttons closer to the center */
 .prev-modal, .next-modal {
     position: absolute;
     top: 50%;
@@ -3666,41 +3667,26 @@ input, select, textarea {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Mobile-specific adjustments */
-@media screen and (max-width: 768px) {
-    .prev-modal, .next-modal {
-        font-size: 16px; /* Reduce size for mobile */
-        padding: 8px;
-        top: 50%; /* Center vertically */
-        transform: translateY(-50%); /* Ensure buttons stay centered */
-    }
-
-    .slideshow-container {
-        height: 300px; /* Adjust the height for mobile */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .prev-modal, .next-modal {
-        font-size: 14px; /* Further reduce size for very small screens */
-        padding: 6px;
-    }
-}
-
-/* Ensure that the image container for the title/description stays fixed */
-.image-container .image-title,
-.image-container .image-description {
-    position: relative;
+/* Styling for Image Title */
+.image-container .image-title {
     width: 100%;
-    text-align: center;
-    padding: 10px;
     font-size: 16px;
-    background-color: #f9f9f9;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px 0;
     color: #333;
 }
 
+/* Styling for Full Description */
 .image-container .image-description {
-    height: 15%;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
+    height: 15%; /* Reduce height of description to allow more space for the image */
     box-sizing: border-box;
 }
