@@ -3251,11 +3251,6 @@ input, select, textarea {
 
 	}
 
-/* Ensure "Fidya Rismayatika" stays on one line */
-#logo a {
-    white-space: nowrap; /* Prevent line breaks */
-}
-
 /* XSmall */
 
 	@media screen and (max-width: 480px) {
