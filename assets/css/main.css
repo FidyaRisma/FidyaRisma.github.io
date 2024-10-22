@@ -3427,16 +3427,16 @@ input, select, textarea {
 
 /* Modal content (image) for desktop view */
 .modal-content {
-    flex: 0 0 70%; /* Image takes up 70% of the modal */
+    flex: 0 0 50%; /* Image takes up 50% of the modal */
     height: auto; /* Allow the image to adjust its height */
-    width: 100%; /* Ensure the image fills 70% of its container */
+    width: 100%; /* Ensure the image fills 50% of its container */
     object-fit: contain; /* Ensure the image scales correctly */
     margin-right: 10px;
 }
 
 /* Caption/description for desktop view */
 #imageCaption {
-    flex: 0 0 30%; /* Description takes up 30% of the modal */
+    flex: 0 0 50%; /* Description takes up 50% of the modal */
     color: #ccc;
     padding: 10px;
     font-size: 16px;
