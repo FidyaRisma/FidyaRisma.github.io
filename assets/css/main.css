@@ -3429,31 +3429,13 @@ input, select, textarea {
     object-fit: contain;
 }
 
-/* Title and Description - Desktop */
-.modal-body .modal-description {
-    width: 35%; /* Title and description take 35% of the width */
-    padding-left: 20px; /* Add some spacing between the image and title/description */
+/* Caption (description) - Desktop */
+.modal-body #imageCaption {
+    width: 35%; /* Description takes 35% of the width */
+    padding-left: 20px; /* Add some spacing between the image and caption */
     color: #ccc;
     overflow-y: auto; /* Enable scrolling if the description is long */
     word-wrap: break-word;
-}
-
-/* Title section inside modal */
-.modal-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 10px;
-}
-
-/* Image description styling */
-.modal-description .image-description {
-    font-size: 16px;
-    color: white;
-    background-color: #333; /* Use a background for contrast */
-    padding: 10px;
-    max-height: 60%; /* Prevent description from overflowing */
-    overflow-y: auto;
 }
 
 /* Close Button */
@@ -3509,23 +3491,15 @@ input, select, textarea {
 
     .modal-body .modal-content {
         width: 100%; /* Image takes full width */
-        max-height: 60%; /* Ensure space for the title and description */
+        max-height: 60%; /* Ensure space for the caption */
     }
 
-    .modal-description {
-        width: 100%; /* Title and description take full width */
+    #imageCaption {
+        width: 100%; /* Caption takes full width */
         padding-left: 0;
         max-height: 40%; /* Ensure enough space for scrolling text */
+        overflow-y: auto; /* Enable scrolling if the description is long */
         font-size: 14px;
-    }
-
-    .modal-title {
-        font-size: 20px; /* Slightly smaller title for mobile */
-    }
-
-    .image-description {
-        font-size: 14px;
-        max-height: 35%; /* Adjust size for mobile */
     }
 
     .close {
@@ -3598,7 +3572,7 @@ input, select, textarea {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Caption/Description styling in thumbnail */
+/* Caption/Description styling */
 .image-container .image-description {
     width: 100%;
     padding: 10px;

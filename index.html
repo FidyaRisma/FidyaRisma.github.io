@@ -560,29 +560,29 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 <!-- JavaScript -->
 <script>
     // Object to store the images and captions for all projects
-    // Object to store the images, titles, and captions for all projects
-var projects = {
-    1: [
-        { src: "images/pic01_thumb.jpg", title: "Title for Image 1", caption: "Description for Image 1", modalSrc: "images/pic01.jpg" },
-        { src: "images/pic02_thumb.jpg", title: "Title for Image 2", caption: "Description for Image 2", modalSrc: "images/pic02.jpg" },
-        { src: "images/pic01_3_thumb.jpg", title: "Title for Image 3", caption: "Description for Image 3", modalSrc: "images/pic01_3.jpg" }
-    ],
-    2: [
-        { src: "images/pic02_1_thumb.jpg", title: "Title for Image 1", caption: "Description for Image 1", modalSrc: "images/pic02_1.jpg" },
-        { src: "images/pic02_2_thumb.jpg", title: "Title for Image 2", caption: "Description for Image 2", modalSrc: "images/pic02_2.jpg" },
-        { src: "images/pic02_3_thumb.jpg", title: "Title for Image 3", caption: "Description for Image 3", modalSrc: "images/pic02_3.jpg" }
-    ],
-    3: [
-        { src: "images/pic03_1_thumb.jpg", title: "Title for Image 1", caption: "Description for Image 1", modalSrc: "images/pic03_1.jpg" },
-        { src: "images/pic03_2_thumb.jpg", title: "Title for Image 2", caption: "Description for Image 2", modalSrc: "images/pic03_2.jpg" },
-        { src: "images/pic03_3_thumb.jpg", title: "Title for Image 3", caption: "Description for Image 3", modalSrc: "images/pic03_3.jpg" }
-    ],
-    4: [
-        { src: "images/pic04_1_thumb.jpg", title: "Title for Image 1", caption: "Description for Image 1", modalSrc: "images/pic04_1.jpg" },
-        { src: "images/pic04_2_thumb.jpg", title: "Title for Image 2", caption: "Description for Image 2", modalSrc: "images/pic04_2.jpg" },
-        { src: "images/pic04_3_thumb.jpg", title: "Title for Image 3", caption: "Description for Image 3", modalSrc: "images/pic04_3.jpg" }
-    ]
-};
+    var projects = {
+        1: [
+            { src: "images/pic01_thumb.jpg", caption: "Description for Image 1", modalSrc: "images/pic01.jpg" },
+            { src: "images/pic02_thumb.jpg", caption: "Description for Image 2", modalSrc: "images/pic02.jpg" },
+            { src: "images/pic01_3_thumb.jpg", caption: "Description for Image 3", modalSrc: "images/pic01_3.jpg" }
+        ],
+        2: [
+            { src: "images/pic02_1_thumb.jpg", caption: "Description for Image 1", modalSrc: "images/pic02_1.jpg" },
+            { src: "images/pic02_2_thumb.jpg", caption: "Description for Image 2", modalSrc: "images/pic02_2.jpg" },
+            { src: "images/pic02_3_thumb.jpg", caption: "Description for Image 3", modalSrc: "images/pic02_3.jpg" }
+        ],
+        3: [
+            { src: "images/pic03_1_thumb.jpg", caption: "Description for Image 1", modalSrc: "images/pic03_1.jpg" },
+            { src: "images/pic03_2_thumb.jpg", caption: "Description for Image 2", modalSrc: "images/pic03_2.jpg" },
+            { src: "images/pic03_3_thumb.jpg", caption: "Description for Image 3", modalSrc: "images/pic03_3.jpg" }
+        ],
+        4: [
+            { src: "images/pic04_1_thumb.jpg", caption: "Description for Image 1", modalSrc: "images/pic04_1.jpg" },
+            { src: "images/pic04_2_thumb.jpg", caption: "Description for Image 2", modalSrc: "images/pic04_2.jpg" },
+            { src: "images/pic04_3_thumb.jpg", caption: "Description for Image 3", modalSrc: "images/pic04_3.jpg" }
+        ]
+    };
+
 
 // Initialize index for each project
 var projectIndices = { 1: 0, 2: 0, 3: 0, 4: 0 };
@@ -600,16 +600,14 @@ function plusSlides(n, project) {
     updateSlide(project);
 }
 
-// Function to update the image, title, and caption for any project
+// Function to update the image and caption for any project
 function updateSlide(project) {
     var imageElement = document.getElementById("currentImage" + project);
     var captionElement = document.getElementById("caption" + project);
-    var titleElement = document.getElementById("imageTitle" + project); // Update the title
 
-    // Update image source, title, and caption
+    // Update image source and caption
     imageElement.src = projects[project][projectIndices[project]].src;
     captionElement.innerHTML = projects[project][projectIndices[project]].caption;
-    titleElement.innerHTML = projects[project][projectIndices[project]].title; // Update title dynamically
 
     // Open the image in the modal when clicked
     imageElement.onclick = function() {
@@ -628,7 +626,7 @@ document.addEventListener("DOMContentLoaded", function() {
 var currentProject = 0;
 var currentSlideIndex = 0;
 
-// Function to open the modal and show the selected image, title, and description
+// Function to open the modal and show the selected image
 function openModal(project, slideIndex) {
     currentProject = project;
     currentSlideIndex = slideIndex;
@@ -636,12 +634,10 @@ function openModal(project, slideIndex) {
     var modal = document.getElementById("imageModal");
     var modalImg = document.getElementById("fullImage");
     var captionText = document.getElementById("imageCaption");
-    var modalTitle = document.getElementById("modalTitle"); // Title in modal
 
     modal.classList.add("active");
     modalImg.src = projects[project][slideIndex].modalSrc;
     captionText.innerHTML = projects[project][slideIndex].caption;
-    modalTitle.innerHTML = projects[project][slideIndex].title; // Set the title in modal
 }
 
 // Function to close the modal
@@ -663,11 +659,9 @@ function plusSlidesModal(n) {
 
     var modalImg = document.getElementById("fullImage");
     var captionText = document.getElementById("imageCaption");
-    var modalTitle = document.getElementById("modalTitle"); // Update title in modal
 
     modalImg.src = projects[currentProject][currentSlideIndex].modalSrc;
     captionText.innerHTML = projects[currentProject][currentSlideIndex].caption;
-    modalTitle.innerHTML = projects[currentProject][currentSlideIndex].title; // Update title dynamically
 }
 
 
