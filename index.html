@@ -81,21 +81,22 @@
     <h4>Map Layouting (Cartography)</h4>
       <p class="about-text">This portofolio group includes the map I produced with various cartography styles. As a geographer, it is important to be able to visualize your idea and data into easily understandble maps for reader. The map layouting was done mostly on ArcMap 10.6 and MATLAB R2024a via m_map library. </p>
 
-  <!-- Thumbnail View with Navigation Buttons -->
+<!-- Thumbnail View with Navigation Buttons -->
 <div class="project">
     <div class="image-container">
         <div class="slideshow-container">
             <!-- Thumbnail Image -->
             <img id="currentImage1" src="images/pic01_thumb.jpg" class="slide-image" alt="Project Image 1" onclick="openModal(1, 0)">
             <!-- Navigation Buttons for Thumbnail View -->
-            <a class="prev-thumbnail" onclick="plusSlides(-1, 1)">&#10094;</a>
-            <a class="next-thumbnail" onclick="plusSlides(1, 1)">&#10095;</a>
+            <a class="prev-thumbnail" onclick="plusSlides(-1, 1)" style="position: absolute; left: 0;">&#10094;</a> <!-- Prev Button on Left -->
+            <a class="next-thumbnail" onclick="plusSlides(1, 1)" style="position: absolute; right: 0;">&#10095;</a> <!-- Next Button on Right -->
         </div>
 
         <!-- Image Title in Thumbnail -->
         <p id="imageTitle1" class="image-title">Title for Image 1</p>
     </div>
 </div>
+
 
 
 
@@ -138,7 +139,7 @@
     </div>
 </div>
 
-<!-- Modal View -->
+<!-- Modal View with Navigation Buttons -->
 <div id="imageModal" class="modal">
     <span class="close" onclick="closeModal()">&times;</span>
     <div class="modal-body">
@@ -152,8 +153,8 @@
         </div>
     </div>
     <!-- Navigation Buttons for Modal View -->
-    <a class="prev-modal" onclick="plusSlidesModal(-1)">&#10094;</a>
-    <a class="next-modal" onclick="plusSlidesModal(1)">&#10095;</a>
+    <a class="prev-modal" onclick="plusSlidesModal(-1)" style="position: absolute; left: 0;">&#10094;</a> <!-- Prev Button on Left -->
+    <a class="next-modal" onclick="plusSlidesModal(1)" style="position: absolute; right: 0;">&#10095;</a> <!-- Next Button on Right -->
 </div>
 
 						<!-- Three -->
