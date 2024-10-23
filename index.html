@@ -132,24 +132,21 @@
     </div>
 </div>
 
-<!-- The Modal structure -->
+<!-- Modal Structure -->
 <div id="imageModal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
+    <span class="close" onclick="closeModal()">&times;</span> <!-- Close button -->
 
-    <!-- Enlarged Image -->
-    <img class="modal-content" id="fullImage" />
-
-    <!-- Navigation Buttons in Modal -->
-    <a class="prev-modal" onclick="changeModalSlide(-1)">&#10094;</a>
-    <a class="next-modal" onclick="changeModalSlide(1)">&#10095;</a>
-
-    <!-- Image Title and Description in modal view, positioned on the right-hand side -->
-    <div class="modal-description">
-        <div id="modalTitle" class="modal-title">Title for the image in modal view</div>
-        <div id="descriptionModal1" class="image-description">
-            Full description of the image will go here.
-        </div>
+    <div class="modal-body">
+        <!-- Modal content (enlarged image) -->
+        <img class="modal-content" id="fullImage">
+        
+        <!-- Caption for the enlarged image -->
+        <div id="imageCaption"></div>
     </div>
+
+    <!-- Next and Previous Buttons for the modal -->
+    <a class="prev-modal" onclick="plusSlidesModal(-1)">&#10094;</a>
+    <a class="next-modal" onclick="plusSlidesModal(1)">&#10095;</a>
 </div>
 
 
@@ -631,36 +628,22 @@ var currentSlideIndex = 0;
 
 // Function to open the modal and show the selected image
 function openModal(project, slideIndex) {
+    currentProject = project;
+    currentSlideIndex = slideIndex;
+
     var modal = document.getElementById("imageModal");
     var modalImg = document.getElementById("fullImage");
-    var descriptionModal = document.getElementById("descriptionModal1");
-    var modalTitle = document.getElementById("modalTitle"); // Title in modal
+    var captionText = document.getElementById("imageCaption");
 
-    modal.style.display = "block"; // Display the modal
-    modalImg.src = projects[project][slideIndex].modalSrc; // Set the enlarged image
-
-    // Show the full description and title in modal view
-    descriptionModal.innerHTML = projects[project][slideIndex].caption; // Update the description
-    modalTitle.innerHTML = projects[project][slideIndex].title; // Update the title
+    modal.classList.add("active");
+    modalImg.src = projects[project][slideIndex].modalSrc;
+    captionText.innerHTML = projects[project][slideIndex].caption;
 }
 
 // Function to close the modal
 function closeModal() {
     var modal = document.getElementById("imageModal");
-    modal.style.display = "none"; // Hide the modal
-}
-
-// Function for navigating between images in modal
-function changeModalSlide(direction) {
-    var currentSlideIndex = /* retrieve current slide index logic */;
-    var project = /* retrieve project logic */;
-    
-    var newIndex = currentSlideIndex + direction;
-    if (newIndex < 0 || newIndex >= projects[project].length) {
-        return; // Stop if out of bounds
-    }
-
-    openModal(project, newIndex);
+    modal.classList.remove("active");
 }
 
 // Function to navigate between slides inside the modal
