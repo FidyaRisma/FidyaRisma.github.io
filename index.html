@@ -81,17 +81,22 @@
     <h4>Map Layouting (Cartography)</h4>
       <p class="about-text">This portofolio group includes the map I produced with various cartography styles. As a geographer, it is important to be able to visualize your idea and data into easily understandble maps for reader. The map layouting was done mostly on ArcMap 10.6 and MATLAB R2024a via m_map library. </p>
 
-   <d
+  <!-- Thumbnail View -->
+<div class="project">
     <div class="image-container">
         <div class="slideshow-container">
-            <img id="currentImage1" src="images/pic01_thumb.jpg" class="slide-image" alt="Project Image 1">
+            <!-- Thumbnail Image -->
+            <img id="currentImage1" src="images/pic01_thumb.jpg" class="slide-image" alt="Project Image 1" onclick="openModal(1, 0)">
             <a class="prev-modal" onclick="plusSlides(-1, 1)">&#10094;</a>
             <a class="next-modal" onclick="plusSlides(1, 1)">&#10095;</a>
         </div>
 
-        <p id="caption1" class="image-description">Description for Image 1</p>
+        <!-- Image Title in Thumbnail -->
+        <p id="imageTitle1" class="image-title">Title for Image 1</p>
     </div>
 </div>
+
+
 
 <!-- Project 2 -->
 <div class="project">
@@ -132,23 +137,22 @@
     </div>
 </div>
 
-<!-- Modal Structure -->
+<!-- Modal View -->
 <div id="imageModal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span> <!-- Close button -->
-
+    <span class="close" onclick="closeModal()">&times;</span>
     <div class="modal-body">
-        <!-- Modal content (enlarged image) -->
-        <img class="modal-content" id="fullImage">
-        
-        <!-- Caption for the enlarged image -->
-        <div id="imageCaption"></div>
-    </div>
+        <!-- Enlarged Image in the Modal -->
+        <img class="modal-content" id="fullImage" />
 
-    <!-- Next and Previous Buttons for the modal -->
+        <!-- Title and Description on Right (Desktop) or Below (Mobile) -->
+        <div class="modal-description">
+            <div id="modalTitle1" class="modal-title">Title for Image 1</div>
+            <div id="descriptionModal1" class="image-description">Detailed description for Image 1 goes here.</div>
+        </div>
+    </div>
     <a class="prev-modal" onclick="plusSlidesModal(-1)">&#10094;</a>
     <a class="next-modal" onclick="plusSlidesModal(1)">&#10095;</a>
 </div>
-
 
 						<!-- Three -->
 							<section id="three">
@@ -626,18 +630,17 @@ document.addEventListener("DOMContentLoaded", function() {
 var currentProject = 0;
 var currentSlideIndex = 0;
 
-// Function to open the modal and show the selected image
+// Function to open the modal and show the selected image, title, and description
 function openModal(project, slideIndex) {
-    currentProject = project;
-    currentSlideIndex = slideIndex;
-
     var modal = document.getElementById("imageModal");
     var modalImg = document.getElementById("fullImage");
-    var captionText = document.getElementById("imageCaption");
+    var modalTitle = document.getElementById("modalTitle1");
+    var modalDescription = document.getElementById("descriptionModal1");
 
     modal.classList.add("active");
     modalImg.src = projects[project][slideIndex].modalSrc;
-    captionText.innerHTML = projects[project][slideIndex].caption;
+    modalTitle.innerHTML = projects[project][slideIndex].title;
+    modalDescription.innerHTML = projects[project][slideIndex].caption;
 }
 
 // Function to close the modal
@@ -646,10 +649,9 @@ function closeModal() {
     modal.classList.remove("active");
 }
 
-// Function to navigate between slides inside the modal
+// Function for navigating between slides inside the modal
 function plusSlidesModal(n) {
     currentSlideIndex += n;
-
     if (currentSlideIndex >= projects[currentProject].length) {
         currentSlideIndex = 0;
     }
@@ -657,13 +659,8 @@ function plusSlidesModal(n) {
         currentSlideIndex = projects[currentProject].length - 1;
     }
 
-    var modalImg = document.getElementById("fullImage");
-    var captionText = document.getElementById("imageCaption");
-
-    modalImg.src = projects[currentProject][currentSlideIndex].modalSrc;
-    captionText.innerHTML = projects[currentProject][currentSlideIndex].caption;
+    openModal(currentProject, currentSlideIndex);
 }
-
 
 </script>
 

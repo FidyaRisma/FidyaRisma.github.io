@@ -3438,6 +3438,24 @@ input, select, textarea {
     word-wrap: break-word;
 }
 
+/* Title section inside modal */
+.modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Image description styling */
+.modal-description .image-description {
+    font-size: 16px;
+    color: white;
+    background-color: #333; /* Use a background for contrast */
+    padding: 10px;
+    max-height: 60%; /* Prevent description from overflowing */
+    overflow-y: auto;
+}
+
 /* Close Button */
 .close {
     position: absolute;
@@ -3466,19 +3484,31 @@ input, select, textarea {
     transition: 0.6s ease;
     user-select: none;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 999; /* Ensure buttons are above modal content */
+    z-index: 999; /* Ensure buttons are above the image */
 }
 
+/* Position buttons closer to the center for better usability */
 .prev-modal {
-    left: 10px;
+    left: 10px; /* Adjust as needed */
 }
 
 .next-modal {
-    right: 10px;
+    right: 10px; /* Adjust as needed */
 }
 
+/* Hover effect for navigation buttons */
 .prev-modal:hover, .next-modal:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Mobile view adjustments for navigation buttons */
+@media screen and (max-width: 768px) {
+    .prev-modal, .next-modal {
+        font-size: 18px; /* Smaller button size for mobile */
+        padding: 10px; /* Smaller padding */
+        left: 15px; /* Adjust button position */
+        right: 15px; /* Keep buttons away from the edges */
+    }
 }
 
 /* Mobile view - Stack image and caption vertically */
@@ -3486,7 +3516,7 @@ input, select, textarea {
     .modal-body {
         display: block; /* Stack image and caption vertically */
         width: 100%; /* Full width on mobile */
-        max-height: 80%;
+        max-height: 80%; /* Adjust height */
     }
 
     .modal-body .modal-content {
@@ -3498,7 +3528,6 @@ input, select, textarea {
         width: 100%; /* Caption takes full width */
         padding-left: 0;
         max-height: 40%; /* Ensure enough space for scrolling text */
-        overflow-y: auto; /* Enable scrolling if the description is long */
         font-size: 14px;
     }
 
@@ -3572,7 +3601,7 @@ input, select, textarea {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Caption/Description styling */
+/* Caption/Description styling in thumbnail */
 .image-container .image-description {
     width: 100%;
     padding: 10px;
