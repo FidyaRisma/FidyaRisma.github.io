@@ -634,12 +634,10 @@ function openModal(project, slideIndex) {
     var modal = document.getElementById("imageModal");
     var modalImg = document.getElementById("fullImage");
     var captionText = document.getElementById("imageCaption");
-    var modalTitle = document.getElementById("modalTitle"); // Title in modal
 
     modal.classList.add("active");
     modalImg.src = projects[project][slideIndex].modalSrc;
     captionText.innerHTML = projects[project][slideIndex].caption;
-    modalTitle.innerHTML = projects[project][slideIndex].title; // Set the title in modal
 }
 
 // Function to close the modal
@@ -647,7 +645,6 @@ function closeModal() {
     var modal = document.getElementById("imageModal");
     modal.classList.remove("active");
 }
-
 
 // Function to navigate between slides inside the modal
 function plusSlidesModal(n) {

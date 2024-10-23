@@ -3438,24 +3438,6 @@ input, select, textarea {
     word-wrap: break-word;
 }
 
-/* Title section inside modal */
-.modal-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 10px;
-}
-
-/* Image description styling */
-.modal-description .image-description {
-    font-size: 16px;
-    color: white;
-    background-color: #333; /* Use a background for contrast */
-    padding: 10px;
-    max-height: 60%; /* Prevent description from overflowing */
-    overflow-y: auto;
-}
-
 /* Close Button */
 .close {
     position: absolute;
@@ -3484,65 +3466,145 @@ input, select, textarea {
     transition: 0.6s ease;
     user-select: none;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 999; /* Ensure buttons are above the image */
+    z-index: 999; /* Ensure buttons are above modal content */
 }
 
-/* Position buttons closer to the center for better usability */
 .prev-modal {
-    left: 10px; /* Adjust as needed */
+    left: 10px;
 }
 
 .next-modal {
-    right: 10px; /* Adjust as needed */
+    right: 10px;
 }
 
-/* Hover effect for navigation buttons */
 .prev-modal:hover, .next-modal:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Mobile view adjustments for navigation buttons */
-@media screen and (max-width: 768px) {
-    .prev-modal, .next-modal {
-        font-size: 18px; /* Smaller button size for mobile */
-        padding: 10px; /* Smaller padding */
-        left: 15px; /* Adjust button position */
-        right: 15px; /* Keep buttons away from the edges */
-    }
-}
-
-/* Modal layout adjustments for mobile */
+/* Mobile view - Stack image and caption vertically */
 @media screen and (max-width: 768px) {
     .modal-body {
         display: block; /* Stack image and caption vertically */
         width: 100%; /* Full width on mobile */
-        max-height: 80%; /* Adjust height */
+        max-height: 80%;
     }
 
     .modal-body .modal-content {
         width: 100%; /* Image takes full width */
-        max-height: 60%; /* Ensure space for the title and description */
+        max-height: 60%; /* Ensure space for the caption */
     }
 
-    .modal-description {
+    #imageCaption {
         width: 100%; /* Caption takes full width */
         padding-left: 0;
         max-height: 40%; /* Ensure enough space for scrolling text */
-        overflow-y: auto;
-    }
-
-    .modal-title {
-        font-size: 20px; /* Slightly smaller title for mobile */
-    }
-
-    .image-description {
+        overflow-y: auto; /* Enable scrolling if the description is long */
         font-size: 14px;
-        max-height: 35%; /* Adjust size for mobile */
     }
 
     .close {
         font-size: 30px;
         top: 15px;
         right: 15px;
+    }
+}
+
+/* Ensure "Fidya Rismayatika" stays on one line */
+#logo a {
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+/* Container for the slideshow and its description */
+.image-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; /* Adjust width as needed */
+    height: 450px; /* Increase height for a larger thumbnail container */
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Slideshow container to handle image size */
+.slideshow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%; /* Increase the height for a larger thumbnail container */
+    position: relative;
+}
+
+/* Slideshow image styling */
+.image-container .slideshow-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Navigation buttons closer to the center */
+.prev-modal, .next-modal {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    cursor: pointer;
+}
+
+.prev-modal {
+    left: 5%; /* Bring buttons closer to the center */
+}
+
+.next-modal {
+    right: 5%; /* Bring buttons closer to the center */
+}
+
+.prev-modal:hover, .next-modal:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption/Description styling */
+.image-container .image-description {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    height: 20%; /* Reduce the size of the description container */
+    box-sizing: border-box;
+}
+
+/* Mobile view adjustments */
+@media screen and (max-width: 768px) {
+    .image-container {
+        height: 400px; /* Slightly smaller container for mobile */
+    }
+
+    .slideshow-container {
+        height: 70%; /* Adjust for mobile to maintain proportions */
+    }
+
+    #imageCaption {
+        height: 30%; /* Adjust the description size for mobile */
+        font-size: 12px; /* Smaller font size for mobile */
+    }
+
+    .prev-modal, .next-modal {
+        font-size: 20px; /* Adjust button size for mobile */
+        padding: 12px;
+        left: 8%; /* Further adjust position for mobile */
+        right: 8%;
     }
 }
