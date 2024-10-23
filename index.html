@@ -150,9 +150,11 @@
             <div id="descriptionModal1" class="image-description">Detailed description for Image 1 goes here.</div>
         </div>
     </div>
+    <!-- Navigation Buttons -->
     <a class="prev-modal" onclick="plusSlidesModal(-1)">&#10094;</a>
     <a class="next-modal" onclick="plusSlidesModal(1)">&#10095;</a>
 </div>
+
 
 						<!-- Three -->
 							<section id="three">
@@ -626,12 +628,15 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// Track the current slide and project
-var currentProject = 0;
+// Variable to track the current project and slide index
+var currentProject = 1;
 var currentSlideIndex = 0;
 
 // Function to open the modal and show the selected image, title, and description
 function openModal(project, slideIndex) {
+    currentProject = project;
+    currentSlideIndex = slideIndex;
+
     var modal = document.getElementById("imageModal");
     var modalImg = document.getElementById("fullImage");
     var modalTitle = document.getElementById("modalTitle1");
@@ -649,18 +654,20 @@ function closeModal() {
     modal.classList.remove("active");
 }
 
-// Function for navigating between slides inside the modal
+// Function to navigate between slides inside the modal
 function plusSlidesModal(n) {
     currentSlideIndex += n;
+
     if (currentSlideIndex >= projects[currentProject].length) {
-        currentSlideIndex = 0;
+        currentSlideIndex = 0; // Loop back to the first image
     }
     if (currentSlideIndex < 0) {
-        currentSlideIndex = projects[currentProject].length - 1;
+        currentSlideIndex = projects[currentProject].length - 1; // Loop back to the last image
     }
 
     openModal(currentProject, currentSlideIndex);
 }
+
 
 </script>
 
