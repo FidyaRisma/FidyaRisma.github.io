@@ -3608,3 +3608,35 @@ input, select, textarea {
         right: 8%;
     }
 }
+
+/* Thumbnail view styling for image title */
+.image-container .image-title {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    box-sizing: border-box;
+    height: auto;
+}
+
+/* Image description hidden by default, only shown in modal */
+.image-description {
+    display: none; /* Hidden in thumbnail view */
+    padding: 10px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+/* Display the image description only in modal view */
+.modal .image-description {
+    display: block; /* Shown when modal is active */
+}
