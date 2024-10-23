@@ -87,9 +87,11 @@
         <div class="slideshow-container">
             <!-- Thumbnail Image -->
             <img id="currentImage1" src="images/pic01_thumb.jpg" class="slide-image" alt="Project Image 1" onclick="openModal(1, 0)">
+            <a class="prev-modal" onclick="plusSlides(-1, 1)">&#10094;</a>
+            <a class="next-modal" onclick="plusSlides(1, 1)">&#10095;</a>
         </div>
 
-        <!-- Image Title below thumbnail -->
+        <!-- Image Title in Thumbnail -->
         <p id="imageTitle1" class="image-title">Title for Image 1</p>
     </div>
 </div>
@@ -142,16 +144,12 @@
         <!-- Enlarged Image in the Modal -->
         <img class="modal-content" id="fullImage" />
 
-        <!-- Title and Description in the Modal -->
+        <!-- Title and Description on Right (Desktop) or Below (Mobile) -->
         <div class="modal-description">
             <div id="modalTitle1" class="modal-title">Title for Image 1</div>
             <div id="descriptionModal1" class="image-description">Detailed description for Image 1 goes here.</div>
         </div>
     </div>
-    <a class="prev-modal" onclick="plusSlidesModal(-1)">&#10094;</a>
-    <a class="next-modal" onclick="plusSlidesModal(1)">&#10095;</a>
-</div>
-  
     <!-- Navigation Buttons -->
     <a class="prev-modal" onclick="plusSlidesModal(-1)">&#10094;</a>
     <a class="next-modal" onclick="plusSlidesModal(1)">&#10095;</a>
@@ -607,14 +605,15 @@ function plusSlides(n, project) {
     }
     updateSlide(project);
 }
-// Function to update the image and title for any project in the thumbnail view
+
+// Function to update the image and caption for any project
 function updateSlide(project) {
     var imageElement = document.getElementById("currentImage" + project);
-    var titleElement = document.getElementById("imageTitle" + project); // Title in thumbnail view
+    var captionElement = document.getElementById("caption" + project);
 
-    // Ensure the image and title are updated
+    // Update image source and caption
     imageElement.src = projects[project][projectIndices[project]].src;
-    titleElement.innerHTML = projects[project][projectIndices[project]].title; // Update title dynamically
+    captionElement.innerHTML = projects[project][projectIndices[project]].caption;
 
     // Open the image in the modal when clicked
     imageElement.onclick = function() {
@@ -625,15 +624,13 @@ function updateSlide(project) {
 // Initialize the first image for each project on page load
 document.addEventListener("DOMContentLoaded", function() {
     for (var project in projects) {
-        updateSlide(project); // Initialize the images and titles for each project
+        updateSlide(project); // Initialize the images for each project
     }
 });
-
 
 // Variable to track the current project and slide index
 var currentProject = 1;
 var currentSlideIndex = 0;
-
 
 // Function to open the modal and show the selected image, title, and description
 function openModal(project, slideIndex) {
@@ -646,8 +643,6 @@ function openModal(project, slideIndex) {
     var modalDescription = document.getElementById("descriptionModal1");
 
     modal.classList.add("active");
-
-    // Ensure correct image, title, and description are shown in modal
     modalImg.src = projects[project][slideIndex].modalSrc;
     modalTitle.innerHTML = projects[project][slideIndex].title;
     modalDescription.innerHTML = projects[project][slideIndex].caption;
@@ -670,8 +665,9 @@ function plusSlidesModal(n) {
         currentSlideIndex = projects[currentProject].length - 1; // Loop back to the last image
     }
 
-    openModal(currentProject, currentSlideIndex); // Update modal with new content
+    openModal(currentProject, currentSlideIndex);
 }
+
 
 </script>
 
