@@ -643,15 +643,9 @@ function openModal(project, slideIndex) {
     var modalDescription = document.getElementById("descriptionModal1");
 
     modal.classList.add("active");
-
-    // Ensure correct image, title, and description are shown
-    if (projects[project][slideIndex]) {
-        modalImg.src = projects[project][slideIndex].modalSrc;
-        modalTitle.innerHTML = projects[project][slideIndex].title || "No Title Available";  // Fallback if title is missing
-        modalDescription.innerHTML = projects[project][slideIndex].caption || "No Description Available";  // Fallback if description is missing
-    } else {
-        console.log("Error: Image data not found.");
-    }
+    modalImg.src = projects[project][slideIndex].modalSrc;
+    modalTitle.innerHTML = projects[project][slideIndex].title;
+    modalDescription.innerHTML = projects[project][slideIndex].caption;
 }
 
 // Function to close the modal
@@ -664,7 +658,6 @@ function closeModal() {
 function plusSlidesModal(n) {
     currentSlideIndex += n;
 
-    // Loop through the slides in the modal
     if (currentSlideIndex >= projects[currentProject].length) {
         currentSlideIndex = 0; // Loop back to the first image
     }
@@ -672,9 +665,9 @@ function plusSlidesModal(n) {
         currentSlideIndex = projects[currentProject].length - 1; // Loop back to the last image
     }
 
-    // Update the modal with the new image, title, and description
     openModal(currentProject, currentSlideIndex);
 }
+
 
 </script>
 
