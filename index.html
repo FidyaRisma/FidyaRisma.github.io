@@ -81,23 +81,17 @@
     <h4>Map Layouting (Cartography)</h4>
       <p class="about-text">This portofolio group includes the map I produced with various cartography styles. As a geographer, it is important to be able to visualize your idea and data into easily understandble maps for reader. The map layouting was done mostly on ArcMap 10.6 and MATLAB R2024a via m_map library. </p>
 
-  <div class="image-container">
+   <d
+    <div class="image-container">
         <div class="slideshow-container">
             <img id="currentImage1" src="images/pic01_thumb.jpg" class="slide-image" alt="Project Image 1">
             <a class="prev-modal" onclick="plusSlides(-1, 1)">&#10094;</a>
             <a class="next-modal" onclick="plusSlides(1, 1)">&#10095;</a>
         </div>
 
-        <!-- Image Title below the image in thumbnail view -->
-        <p id="imageTitle1" class="image-title">Title for Image 1</p>
-    </div>
-
-    <!-- Full Image Description, shown only in modal -->
-    <div id="descriptionModal1" class="image-description">
-        This is the detailed description for the first image in the slideshow.
+        <p id="caption1" class="image-description">Description for Image 1</p>
     </div>
 </div>
-
 
 <!-- Project 2 -->
 <div class="project">
@@ -632,28 +626,25 @@ document.addEventListener("DOMContentLoaded", function() {
 var currentProject = 0;
 var currentSlideIndex = 0;
 
+// Function to open the modal and show the selected image
 function openModal(project, slideIndex) {
+    currentProject = project;
+    currentSlideIndex = slideIndex;
+
     var modal = document.getElementById("imageModal");
     var modalImg = document.getElementById("fullImage");
-    var descriptionModal = document.getElementById("descriptionModal" + project);
+    var captionText = document.getElementById("imageCaption");
 
     modal.classList.add("active");
     modalImg.src = projects[project][slideIndex].modalSrc;
-
-    // Show the full description in modal view
-    descriptionModal.style.display = "block";
+    captionText.innerHTML = projects[project][slideIndex].caption;
 }
 
-function closeModal(project) {
+// Function to close the modal
+function closeModal() {
     var modal = document.getElementById("imageModal");
-    var descriptionModal = document.getElementById("descriptionModal" + project);
-
     modal.classList.remove("active");
-
-    // Hide the full description when modal is closed
-    descriptionModal.style.display = "none";
 }
-
 
 // Function to navigate between slides inside the modal
 function plusSlidesModal(n) {
