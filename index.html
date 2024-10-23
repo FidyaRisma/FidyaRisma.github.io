@@ -668,6 +668,19 @@ function plusSlidesModal(n) {
     openModal(currentProject, currentSlideIndex);
 }
 
+// Add event listener for keydown events for left/right navigation in modal
+document.addEventListener("keydown", function(event) {
+    var modal = document.getElementById("imageModal");
+    if (modal.classList.contains("active")) {
+        if (event.key === "ArrowRight") {
+            plusSlidesModal(1); // Move to next image
+        }
+        if (event.key === "ArrowLeft") {
+            plusSlidesModal(-1); // Move to previous image
+        }
+    }
+});
+
 
 </script>
 
