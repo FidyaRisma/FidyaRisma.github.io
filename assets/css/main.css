@@ -3433,15 +3433,13 @@ input, select, textarea {
 /* Caption (description) - Fixed and positioned to the right */
 .modal-description {
     width: 35%; /* Description takes 35% of the width */
-    position: absolute; /* Fix the position */
-    top: 10%; /* Adjust the vertical position */
-    right: 0; /* Align to the right */
     padding: 20px;
     color: white;
     overflow-y: auto; /* Enable scrolling if the description is long */
     word-wrap: break-word;
     max-height: 80%; /* Prevent overflow */
     background-color: rgba(0, 0, 0, 0.6); /* Optional background for contrast */
+    position: relative;
 }
 
 /* Title section inside modal */
@@ -3479,137 +3477,65 @@ input, select, textarea {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    padding: 16px;
+    padding: 10px; /* Reduce padding for smaller buttons */
     color: white;
     font-weight: bold;
-    font-size: 24px;
-    transition: 0.6s ease;
-    user-select: none;
-    background: rgba(0, 0, 0, 0.5);
+    font-size: 20px; /* Slightly smaller font size */
+    background: rgba(0, 0, 0, 0.3); /* Smaller background */
+    border-radius: 50%; /* Circular buttons */
+    width: 35px; /* Fixed small width */
+    height: 35px; /* Fixed small height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.6s ease;
     z-index: 999; /* Ensure buttons are above the image */
 }
 
-/* Position buttons closer to the center for better usability */
 .prev-modal {
-    left: 5%; /* Bring buttons closer to the center */
+    left: 10px; /* Position close to the left */
 }
 
 .next-modal {
-    right: 5%; /* Bring buttons closer to the center */
+    right: 10px; /* Position close to the right */
 }
 
 /* Hover effect for navigation buttons */
 .prev-modal:hover, .next-modal:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly darker on hover */
 }
 
-/* Mobile view adjustments for navigation buttons */
-@media screen and (max-width: 768px) {
-    .prev-modal, .next-modal {
-        font-size: 18px; /* Smaller button size for mobile */
-        padding: 10px; /* Smaller padding */
-        left: 15px; /* Adjust button position */
-        right: 15px; /* Keep buttons away from the edges */
-    }
-}
-
-/* Mobile view - Stack image and caption vertically */
+/* Mobile-specific adjustments for modal view */
 @media screen and (max-width: 768px) {
     .modal-body {
-        display: block; /* Stack image and caption vertically */
+        display: block; /* Stack vertically */
         width: 100%; /* Full width on mobile */
-        max-height: 80%; /* Adjust height */
+        max-height: 100%; /* Use full height */
+        padding: 10px;
     }
 
     .modal-body .modal-content {
         width: 100%; /* Image takes full width */
-        max-height: 60%; /* Ensure space for the caption */
+        max-height: 60%; /* Limit height to leave space for description */
     }
 
-    #imageCaption {
-        width: 100%; /* Caption takes full width */
-        padding-left: 0;
-        max-height: 40%; /* Ensure enough space for scrolling text */
-        font-size: 14px;
+    /* Place title and description below the image */
+    .modal-description {
+        width: 100%; /* Take full width */
+        position: relative; /* Stack below the image */
+        top: auto;
+        right: auto;
+        margin-top: 10px;
+        padding: 10px;
+        max-height: 35%; /* Adjust to allow scrolling if needed */
+        background-color: rgba(0, 0, 0, 0.7); /* Background for readability */
+        font-size: 14px; /* Smaller font for mobile */
     }
 
+    /* Adjust close button */
     .close {
         font-size: 30px;
         top: 15px;
         right: 15px;
-    }
-}
-
-/* Ensure "Fidya Rismayatika" stays on one line */
-#logo a {
-    white-space: nowrap; /* Prevent line breaks */
-}
-
-/* Container for the slideshow and its description */
-.image-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%; /* Adjust width as needed */
-    height: 450px; /* Increase height for a larger thumbnail container */
-    padding: 20px;
-    box-sizing: border-box;
-    overflow: hidden;
-}
-
-/* Slideshow container to handle image size */
-.slideshow-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 80%; /* Increase the height for a larger thumbnail container */
-    position: relative;
-}
-
-/* Slideshow image styling */
-.image-container .slideshow-container img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    display: block;
-}
-
-/* Caption/Description styling in thumbnail */
-.image-container .image-description {
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    font-size: 14px;
-    background-color: #f9f9f9;
-    color: #333;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
-    height: 20%; /* Reduce the size of the description container */
-    box-sizing: border-box;
-}
-
-/* Mobile view adjustments */
-@media screen and (max-width: 768px) {
-    .image-container {
-        height: 400px; /* Slightly smaller container for mobile */
-    }
-
-    .slideshow-container {
-        height: 70%; /* Adjust for mobile to maintain proportions */
-    }
-
-    #imageCaption {
-        height: 30%; /* Adjust the description size for mobile */
-        font-size: 12px; /* Smaller font size for mobile */
-    }
-
-    .prev-modal, .next-modal {
-        font-size: 20px; /* Adjust button size for mobile */
-        padding: 12px;
-        left: 8%; /* Further adjust position for mobile */
-        right: 8%;
     }
 }
