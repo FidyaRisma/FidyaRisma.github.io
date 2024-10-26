@@ -3606,35 +3606,10 @@ input, select, textarea {
         font-size: 12px; /* Smaller font size for mobile */
     }
 
-  /* Mobile-specific adjustments for modal navigation buttons */
-@media screen and (max-width: 768px) {
     .prev-modal, .next-modal {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        padding: 10px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px; /* Smaller font size for mobile */
-        background: rgba(0, 0, 0, 0.5);
-        border-radius: 50%;
-        width: 30px; /* Smaller width for mobile */
-        height: 30px; /* Smaller height for mobile */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 999;
-    }
-
-    /* Position previous button on the left for mobile view */
-    .prev-modal {
-        left: 10px; /* Place on the left */
-    }
-
-    /* Position next button on the right for mobile view */
-    .next-modal {
-        right: 10px; /* Place on the right */
+        font-size: 20px; /* Adjust button size for mobile */
+        padding: 12px;
+        left: 8%; /* Further adjust position for mobile */
+        right: 8%;
     }
 }
-
