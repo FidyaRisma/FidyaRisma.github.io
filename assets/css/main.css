@@ -3640,3 +3640,26 @@ input, select, textarea {
     }
 }
 
+/* Mobile-specific layout for modal view */
+@media screen and (max-width: 768px) {
+    .modal-body {
+        display: block; /* Stack content vertically */
+        width: 100%; /* Full width on mobile */
+        max-height: 100%; /* Full height */
+    }
+
+    .modal-content {
+        width: 100%; /* Image takes full width */
+        max-height: 60%; /* Set max height for image to leave space for description */
+        margin-bottom: 10px; /* Space between image and description */
+    }
+
+    .modal-description {
+        width: 100%; /* Full width for description */
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.6); /* Background color for readability */
+        color: #fff;
+        max-height: 30%; /* Allow room for scrolling if description is long */
+        overflow-y: auto; /* Enable scrolling if needed */
+    }
+}
