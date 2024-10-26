@@ -3606,10 +3606,18 @@ input, select, textarea {
         font-size: 12px; /* Smaller font size for mobile */
     }
 
+  /* Adjust navigation buttons for mobile devices */
+@media screen and (max-width: 768px) {
     .prev-modal, .next-modal {
-        font-size: 20px; /* Adjust button size for mobile */
-        padding: 12px;
-        left: 8%; /* Further adjust position for mobile */
-        right: 8%;
+        font-size: 16px; /* Smaller button size */
+        padding: 8px; /* Reduce padding */
+        background: rgba(0, 0, 0, 0.3); /* Lighter background for mobile */
+        border-radius: 50%; /* Circular buttons */
+        left: 10px; /* Adjust left position */
+        right: 10px; /* Adjust right position */
+    }
+
+    .prev-modal:hover, .next-modal:hover {
+        background-color: rgba(0, 0, 0, 0.5); /* Darken background on hover */
     }
 }
