@@ -3606,10 +3606,32 @@ input, select, textarea {
         font-size: 12px; /* Smaller font size for mobile */
     }
 
+@media screen and (max-width: 768px) {
     .prev-modal, .next-modal {
-        font-size: 20px; /* Adjust button size for mobile */
-        padding: 12px;
-        left: 8%; /* Further adjust position for mobile */
-        right: 8%;
+        font-size: 16px; /* Small font size for the arrow */
+        padding: 0; /* Remove extra padding */
+        background: rgba(0, 0, 0, 0.2); /* Light background */
+        border-radius: 50%; /* Circular shape */
+        width: 25px; /* Fixed small width */
+        height: 25px; /* Fixed small height */
+        line-height: 25px; /* Center arrow within button */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%); /* Adjust position */
+    }
+
+    .prev-modal {
+        left: 10px; /* Position close to left edge */
+    }
+
+    .next-modal {
+        right: 10px; /* Position close to right edge */
+    }
+
+    .prev-modal:hover, .next-modal:hover {
+        background-color: rgba(0, 0, 0, 0.4); /* Slightly darker on hover */
     }
 }
+
