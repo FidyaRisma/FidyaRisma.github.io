@@ -632,7 +632,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // Variable to track the current slide in modal view
 var currentSlideIndex = 0;
 
-// Function to open the modal and show the selected image, title, and description
+// Open Modal Function
 function openModal(project, slideIndex) {
     currentProject = project;
     currentSlideIndex = slideIndex;
@@ -642,17 +642,19 @@ function openModal(project, slideIndex) {
     var modalTitle = document.getElementById("modalTitle1");
     var modalDescription = document.getElementById("descriptionModal1");
 
+    // Display the selected image, title, and description in modal
     modal.classList.add("active");
     modalImg.src = projects[project][slideIndex].modalSrc;
     modalTitle.innerHTML = projects[project][slideIndex].title;
     modalDescription.innerHTML = projects[project][slideIndex].caption;
 }
 
-// Function to close the modal
+// Close Modal Function
 function closeModal() {
     var modal = document.getElementById("imageModal");
     modal.classList.remove("active");
 }
+
 
 // Function to navigate between slides inside the modal view
 function plusSlidesModal(n) {
