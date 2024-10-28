@@ -642,12 +642,13 @@ function openModal(project, slideIndex) {
     var modalTitle = document.getElementById("modalTitle1");
     var modalDescription = document.getElementById("descriptionModal1");
 
-    // Display the selected image, title, and description in modal
+    // Set modal content with image, title, and description
     modal.classList.add("active");
     modalImg.src = projects[project][slideIndex].modalSrc;
-    modalTitle.innerHTML = projects[project][slideIndex].title;
-    modalDescription.innerHTML = projects[project][slideIndex].caption;
+    modalTitle.innerHTML = projects[project][slideIndex].title || "Untitled"; // Set default title if missing
+    modalDescription.innerHTML = projects[project][slideIndex].caption || "No description available."; // Set default caption if missing
 }
+
 
 // Close Modal Function
 function closeModal() {
