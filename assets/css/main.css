@@ -3518,7 +3518,6 @@ input, select, textarea {
         max-height: 100%;
     }
 
-    /* Modal content - Image taking top 60% */
     .modal-content {
         width: 100%;
         max-height: 60%;
@@ -3526,18 +3525,16 @@ input, select, textarea {
         object-fit: contain;
     }
 
-    /* Description takes remaining 40% */
     .modal-description {
         width: 100%;
         padding: 10px;
         background-color: rgba(0, 0, 0, 0.7);
         color: white;
-        max-height: 40%;
+        max-height: 30%;
         overflow-y: auto;
         text-align: left;
     }
 
-    /* Title inside the modal */
     .modal-title {
         color: white;
         font-size: 15px;
@@ -3545,7 +3542,6 @@ input, select, textarea {
         margin-bottom: 5px;
     }
 
-    /* Caption settings */
     #imageCaption {
         width: 100%;
         padding-left: 0;
@@ -3553,24 +3549,20 @@ input, select, textarea {
         font-size: 14px;
     }
 
-    /* Close button styling */
     .close {
         font-size: 30px;
         top: 15px;
         right: 15px;
     }
 
-    /* Image container adjustments */
     .image-container {
         height: 400px;
     }
 
-    /* Slideshow container for thumbnail adjustments */
     .slideshow-container {
         height: 70%;
     }
 
-    /* Caption size */
     #imageCaption {
         height: 30%;
         font-size: 12px;
@@ -3606,12 +3598,17 @@ input, select, textarea {
         left: auto;
     }
 
-    /* Image description text */
+    .modal-description {
+        padding: 10px;
+        max-height: 40%;
+    }
+
     .image-description {
         font-size: 10px;
         line-height: 1.6;
     }
 }
+
 
 /* Ensure "Fidya Rismayatika" stays on one line */
 #logo a {
