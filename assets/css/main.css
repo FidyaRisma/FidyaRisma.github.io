@@ -3661,32 +3661,27 @@ input, select, textarea {
     }
 }
 
-/* Default (Desktop) - Title and Description on the side */
-#modalContent {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 20px;
-    color: #fff;
-}
-
+/* Mobile-specific layout for modal view */
 @media screen and (max-width: 768px) {
-    /* Mobile - Stack Image, Title, and Description */
     .modal-body {
-        display: block;
-        width: 100%;
+        display: flex; /* Flex layout for stacking */
+        flex-direction: column; /* Stack elements vertically */
+        width: 100%; /* Full width on mobile */
+        max-height: 100%; /* Full height */
     }
-    #modalContent {
-        width: 100%;
+
+    .modal-content {
+        width: 100%; /* Image takes full width */
+        max-height: 60%; /* Set max height for image to leave space for description */
+        margin-bottom: 10px; /* Space between image and description */
+    }
+
+    .modal-description {
+        width: 100%; /* Full width for description */
         padding: 10px;
-    }
-    .modal-title {
-        font-size: 18px;
-        margin-top: 10px;
-    }
-    .image-description {
-        font-size: 14px;
-        margin-top: 10px;
+        background-color: rgba(0, 0, 0, 0.6); /* Background color for readability */
+        color: #fff;
+        max-height: 35%; /* Allow room for scrolling if description is long */
+        overflow-y: auto; /* Enable scrolling if needed */
     }
 }
-
