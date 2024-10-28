@@ -81,23 +81,12 @@
     <h4>Map Layouting (Cartography)</h4>
       <p class="about-text">This portofolio group includes the map I produced with various cartography styles. As a geographer, it is important to be able to visualize your idea and data into easily understandble maps for reader. The map layouting was done mostly on ArcMap 10.6 and MATLAB R2024a via m_map library. </p>
 
-<!-- Thumbnail View with Navigation Buttons -->
-<div class="project">
+    <!-- Thumbnail Image and Title -->
     <div class="image-container">
-        <div class="slideshow-container">
-            <!-- Thumbnail Image -->
-            <img id="currentImage1" src="images/pic01_thumb.jpg" class="slide-image" alt="Project Image 1" onclick="openModal(1, 0)">
-            <!-- Navigation Buttons for Thumbnail View -->
-            <a class="prev-thumbnail" onclick="plusSlides(-1, 1)" style="position: absolute; left: 0;">&#10094;</a> <!-- Prev Button on Left -->
-            <a class="next-thumbnail" onclick="plusSlides(1, 1)" style="position: absolute; right: 0;">&#10095;</a> <!-- Next Button on Right -->
-        </div>
-
-        <!-- Image Title in Thumbnail -->
+        <img id="currentImage1" class="thumbnail-image" alt="Thumbnail Image 1">
         <p id="imageTitle1" class="image-title">Title for Image 1</p>
     </div>
 </div>
-
-
 
 
 <!-- Project 2 -->
@@ -139,22 +128,23 @@
     </div>
 </div>
 
-<!-- Modal View with Navigation Buttons -->
+<!-- Modal View Structure -->
 <div id="imageModal" class="modal">
     <span class="close" onclick="closeModal()">&times;</span>
     <div class="modal-body">
-        <!-- Enlarged Image in the Modal -->
-        <img class="modal-content" id="fullImage" alt="Modal Image"/>
-
-        <!-- Title and Description (below image for mobile) -->
-        <div id="modalContent">
+        <!-- Modal Image -->
+        <img id="fullImage" class="modal-content" alt="Full Image">
+        
+        <!-- Title and Description -->
+        <div id="modalContent" class="modal-description">
             <div id="modalTitle" class="modal-title">Title for Image</div>
             <div id="descriptionModal" class="image-description">
-                <!-- Dynamically inserted sections -->
+                <!-- Dynamic content from JavaScript -->
             </div>
         </div>
     </div>
 </div>
+
 
     <!-- Navigation Buttons for Modal View -->
     <a class="prev-modal" onclick="plusSlidesModal(-1)" style="position: absolute; left: 0;">&#10094;</a> <!-- Prev Button on Left -->
@@ -707,79 +697,62 @@ function plusSlides(n, project) {
     updateSlide(project); // Update thumbnail image and title
 }
 
-// Function to update the image and title for any project in the thumbnail view
+
+// Function to update the thumbnail view
 function updateSlide(project) {
     var imageElement = document.getElementById("currentImage" + project);
-    var titleElement = document.getElementById("imageTitle" + project); // Title in thumbnail view
+    var titleElement = document.getElementById("imageTitle" + project); // Title for thumbnail
 
-    // Update image source and title dynamically
-    imageElement.src = projects[project][projectIndices[project]].src;
-    titleElement.innerHTML = projects[project][projectIndices[project]].title; // Update title
+    // Update thumbnail image and title from projects object
+    var imageData = projects[project][projectIndices[project]];
+    imageElement.src = imageData.image; // Set thumbnail image source
+    titleElement.innerHTML = imageData.title || "Untitled"; // Set title
 
-    // Open the image in the modal when clicked
+    // Add click event to open modal view
     imageElement.onclick = function() {
         openModal(project, projectIndices[project]);
     };
 }
 
-// Initialize the first image and title for each project on page load
-document.addEventListener("DOMContentLoaded", function() {
-    for (var project in projects) {
-        updateSlide(project); // Initialize the images and titles for each project
-    }
-});
+// Function to open the modal view with the selected image
+function openModal(project, slideIndex) {
+    var modal = document.getElementById("imageModal");
+    var modalImg = document.getElementById("fullImage");
+    var modalTitle = document.getElementById("modalTitle");
+    var modalDescription = document.getElementById("descriptionModal");
 
-// Variable to track the current slide in modal view
-var currentSlideIndex = 0;
+    // Set modal content with image, title, and description sections
+    var imageData = projects[project][slideIndex];
+    modalImg.src = imageData.image; // Modal image source
+    modalTitle.innerHTML = imageData.title || "Untitled"; // Modal title
 
-// Open Modal Function
-function openModal(index) {
-    const project = projects[index];
-    
-    document.getElementById("fullImage").src = project.image;
-    document.getElementById("modalTitle").textContent = project.title;
-    
-    // Clear previous content
-    const descriptionContainer = document.getElementById("descriptionModal");
-    descriptionContainer.innerHTML = ""; // Clear previous content
-    
-    // Populate each section in description
-    project.description.forEach(item => {
+    // Clear and populate description sections in modal
+    modalDescription.innerHTML = ""; // Clear previous content
+    imageData.description.forEach(item => {
         const section = document.createElement("h3");
         section.textContent = item.section;
-        
         const content = document.createElement("p");
         content.textContent = item.content;
-        
-        descriptionContainer.appendChild(section);
-        descriptionContainer.appendChild(content);
+        modalDescription.appendChild(section);
+        modalDescription.appendChild(content);
     });
-    
-    document.getElementById("imageModal").classList.add("active");
+
+    // Show the modal
+    modal.classList.add("active");
 }
 
-
-
-// Close Modal Function
+// Function to close the modal
 function closeModal() {
     var modal = document.getElementById("imageModal");
     modal.classList.remove("active");
 }
 
-
-// Function to navigate between slides inside the modal view
-function plusSlidesModal(n) {
-    currentSlideIndex += n;
-
-    if (currentSlideIndex >= projects[currentProject].length) {
-        currentSlideIndex = 0; // Loop back to the first image
+// Initialize the thumbnails on page load
+document.addEventListener("DOMContentLoaded", function() {
+    for (var project in projects) {
+        updateSlide(project); // Initialize each project’s thumbnail
     }
-    if (currentSlideIndex < 0) {
-        currentSlideIndex = projects[currentProject].length - 1; // Loop back to the last image
-    }
-
-    openModal(currentProject, currentSlideIndex);
-}
+});
 
 // Add event listener for keydown events for left/right navigation in modal
 document.addEventListener("keydown", function(event) {
