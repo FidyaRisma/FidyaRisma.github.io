@@ -3679,31 +3679,26 @@ input, select, textarea {
     padding: 0;
 }
 
-/* Mobile view adjustments to reduce gap */
+/* Mobile view adjustments */
 @media screen and (max-width: 768px) {
-    /* Ensure no extra margins above or below paragraph and slideshow */
     .paragraph-above-slideshow {
-        margin-bottom: 5px; /* Adjust as needed for minimal gap */
-    }
-    
-    .slideshow-container {
-        margin-top: 5px; /* Minimal gap from paragraph */
-        margin-bottom: 5px;
-        padding: 0;
+        font-size: 1em;
+        margin: 3px 0; /* Reduce margin for tighter spacing */
     }
 
-    /* Ensure slideshow images are centered without extra padding */
-    .slideshow-container img {
-        max-width: 100%;
+    .image-container {
         height: auto;
-        display: block;
-        margin: 0 auto;
     }
-    
-    /* Adjust spacing around headings */
-    .slideshow-container h2,
-    .slideshow-container h3 {
-        margin-top: 10px;
-        margin-bottom: 5px;
+
+    .slideshow-container {
+        height: auto;
+        margin-top: 2px; /* Reduce gap between paragraph and slideshow */
     }
+
+    .image-description {
+        font-size: 12px; /* Adjust font size for mobile readability */
+        padding: 5px;
+    }
+}
+
 }
