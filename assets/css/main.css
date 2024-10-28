@@ -3453,8 +3453,8 @@ input, select, textarea {
 }
 /* Adjust spacing for section titles and descriptions in modal view */
 .modal-description p {
-    margin-top: 5px; /* Adjust this as needed */
-    margin-bottom: 5px; /* Adjust this as needed */
+    margin-top: 10px; /* Adjust this as needed */
+    margin-bottom: 10px; /* Adjust this as needed */
 }
 
 .modal-description strong {
