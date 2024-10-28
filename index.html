@@ -659,6 +659,20 @@ function plusSlides(n, project) {
     updateSlide(project); // Update thumbnail image and title
 }
 
+// Function to update the image and title for any project in the thumbnail view
+function updateSlide(project) {
+    var imageElement = document.getElementById("currentImage" + project);
+    var titleElement = document.getElementById("imageTitle" + project); // Title in thumbnail view
+
+    // Update image source and title dynamically
+    imageElement.src = projects[project][projectIndices[project]].src;
+    titleElement.innerHTML = projects[project][projectIndices[project]].title; // Update title
+
+    // Open the image in the modal when clicked
+    imageElement.onclick = function() {
+        openModal(project, projectIndices[project]);
+    };
+}
 
 // Initialize the first image and title for each project on page load
 document.addEventListener("DOMContentLoaded", function() {
@@ -671,7 +685,6 @@ document.addEventListener("DOMContentLoaded", function() {
 var currentSlideIndex = 0;
 
 // Open Modal Function
-// Function to update the image and title for any project in the thumbnail view
 function openModal(project, slideIndex) {
     currentProject = project;
     currentSlideIndex = slideIndex;
