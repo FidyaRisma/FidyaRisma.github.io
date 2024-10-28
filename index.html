@@ -146,10 +146,12 @@
         <!-- Enlarged Image in the Modal -->
         <img class="modal-content" id="fullImage" />
 
-        <!-- Title and Description on Right (Desktop) or Below (Mobile) -->
+        <!-- Title and Description in Modal -->
         <div class="modal-description">
-            <div id="modalTitle1" class="modal-title">Title for Image 1</div>
-            <div id="descriptionModal1" class="image-description">Detailed description for Image 1 goes here.</div>
+            <h2 id="modalTitle" class="modal-title">Title for Image</h2>
+            <div id="descriptionModal" class="image-description">
+                Detailed description for the image will be shown here.
+            </div>
         </div>
     </div>
     <!-- Navigation Buttons for Modal View -->
@@ -567,29 +569,68 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 <!-- JavaScript -->
 <script>
     // Object to store the images and captions for all projects
-    var projects = {
-        1: [
-        { src: "images/pic01_thumb.jpg", title: "Land Use Jepara", caption: "This project was developed to create a satellite data platform for sustainable ocean environment observation based on Challenges 7 and 8 of Ocean Decade. The platform was built for sustainable fisheries by integrating remote sensing data which are both easy and free to use by using Google Earth Engine (GEE).", modalSrc: "images/pic01.jpg" },
-        { src: "images/pic02_thumb.jpg", title: "Title for Image 2", caption: "Description for Image 2", modalSrc: "images/pic02.jpg" },
-        { src: "images/pic03_thumb.jpg", title: "Title for Image 3", caption: "Description for Image 3", modalSrc: "images/pic03.jpg" }
+// Object to store images for all projects
+var projects = {
+    1: [
+        { src: "images/pic01_thumb.jpg", modalSrc: "images/pic01.jpg" },
+        { src: "images/pic02_thumb.jpg", modalSrc: "images/pic02.jpg" },
+        { src: "images/pic03_thumb.jpg", modalSrc: "images/pic03.jpg" }
     ],
-        2: [
-            { src: "images/pic02_1_thumb.jpg", caption: "Description for Image 1", modalSrc: "images/pic02_1.jpg" },
-            { src: "images/pic02_2_thumb.jpg", caption: "Description for Image 2", modalSrc: "images/pic02_2.jpg" },
-            { src: "images/pic02_3_thumb.jpg", caption: "Description for Image 3", modalSrc: "images/pic02_3.jpg" }
-        ],
-        3: [
-            { src: "images/pic03_1_thumb.jpg", caption: "Description for Image 1", modalSrc: "images/pic03_1.jpg" },
-            { src: "images/pic03_2_thumb.jpg", caption: "Description for Image 2", modalSrc: "images/pic03_2.jpg" },
-            { src: "images/pic03_3_thumb.jpg", caption: "Description for Image 3", modalSrc: "images/pic03_3.jpg" }
-        ],
-        4: [
-            { src: "images/pic04_1_thumb.jpg", caption: "Description for Image 1", modalSrc: "images/pic04_1.jpg" },
-            { src: "images/pic04_2_thumb.jpg", caption: "Description for Image 2", modalSrc: "images/pic04_2.jpg" },
-            { src: "images/pic04_3_thumb.jpg", caption: "Description for Image 3", modalSrc: "images/pic04_3.jpg" }
-        ]
-    };
+    2: [
+        { src: "images/pic02_1_thumb.jpg", modalSrc: "images/pic02_1.jpg" },
+        { src: "images/pic02_2_thumb.jpg", modalSrc: "images/pic02_2.jpg" },
+        { src: "images/pic02_3_thumb.jpg", modalSrc: "images/pic02_3.jpg" }
+    ],
+    3: [
+        { src: "images/pic03_1_thumb.jpg", modalSrc: "images/pic03_1.jpg" },
+        { src: "images/pic03_2_thumb.jpg", modalSrc: "images/pic03_2.jpg" },
+        { src: "images/pic03_3_thumb.jpg", modalSrc: "images/pic03_3.jpg" }
+    ],
+    4: [
+        { src: "images/pic04_1_thumb.jpg", modalSrc: "images/pic04_1.jpg" },
+        { src: "images/pic04_2_thumb.jpg", modalSrc: "images/pic04_2.jpg" },
+        { src: "images/pic04_3_thumb.jpg", modalSrc: "images/pic04_3.jpg" }
+    ]
+};
 
+// Object to store titles for all projects
+var titles = {
+    1: ["Land Use Jepara", "Title for Image 2", "Title for Image 3"],
+    2: ["Project 2 - Image 1", "Project 2 - Image 2", "Project 2 - Image 3"],
+    3: ["Project 3 - Image 1", "Project 3 - Image 2", "Project 3 - Image 3"],
+    4: ["Project 4 - Image 1", "Project 4 - Image 2", "Project 4 - Image 3"]
+};
+
+// Object to store detailed captions with sections for each project
+var captions = {
+    1: [
+        `
+        <p><strong>Introduction:</strong></p>
+        <p>This project was developed to create a satellite data platform for sustainable ocean environment observation...</p>
+        <p><strong>Data Used:</strong></p>
+        <p>Satellite imagery, GIS layers, environmental data...</p>
+        <p><strong>Visualization Tools:</strong></p>
+        <p>Google Earth Engine (GEE), ArcGIS, and MATLAB.</p>
+        `,
+        "<p>Detailed description for Image 2 goes here.</p>",
+        "<p>Detailed description for Image 3 goes here.</p>"
+    ],
+    2: [
+        "<p>Project 2 - Image 1 description.</p>",
+        "<p>Project 2 - Image 2 description.</p>",
+        "<p>Project 2 - Image 3 description.</p>"
+    ],
+    3: [
+        "<p>Project 3 - Image 1 description.</p>",
+        "<p>Project 3 - Image 2 description.</p>",
+        "<p>Project 3 - Image 3 description.</p>"
+    ],
+    4: [
+        "<p>Project 4 - Image 1 description.</p>",
+        "<p>Project 4 - Image 2 description.</p>",
+        "<p>Project 4 - Image 3 description.</p>"
+    ]
+};
 
 // Initialize index for each project
 var projectIndices = { 1: 0, 2: 0, 3: 0, 4: 0 };
@@ -632,30 +673,27 @@ document.addEventListener("DOMContentLoaded", function() {
 // Variable to track the current slide in modal view
 var currentSlideIndex = 0;
 
-// Open Modal Function
+// Open modal function to load image, title, and description
 function openModal(project, slideIndex) {
     currentProject = project;
     currentSlideIndex = slideIndex;
 
     var modal = document.getElementById("imageModal");
     var modalImg = document.getElementById("fullImage");
-    var modalTitle = document.getElementById("modalTitle1");
-    var modalDescription = document.getElementById("descriptionModal1");
+    var modalTitle = document.getElementById("modalTitle");
+    var modalDescription = document.getElementById("descriptionModal");
 
-    // Set modal content with image, title, and description
+    // Set modal content
     modal.classList.add("active");
     modalImg.src = projects[project][slideIndex].modalSrc;
-    modalTitle.innerHTML = projects[project][slideIndex].title || "Untitled"; // Set default title if missing
-    modalDescription.innerHTML = projects[project][slideIndex].caption || "No description available."; // Set default caption if missing
+    modalTitle.innerHTML = titles[project][slideIndex] || "Untitled"; // Fallback title
+    modalDescription.innerHTML = captions[project][slideIndex] || "No description available."; // Fallback caption
 }
 
-
-// Close Modal Function
+// Function to close the modal
 function closeModal() {
     var modal = document.getElementById("imageModal");
     modal.classList.remove("active");
-}
-
 
 // Function to navigate between slides inside the modal view
 function plusSlidesModal(n) {
