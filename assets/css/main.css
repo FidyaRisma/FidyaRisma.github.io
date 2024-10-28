@@ -3399,12 +3399,12 @@ input, select, textarea {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1000; /* Ensure modal is above everything */
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Dark background with opacity */
+    background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -3415,54 +3415,49 @@ input, select, textarea {
     display: flex;
 }
 
-/* Modal body layout for desktop */
+/* Modal body layout */
 .modal-body {
-    display: flex; /* Flex layout for desktop */
-    width: 90%; /* Adjust width to prevent overflow */
-    max-height: 80%; /* Restrict max height */
+    display: flex;
+    width: 90%;
+    max-height: 80%;
 }
 
-/* Modal content (image) - Desktop */
 .modal-body .modal-content {
-    width: 65%; /* Image takes 65% of the width */
-    max-height: 100%; /* Prevent overflow */
+    width: 65%;
+    max-height: 100%;
     object-fit: contain;
-    float: left; /* Ensure image stays on the left */
 }
 
-/* Caption (description) - Fixed and positioned to the right */
+/* Caption (description) */
 .modal-description {
-    width: 35%; /* Description takes 35% of the width */
-    position: absolute; /* Fix the position */
-    top: 10%; /* Adjust the vertical position */
-    right: 0; /* Align to the right */
+    width: 35%;
+    position: absolute;
+    top: 10%;
+    right: 0;
     padding: 20px;
     color: white;
-    overflow-y: auto; /* Enable scrolling if the description is long */
+    overflow-y: auto;
     word-wrap: break-word;
-    max-height: 80%; /* Prevent overflow */
-    background-color: rgba(0, 0, 0, 0.6); /* Optional background for contrast */
+    max-height: 80%;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* Title section inside modal */
 .modal-title {
     color: white;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
 }
-/* Adjust spacing for section titles and descriptions in modal view */
+
 .modal-description p {
-    margin-top: 10px; /* Adjust this as needed */
-    margin-bottom: 5px; /* Adjust this as needed */
+    margin: 10px 0 5px;
 }
 
 .modal-description strong {
     display: block;
-    margin-bottom: 3px; /* Adjust this as needed */
+    margin-bottom: 3px;
 }
 
-/* Image description styling */
 .modal-description .image-description {
     font-size: 16px;
     line-height: 1.5;
@@ -3475,12 +3470,12 @@ input, select, textarea {
     top: 20px;
     right: 20px;
     color: #fff;
-    background-color: rgba(255, 0, 0, 0.9); /* Red background for visibility */
+    background-color: rgba(255, 0, 0, 0.9);
     padding: 15px;
     font-size: 24px;
     font-weight: bold;
     border-radius: 50%;
-    z-index: 2000; /* Ensure it's above the modal content */
+    z-index: 2000;
     cursor: pointer;
 }
 
@@ -3497,72 +3492,59 @@ input, select, textarea {
     transition: 0.6s ease;
     user-select: none;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 999; /* Ensure buttons are above the image */
+    z-index: 999;
 }
 
-/* Position buttons closer to the center for better usability */
 .prev-modal {
-    left: 5%; /* Bring buttons closer to the center */
+    left: 5%;
 }
 
 .next-modal {
-    right: 5%; /* Bring buttons closer to the center */
+    right: 5%;
 }
 
-/* Hover effect for navigation buttons */
 .prev-modal:hover, .next-modal:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Mobile view adjustments for navigation buttons */
+/* Mobile view adjustments */
 @media screen and (max-width: 768px) {
     .prev-modal, .next-modal {
-        font-size: 18px; /* Smaller button size for mobile */
-        padding: 10px; /* Smaller padding */
-        left: 15px; /* Adjust button position */
-        right: 15px; /* Keep buttons away from the edges */
+        font-size: 18px;
+        padding: 10px;
+        left: 15px;
+        right: 15px;
     }
-}
 
-
-/* Mobile-specific layout for modal view */
-@media screen and (max-width: 768px) {
     .modal-body {
-        display: flex;
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center content */
+        flex-direction: column;
+        align-items: center;
         width: 100%;
         max-height: 100%;
     }
 
     .modal-content {
         width: 100%;
-        max-height: 60%; /* Leave room for title and description */
+        max-height: 60%;
         margin-bottom: 10px;
     }
 
     .modal-description {
         width: 100%;
         padding: 10px;
-        background-color: rgba(0, 0, 0, 0.6); /* Dark background for readability */
-        color: white;
-        max-height: 30%; /* Space for long descriptions */
-        overflow-y: auto; /* Enable scrolling */
+        max-height: 30%;
         text-align: left;
     }
 
     .modal-title {
-        color: white;
         font-size: 20px;
-        font-weight: bold;
         margin-bottom: 10px;
     }
-}
 
     #imageCaption {
-        width: 100%; /* Caption takes full width */
+        width: 100%;
         padding-left: 0;
-        max-height: 40%; /* Ensure enough space for scrolling text */
+        max-height: 40%;
         font-size: 14px;
     }
 
@@ -3571,11 +3553,60 @@ input, select, textarea {
         top: 15px;
         right: 15px;
     }
+
+    .image-container {
+        height: 400px;
+    }
+
+    .slideshow-container {
+        height: 70%;
+    }
+
+    #imageCaption {
+        height: 30%;
+        font-size: 12px;
+    }
+
+    /* Mobile-specific adjustments for modal navigation buttons */
+    .prev-modal, .next-modal {
+        font-size: 18px;
+        padding: 8px;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+    }
+
+    .prev-modal {
+        left: 5%;
+    }
+
+    .next-modal {
+        right: 5%;
+    }
+
+    .modal-description {
+        padding: 10px;
+        max-height: 40%;
+    }
+
+    .modal-title {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .image-description {
+        font-size: 14px;
+        line-height: 1.6;
+    }
 }
 
 /* Ensure "Fidya Rismayatika" stays on one line */
 #logo a {
-    white-space: nowrap; /* Prevent line breaks */
+    white-space: nowrap;
 }
 
 /* Container for the slideshow and its description */
@@ -3585,24 +3616,22 @@ input, select, textarea {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    width: 100%; /* Adjust width as needed */
-    height: 450px; /* Increase height for a larger thumbnail container */
+    width: 100%;
+    height: 450px;
     padding: 20px;
     box-sizing: border-box;
     overflow: hidden;
 }
 
-/* Slideshow container to handle image size */
 .slideshow-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 80%; /* Increase the height for a larger thumbnail container */
+    height: 80%;
     position: relative;
 }
 
-/* Slideshow image styling */
 .image-container .slideshow-container img {
     max-width: 100%;
     max-height: 100%;
@@ -3620,101 +3649,12 @@ input, select, textarea {
     color: #333;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
-    height: 20%; /* Reduce the size of the description container */
+    height: 20%;
     box-sizing: border-box;
 }
 
-/* Mobile view adjustments */
-@media screen and (max-width: 768px) {
-    .image-container {
-        height: 400px; /* Slightly smaller container for mobile */
-    }
-
-    .slideshow-container {
-        height: 70%; /* Adjust for mobile to maintain proportions */
-    }
-
-    #imageCaption {
-        height: 30%; /* Adjust the description size for mobile */
-        font-size: 12px; /* Smaller font size for mobile */
-    }
-    
-    
-/* Change color of image title on thumbnail */
 .image-title {
-    color: black; /* Replace with your desired color */
-    font-size: 16px; /* Optional: adjust font size */
-    font-weight: bold; /* Optional: make text bold */
-}
-
-/* Mobile-specific adjustments for modal navigation buttons */
-@media screen and (max-width: 768px) {
-    .prev-modal, .next-modal {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        padding: 8px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        background: rgba(0, 0, 0, 0.5);
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 999;
-    }
-
-/* Mobile view adjustments specifically for modal navigation buttons */
-@media screen and (max-width: 768px) {
-    .prev-modal {
-        left: 5%; /* Position the "prev" button to the left side */
-        right: auto; /* Remove any right positioning */
-    }
-
-    .next-modal {
-        right: 5%; /* Position the "next" button to the right side */
-        left: auto; /* Remove any left positioning */
-    }
-}
-
-/* Mobile view for modal - Stack image, title, and description vertically */
-@media screen and (max-width: 768px) {
-    .modal-body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        max-height: 90%;
-    }
-
-    .modal-content {
-        width: 100%;
-        max-height: 50%;
-        margin-bottom: 10px;
-    }
-
-    .modal-description {
-        width: 100%;
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0.7); /* Optional for contrast */
-        color: #fff;
-        max-height: 40%; /* Adjust as needed */
-        overflow-y: auto; /* Allow scrolling for long descriptions */
-    }
-
-    .modal-title {
-        color: white;
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: 8px;
-    }
-
-    .image-description {
-        font-size: 14px;
-        line-height: 1.6;
-    }
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
 }
