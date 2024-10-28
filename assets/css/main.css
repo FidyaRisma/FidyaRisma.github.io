@@ -3346,7 +3346,6 @@ input, select, textarea {
     transform: scale(1.05);
 }
 
-
 .about-text {
     text-align: justify;
 }
@@ -3357,6 +3356,8 @@ input, select, textarea {
     width: 100%;
     max-width: 600px;
     margin: auto;
+    padding: 0;
+    margin-top: 5px; /* Reduce the gap between paragraph and slideshow */
 }
 
 .slide-image {
@@ -3393,7 +3394,6 @@ input, select, textarea {
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
-
 
 /* Modal styles (hidden by default) */
 .modal {
@@ -3455,7 +3455,7 @@ input, select, textarea {
 
 .modal-description strong {
     display: block;
-     margin: 5px 0 5px;
+    margin: 5px 0 5px;
 }
 
 .modal-description .image-description {
@@ -3520,7 +3520,7 @@ input, select, textarea {
 
     .modal-content {
         width: 100%;
-        max-height: 60%;
+        max-height: 50%;
         margin-bottom: 10px;
         object-fit: contain;
     }
@@ -3530,7 +3530,7 @@ input, select, textarea {
         padding: 10px;
         background-color: rgba(0, 0, 0, 0.7);
         color: white;
-        max-height: 30%;
+        max-height: 50%;
         overflow-y: auto;
         text-align: left;
     }
@@ -3556,11 +3556,12 @@ input, select, textarea {
     }
 
     .image-container {
-        height: 400px;
+        height: auto;
     }
 
     .slideshow-container {
-        height: 70%;
+        height: auto;
+        margin-top: 5px;
     }
 
     #imageCaption {
@@ -3589,12 +3590,12 @@ input, select, textarea {
 
     /* Auto-align navigation buttons */
     .prev-modal {
-        left: 5%; /* Position to the left for mobile */
+        left: 5%;
         right: auto;
     }
 
     .next-modal {
-        right: 5%; /* Position to the right for mobile */
+        right: 5%;
         left: auto;
     }
 
@@ -3608,7 +3609,6 @@ input, select, textarea {
         line-height: 1.6;
     }
 }
-
 
 /* Ensure "Fidya Rismayatika" stays on one line */
 #logo a {
@@ -3679,26 +3679,29 @@ input, select, textarea {
     padding: 0;
 }
 
-/* Mobile view adjustments */
+/* Mobile view adjustments to reduce gap */
 @media screen and (max-width: 768px) {
+    /* Ensure no extra margins above or below paragraph and slideshow */
     .paragraph-above-slideshow {
-        font-size: 1em;
-        margin: 3px 0; /* Reduce margin for tighter spacing */
+        margin-bottom: 5px;
     }
-
-    .image-container {
-        height: auto;
-    }
-
+    
     .slideshow-container {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 0;
+    }
+
+    .slideshow-container img {
+        max-width: 100%;
         height: auto;
-        margin-top: 2px; /* Reduce gap between paragraph and slideshow */
+        display: block;
+        margin: 0 auto;
     }
-
-    .image-description {
-        font-size: 12px; /* Adjust font size for mobile readability */
-        padding: 5px;
+    
+    .slideshow-container h2,
+    .slideshow-container h3 {
+        margin-top: 10px;
+        margin-bottom: 5px;
     }
-}
-
 }
