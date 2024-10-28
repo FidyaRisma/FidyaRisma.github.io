@@ -651,14 +651,23 @@ function updateSlide(project) {
     var titleElement = document.getElementById("imageTitle" + project); // Title in thumbnail view
 
     // Update image source and title dynamically
-    imageElement.src = projects[project][projectIndices[project]].src;
-    titleElement.innerHTML = projects[project][projectIndices[project]].title; // Update title
+    if (projects[project] && projects[project][projectIndices[project]]) {
+        imageElement.src = projects[project][projectIndices[project]].src;
+    }
+
+    // Set the title in thumbnail view, or use a fallback title if undefined
+    if (titles[project] && titles[project][projectIndices[project]]) {
+        titleElement.innerHTML = titles[project][projectIndices[project]];
+    } else {
+        titleElement.innerHTML = "Untitled"; // Fallback title if undefined
+    }
 
     // Open the image in the modal when clicked
     imageElement.onclick = function() {
         openModal(project, projectIndices[project]);
     };
 }
+
 
 // Initialize the first image and title for each project on page load
 document.addEventListener("DOMContentLoaded", function() {
@@ -681,11 +690,17 @@ function openModal(project, slideIndex) {
     var modalTitle = document.getElementById("modalTitle");
     var modalDescription = document.getElementById("descriptionModal");
 
-    // Set modal content
-    modal.classList.add("active");
-    modalImg.src = projects[project][slideIndex].modalSrc;
+    // Ensure project and slideIndex are valid
+    if (projects[project] && projects[project][slideIndex]) {
+        modalImg.src = projects[project][slideIndex].modalSrc;
+    }
+
+    // Set the title and description in the modal view
     modalTitle.innerHTML = titles[project][slideIndex] || "Untitled"; // Fallback title
     modalDescription.innerHTML = captions[project][slideIndex] || "No description available."; // Fallback caption
+
+    // Show the modal
+    modal.classList.add("active");
 }
 
 // Function to close the modal
