@@ -3679,3 +3679,31 @@ input, select, textarea {
     padding: 0;
 }
 
+/* Mobile view adjustments to reduce gap */
+@media screen and (max-width: 768px) {
+    /* Ensure no extra margins above or below paragraph and slideshow */
+    .paragraph-above-slideshow {
+        margin-bottom: 5px; /* Adjust as needed for minimal gap */
+    }
+    
+    .slideshow-container {
+        margin-top: 5px; /* Minimal gap from paragraph */
+        margin-bottom: 5px;
+        padding: 0;
+    }
+
+    /* Ensure slideshow images are centered without extra padding */
+    .slideshow-container img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    /* Adjust spacing around headings */
+    .slideshow-container h2,
+    .slideshow-container h3 {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+}
