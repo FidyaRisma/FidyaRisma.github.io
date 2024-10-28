@@ -140,14 +140,13 @@
 <div id="imageModal" class="modal">
     <span class="close" onclick="closeModal()">&times;</span>
     <div class="modal-body">
-        <!-- Enlarged Image in the Modal -->
         <img class="modal-content" id="fullImage" />
 
-        <!-- Title and Description in Modal -->
+        <!-- Title and Description -->
         <div class="modal-description">
             <h2 id="modalTitle" class="modal-title">Title for Image</h2>
             <div id="descriptionModal" class="image-description">
-                Detailed description for the image will be shown here.
+                Description for the image will appear here.
             </div>
         </div>
     </div>
@@ -690,18 +689,29 @@ function openModal(project, slideIndex) {
     var modalTitle = document.getElementById("modalTitle");
     var modalDescription = document.getElementById("descriptionModal");
 
-    // Ensure project and slideIndex are valid
+    // Ensure the project and slide index exist in projects and load the image
     if (projects[project] && projects[project][slideIndex]) {
         modalImg.src = projects[project][slideIndex].modalSrc;
     }
 
-    // Set the title and description in the modal view
-    modalTitle.innerHTML = titles[project][slideIndex] || "Untitled"; // Fallback title
-    modalDescription.innerHTML = captions[project][slideIndex] || "No description available."; // Fallback caption
+    // Set title with fallback for undefined values
+    if (titles[project] && titles[project][slideIndex] !== undefined) {
+        modalTitle.innerHTML = titles[project][slideIndex];
+    } else {
+        modalTitle.innerHTML = "Untitled"; // Fallback title if undefined
+    }
 
-    // Show the modal
+    // Set description with fallback for undefined values
+    if (captions[project] && captions[project][slideIndex] !== undefined) {
+        modalDescription.innerHTML = captions[project][slideIndex];
+    } else {
+        modalDescription.innerHTML = "No description available."; // Fallback description if undefined
+    }
+
+    // Display the modal
     modal.classList.add("active");
 }
+
 
 // Function to close the modal
 function closeModal() {
