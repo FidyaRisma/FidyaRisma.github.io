@@ -2839,7 +2839,7 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		background: #f875aa;
+		background: #white;
 		border-top: 0;
 		color: #c0c0c0;
 		overflow: hidden;
@@ -3076,7 +3076,7 @@ input, select, textarea {
 					}
 
 					#titleBar .toggle:before {
-						background: #ffa3af;
+						background: #f875aa;
 						color: #ffffff;
 						content: '\f0c9';
 						display: block;
