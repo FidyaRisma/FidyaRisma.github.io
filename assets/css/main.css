@@ -2800,14 +2800,14 @@ input, select, textarea {
 						-ms-transition: none;
 						transition: none;
 						border: 0;
-						color: #aedefc !important;
+						color: #ffdfdf !important;
 						display: block;
 						padding: 0.85em 0;
 						text-decoration: none;
 					}
 
 						#header > nav ul li a.active {
-							background: #aedefc;
+							background: #ffdfdf;
 							color: #f875aa !important;
 						}
 
@@ -2839,7 +2839,7 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		background: #fafafa;
+		background: #f875aa;
 		border-top: 0;
 		color: #c0c0c0;
 		overflow: hidden;
