@@ -694,27 +694,12 @@ function openModal(project, slideIndex) {
     var modalTitle = document.getElementById("modalTitle1");
     var modalDescription = document.getElementById("descriptionModal1");
 
-    // Check if the project, slideIndex, title, and caption exist before setting them
-    if (projects[project] && projects[project][slideIndex]) {
-        modalImg.src = projects[project][slideIndex].modalSrc;
-    }
-
-    if (titles[project] && titles[project][slideIndex]) {
-        modalTitle.innerHTML = titles[project][slideIndex];
-    } else {
-        modalTitle.innerHTML = "Untitled"; // Fallback title if undefined
-    }
-
-    if (captions[project] && captions[project][slideIndex]) {
-        modalDescription.innerHTML = captions[project][slideIndex];
-    } else {
-        modalDescription.innerHTML = "No description available."; // Fallback description if undefined
-    }
-
-    // Show the modal
+    // Set modal content using separate objects for images, titles, and captions
     modal.classList.add("active");
+    modalImg.src = projects[project][slideIndex].modalSrc;
+    modalTitle.innerHTML = titles[project][slideIndex] || "Untitled"; // Default title if missing
+    modalDescription.innerHTML = captions[project][slideIndex] || "No description available."; // Default caption if missing
 }
-
 
 
 
