@@ -3450,12 +3450,12 @@ input, select, textarea {
 }
 
 .modal-description p {
-    margin: 10px 0 5px;
+    margin: 5px 0 5px;
 }
 
 .modal-description strong {
     display: block;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
 
 .modal-description .image-description {
