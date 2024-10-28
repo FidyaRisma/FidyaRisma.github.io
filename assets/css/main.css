@@ -3605,7 +3605,7 @@ input, select, textarea {
     text-align: center;
     font-size: 14px;
     background-color: #f9f9f9;
-    color: black;
+    color: #333;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
     height: 20%; /* Reduce the size of the description container */
