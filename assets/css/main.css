@@ -3664,24 +3664,34 @@ input, select, textarea {
 /* Mobile-specific layout for modal view */
 @media screen and (max-width: 768px) {
     .modal-body {
-        display: flex; /* Flex layout for stacking */
+        display: flex;
         flex-direction: column; /* Stack elements vertically */
-        width: 100%; /* Full width on mobile */
-        max-height: 100%; /* Full height */
+        align-items: center;
+        width: 100%;
+        max-height: 100%;
     }
 
     .modal-content {
-        width: 100%; /* Image takes full width */
-        max-height: 60%; /* Set max height for image to leave space for description */
-        margin-bottom: 10px; /* Space between image and description */
+        width: 100%;
+        max-height: 60%; /* Set max height for image to leave space for title and description */
+        margin-bottom: 10px;
     }
 
     .modal-description {
-        width: 100%; /* Full width for description */
+        width: 100%;
         padding: 10px;
         background-color: rgba(0, 0, 0, 0.6); /* Background color for readability */
-        color: #fff;
-        max-height: 35%; /* Allow room for scrolling if description is long */
-        overflow-y: auto; /* Enable scrolling if needed */
+        color: white;
+        max-height: 20%; /* Allow room for scrolling if description is long */
+        overflow-y: auto; /* Enable scrolling */
+        text-align: left;
     }
+
+    .modal-title {
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+}
+
 }
