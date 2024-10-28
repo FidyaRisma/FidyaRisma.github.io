@@ -3679,7 +3679,3 @@ input, select, textarea {
     padding: 0;
 }
 
-/* Optional: Add a small margin if needed for better visual separation */
-.paragraph-above-slideshow {
-    margin-bottom: 10px; /* Adjust as needed for spacing */
-}
