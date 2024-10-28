@@ -567,28 +567,124 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 <!-- JavaScript -->
 <script>
     // Object to store the images and captions for all projects
-    var projects = {
-        1: [
-        { src: "images/pic01_thumb.jpg", title: "Land Use Jepara", caption: "This project was developed to create a satellite data platform for sustainable ocean environment observation based on Challenges 7 and 8 of Ocean Decade. The platform was built for sustainable fisheries by integrating remote sensing data which are both easy and free to use by using Google Earth Engine (GEE).", modalSrc: "images/pic01.jpg" },
-        { src: "images/pic02_thumb.jpg", title: "Title for Image 2", caption: "Description for Image 2", modalSrc: "images/pic02.jpg" },
-        { src: "images/pic03_thumb.jpg", title: "Title for Image 3", caption: "Description for Image 3", modalSrc: "images/pic03.jpg" }
+    const projects = {
+    1: [
+        {
+            image: "images/pic01.jpg",
+            title: "Land Use Jepara",
+            description: [
+                { section: "Introduction", content: "This project was developed to create a satellite data platform for sustainable ocean environment observation based on Challenges 7 and 8 of Ocean Decade." },
+                { section: "Data Used", content: "Satellite data from various sources were integrated, with emphasis on land use analysis." },
+                { section: "Visualization Tools", content: "Google Earth Engine, MATLAB, and ArcGIS were used to analyze and visualize data." }
+            ]
+        },
+        {
+            image: "images/pic02.jpg",
+            title: "Coastal Erosion Study",
+            description: [
+                { section: "Introduction", content: "A study on coastal erosion in vulnerable areas." },
+                { section: "Data Used", content: "Landsat imagery, elevation data, and bathymetry." },
+                { section: "Visualization Tools", content: "QGIS, Google Earth Engine, and custom Python scripts." }
+            ]
+        },
+        {
+            image: "images/pic03.jpg",
+            title: "Urban Expansion Analysis",
+            description: [
+                { section: "Introduction", content: "Analysis of urban expansion and its effects on surrounding ecosystems." },
+                { section: "Data Used", content: "High-resolution satellite imagery, historical data." },
+                { section: "Visualization Tools", content: "ArcGIS, Google Earth Engine, and Python libraries." }
+            ]
+        }
     ],
-        2: [
-            { src: "images/pic02_1_thumb.jpg", caption: "Description for Image 1", modalSrc: "images/pic02_1.jpg" },
-            { src: "images/pic02_2_thumb.jpg", caption: "Description for Image 2", modalSrc: "images/pic02_2.jpg" },
-            { src: "images/pic02_3_thumb.jpg", caption: "Description for Image 3", modalSrc: "images/pic02_3.jpg" }
-        ],
-        3: [
-            { src: "images/pic03_1_thumb.jpg", caption: "Description for Image 1", modalSrc: "images/pic03_1.jpg" },
-            { src: "images/pic03_2_thumb.jpg", caption: "Description for Image 2", modalSrc: "images/pic03_2.jpg" },
-            { src: "images/pic03_3_thumb.jpg", caption: "Description for Image 3", modalSrc: "images/pic03_3.jpg" }
-        ],
-        4: [
-            { src: "images/pic04_1_thumb.jpg", caption: "Description for Image 1", modalSrc: "images/pic04_1.jpg" },
-            { src: "images/pic04_2_thumb.jpg", caption: "Description for Image 2", modalSrc: "images/pic04_2.jpg" },
-            { src: "images/pic04_3_thumb.jpg", caption: "Description for Image 3", modalSrc: "images/pic04_3.jpg" }
-        ]
-    };
+    2: [
+        {
+            image: "images/pic04.jpg",
+            title: "Deforestation Monitoring",
+            description: [
+                { section: "Introduction", content: "This project monitors deforestation patterns over time." },
+                { section: "Data Used", content: "MODIS, Sentinel-2 imagery, and forest cover data." },
+                { section: "Visualization Tools", content: "Google Earth Engine and QGIS for analysis." }
+            ]
+        },
+        {
+            image: "images/pic05.jpg",
+            title: "Water Quality Assessment",
+            description: [
+                { section: "Introduction", content: "Assessing water quality in riverine and coastal areas." },
+                { section: "Data Used", content: "Water samples, remote sensing data, and historical records." },
+                { section: "Visualization Tools", content: "ArcGIS, Google Earth Engine, and R for statistical analysis." }
+            ]
+        },
+        {
+            image: "images/pic06.jpg",
+            title: "Wildfire Impact Study",
+            description: [
+                { section: "Introduction", content: "Impact analysis of wildfires on vegetation cover." },
+                { section: "Data Used", content: "Landsat 8, Sentinel-2, and MODIS imagery." },
+                { section: "Visualization Tools", content: "Google Earth Engine and Python scripts for change detection." }
+            ]
+        }
+    ],
+    3: [
+        {
+            image: "images/pic07.jpg",
+            title: "Flood Risk Mapping",
+            description: [
+                { section: "Introduction", content: "Creating flood risk maps for at-risk areas." },
+                { section: "Data Used", content: "Topographic maps, precipitation data, and flood history." },
+                { section: "Visualization Tools", content: "ArcGIS, QGIS, and R for statistical modeling." }
+            ]
+        },
+        {
+            image: "images/pic08.jpg",
+            title: "Air Quality Monitoring",
+            description: [
+                { section: "Introduction", content: "Monitoring air quality using remote sensing data." },
+                { section: "Data Used", content: "MODIS aerosol data, local air quality stations." },
+                { section: "Visualization Tools", content: "MATLAB, Google Earth Engine, and R." }
+            ]
+        },
+        {
+            image: "images/pic09.jpg",
+            title: "Habitat Suitability Modeling",
+            description: [
+                { section: "Introduction", content: "Modeling habitat suitability for endangered species." },
+                { section: "Data Used", content: "Species occurrence data, environmental variables." },
+                { section: "Visualization Tools", content: "R and ArcGIS for spatial modeling." }
+            ]
+        }
+    ],
+    4: [
+        {
+            image: "images/pic10.jpg",
+            title: "Soil Degradation Analysis",
+            description: [
+                { section: "Introduction", content: "Analyzing soil degradation in agricultural areas." },
+                { section: "Data Used", content: "Soil moisture data, satellite imagery, and historical records." },
+                { section: "Visualization Tools", content: "QGIS and Python for data analysis and visualization." }
+            ]
+        },
+        {
+            image: "images/pic11.jpg",
+            title: "Renewable Energy Potential",
+            description: [
+                { section: "Introduction", content: "Assessing renewable energy potential in rural regions." },
+                { section: "Data Used", content: "Solar radiation data, wind speed data, and land use." },
+                { section: "Visualization Tools", content: "ArcGIS, Google Earth Engine, and MATLAB." }
+            ]
+        },
+        {
+            image: "images/pic12.jpg",
+            title: "Biodiversity Hotspot Analysis",
+            description: [
+                { section: "Introduction", content: "Identifying biodiversity hotspots for conservation efforts." },
+                { section: "Data Used", content: "Species distribution data, climate data." },
+                { section: "Visualization Tools", content: "Google Earth Engine and R for biodiversity modeling." }
+            ]
+        }
+    ]
+};
 
 
 // Initialize index for each project
@@ -633,21 +729,31 @@ document.addEventListener("DOMContentLoaded", function() {
 var currentSlideIndex = 0;
 
 // Open Modal Function
-function openModal(project, slideIndex) {
-    currentProject = project;
-    currentSlideIndex = slideIndex;
-
-    var modal = document.getElementById("imageModal");
-    var modalImg = document.getElementById("fullImage");
-    var modalTitle = document.getElementById("modalTitle1");
-    var modalDescription = document.getElementById("descriptionModal1");
-
-    // Set modal content with image, title, and description
-    modal.classList.add("active");
-    modalImg.src = projects[project][slideIndex].modalSrc;
-    modalTitle.innerHTML = projects[project][slideIndex].title || "Untitled"; // Set default title if missing
-    modalDescription.innerHTML = projects[project][slideIndex].caption || "No description available."; // Set default caption if missing
+function openModal(index) {
+    const project = projects[index];
+    
+    document.getElementById("fullImage").src = project.image;
+    document.getElementById("modalTitle").textContent = project.title;
+    
+    // Clear previous content
+    const descriptionContainer = document.getElementById("descriptionModal");
+    descriptionContainer.innerHTML = ""; // Clear previous content
+    
+    // Populate each section in description
+    project.description.forEach(item => {
+        const section = document.createElement("h3");
+        section.textContent = item.section;
+        
+        const content = document.createElement("p");
+        content.textContent = item.content;
+        
+        descriptionContainer.appendChild(section);
+        descriptionContainer.appendChild(content);
+    });
+    
+    document.getElementById("imageModal").classList.add("active");
 }
+
 
 
 // Close Modal Function
