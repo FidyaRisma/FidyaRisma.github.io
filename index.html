@@ -144,18 +144,14 @@
     <span class="close" onclick="closeModal()">&times;</span>
     <div class="modal-body">
         <!-- Enlarged Image in the Modal -->
-        <img class="modal-content" id="fullImage" alt="Modal Image"/>
+        <img class="modal-content" id="fullImage" />
 
-        <!-- Title and Description (below image for mobile) -->
-        <div id="modalContent">
-            <div id="modalTitle" class="modal-title">Title for Image</div>
-            <div id="descriptionModal" class="image-description">
-                <!-- Dynamically inserted sections -->
-            </div>
+        <!-- Title and Description on Right (Desktop) or Below (Mobile) -->
+        <div class="modal-description">
+            <div id="modalTitle1" class="modal-title">Title for Image 1</div>
+            <div id="descriptionModal1" class="image-description">Detailed description for Image 1 goes here.</div>
         </div>
     </div>
-</div>
-
     <!-- Navigation Buttons for Modal View -->
     <a class="prev-modal" onclick="plusSlidesModal(-1)" style="position: absolute; left: 0;">&#10094;</a> <!-- Prev Button on Left -->
     <a class="next-modal" onclick="plusSlidesModal(1)" style="position: absolute; right: 0;">&#10095;</a> <!-- Next Button on Right -->
