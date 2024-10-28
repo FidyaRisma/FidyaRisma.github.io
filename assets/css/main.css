@@ -3446,9 +3446,20 @@ input, select, textarea {
 
 /* Title section inside modal */
 .modal-title {
+    color: white;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
+}
+/* Adjust spacing for section titles and descriptions in modal view */
+.modal-description p {
+    margin-top: 5px; /* Adjust this as needed */
+    margin-bottom: 5px; /* Adjust this as needed */
+}
+
+.modal-description strong {
+    display: block;
+    margin-bottom: 3px; /* Adjust this as needed */
 }
 
 /* Image description styling */
@@ -3541,6 +3552,7 @@ input, select, textarea {
     }
 
     .modal-title {
+        color: white;
         font-size: 20px;
         font-weight: bold;
         margin-bottom: 10px;
@@ -3626,9 +3638,11 @@ input, select, textarea {
         height: 30%; /* Adjust the description size for mobile */
         font-size: 12px; /* Smaller font size for mobile */
     }
+    
+    
 /* Change color of image title on thumbnail */
 .image-title {
-    color: #3498db; /* Replace with your desired color */
+    color: black; /* Replace with your desired color */
     font-size: 16px; /* Optional: adjust font size */
     font-weight: bold; /* Optional: make text bold */
 }
@@ -3693,6 +3707,7 @@ input, select, textarea {
     }
 
     .modal-title {
+        color: white;
         font-size: 18px;
         font-weight: bold;
         margin-bottom: 8px;
