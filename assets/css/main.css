@@ -3523,12 +3523,7 @@ input, select, textarea {
     /* Modal content (image) positioned on top */
     .modal-content {
         width: 100%;
-<<<<<<< HEAD
         height: 50%; /* Take upper half of the modal */
-=======
-        max-height: 50%; /* Take upper half of the modal */
-        margin-bottom: 10px;
->>>>>>> parent of 310988b (Revert "test3_291024")
         object-fit: contain;
     }
 
@@ -3538,11 +3533,7 @@ input, select, textarea {
         padding: 10px;
         background-color: rgba(0, 0, 0, 0.7);
         color: white;
-<<<<<<< HEAD
         height: 50%; /* Take lower half of the modal */
-=======
-        max-height: 50%; /* Take lower half of the modal */
->>>>>>> parent of 310988b (Revert "test3_291024")
         overflow-y: auto;
         text-align: left;
     }
@@ -3573,20 +3564,6 @@ input, select, textarea {
         height: auto;
     }
 }
-<<<<<<< HEAD
-=======
-
-    /* Reduce the size of the slideshow container for mobile */
-    .slideshow-container {
-        height: 60%; /* Decrease the height to minimize the gap */
-        margin-top: 5px;
-    }
-
-    #imageCaption {
-        height: 30%;
-        font-size: 12px;
-    }
->>>>>>> parent of 310988b (Revert "test3_291024")
 
     /* Navigation buttons on mobile modal view */
     .prev-modal, .next-modal {
