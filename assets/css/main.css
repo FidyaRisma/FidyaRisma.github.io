@@ -3378,9 +3378,6 @@ input, select, textarea {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-    background-color: rgba(0, 0, 255, 0.7); /* Add blue background color */
-    border: 2px solid blue; /* Blue border for better visibility */
-    z-index: 999; /* Ensure buttons stay on top */
 }
 
 .next {
@@ -3393,9 +3390,9 @@ input, select, textarea {
     border-radius: 3px 0 0 3px;
 }
 
-/* Add a darker blue background color to the buttons on hover */
+/* Add a background color to the buttons on hover */
 .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 255, 0.9);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Modal styles (hidden by default) */
@@ -3482,7 +3479,7 @@ input, select, textarea {
     cursor: pointer;
 }
 
-/* Navigation buttons for modal view */
+/* Navigation buttons */
 .prev-modal, .next-modal {
     cursor: pointer;
     position: absolute;
@@ -3636,7 +3633,7 @@ input, select, textarea {
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    height: 650px;
+    height: 550px;
     padding: 0;
     box-sizing: border-box;
     overflow: hidden;
