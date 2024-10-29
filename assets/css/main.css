@@ -3350,14 +3350,14 @@ input, select, textarea {
     text-align: justify;
 }
 
-/* Style for the slideshow container */
+/* Style for the slideshow container - Desktop */
 .slideshow-container {
     position: relative;
     width: 100%;
-    max-width: 600px;
-    margin: auto;
+    max-width: 800px; /* Maximum width for larger image display */
+    min-height: 600px; /* Set a minimum height of 600px */
+    margin: 10px auto; /* Shortened top margin to reduce gap */
     padding: 0;
-    margin-top: 5px; /* Reduce the gap between paragraph and slideshow */
 }
 
 .slide-image {
@@ -3423,14 +3423,14 @@ input, select, textarea {
 }
 
 .modal-body .modal-content {
-    width: 65%;
+    width: 70%; /* Increased width for better visibility */
     max-height: 100%;
     object-fit: contain;
 }
 
 /* Caption (description) */
 .modal-description {
-    width: 35%;
+    width: 30%; /* Reduced description width to give more space to image */
     position: absolute;
     top: 10%;
     right: 0;
@@ -3507,6 +3507,15 @@ input, select, textarea {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* Image Title in Slideshow */
+.image-title {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px; /* Spacing to ensure it's visible right below the image */
+}
+
 /* Mobile view adjustments */
 @media screen and (max-width: 768px) {
     /* Modal body layout for mobile */
@@ -3559,10 +3568,9 @@ input, select, textarea {
         height: auto;
     }
 
-    /* Reduce the size of the slideshow container for mobile */
     .slideshow-container {
-        height: 50%; /* Decrease the height to minimize the gap */
-        margin-top: 5px;
+        height: 60%; /* Decreased height for mobile to minimize gap */
+        margin-top: 5px; /* Shortened top margin */
     }
 
     #imageCaption {
@@ -3612,12 +3620,12 @@ input, select, textarea {
 
     /* Adjust spacing for the slideshow and paragraph above */
     .paragraph-above-slideshow {
-        margin-bottom: 0; /* Remove extra gap */
+        margin-bottom: 0;
     }
 
     .slideshow-container {
-        margin-top: 0; /* Remove top margin */
-        padding: 0; /* Remove padding */
+        margin-top: 0;
+        padding: 0;
     }
 }
 
@@ -3634,7 +3642,7 @@ input, select, textarea {
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    height: 450px; /* Decrease height for a smaller container */
+    height: 600px; /* Set the height to at least 600px */
     padding: 0;
     box-sizing: border-box;
     overflow: hidden;
@@ -3645,10 +3653,10 @@ input, select, textarea {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 60%; /* Reduced height to minimize gap */
+    height: 75%; /* Increased height to make the image larger */
     position: relative;
-    margin: 0; /* Remove margin to reduce gap */
-    padding: 0; /* Remove padding to minimize gaps */
+    margin: 0;
+    padding: 0;
 }
 
 .image-container .slideshow-container img {
@@ -3656,7 +3664,7 @@ input, select, textarea {
     max-height: 100%;
     object-fit: contain;
     display: block;
-    margin: 0; /* Remove margin to reduce gap */
+    margin: 0;
 }
 
 /* Caption/Description styling in thumbnail */
@@ -3669,14 +3677,8 @@ input, select, textarea {
     color: #333;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
-    height: 20%;
+    height: 25%;
     box-sizing: border-box;
-}
-
-.image-title {
-    color: black;
-    font-size: 20px;
-    font-weight: bold;
 }
 
 /* Remove extra margin or padding from the paragraph above and slideshow */
@@ -3689,23 +3691,22 @@ input, select, textarea {
 
 /* Mobile view adjustments to reduce gap */
 @media screen and (max-width: 768px) {
-    /* Ensure no extra margins above or below paragraph and slideshow */
     .paragraph-above-slideshow {
-        margin-bottom: 0; /* Remove gap */
+        margin-bottom: 0;
     }
 
     .slideshow-container {
-        margin: 0 auto; /* Remove margin and center */
-        padding: 0; /* Remove padding */
+        margin: 0 auto;
+        padding: 0;
     }
 
     .slideshow-container img {
         max-width: 100%;
         height: auto;
         display: block;
-        margin: 0 auto; /* Ensure no extra margin */
+        margin: 0 auto;
     }
-    
+
     .slideshow-container h2,
     .slideshow-container h3 {
         margin-top: 10px;
