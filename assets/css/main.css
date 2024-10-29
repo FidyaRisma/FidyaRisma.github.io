@@ -3355,7 +3355,7 @@ input, select, textarea {
     position: relative;
     width: 100%;
     max-width: 550px;
-    margin: 5px;
+    margin: auto;
     padding: 0;
     margin-top: 0px; /* Reduce the gap between paragraph and slideshow */
 }
