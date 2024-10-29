@@ -3354,10 +3354,10 @@ input, select, textarea {
 .slideshow-container {
     position: relative;
     width: 100%;
-    max-width: 600px;
+    max-width: 800px; /* Increase the max-width for larger thumbnails */
     margin: auto;
     padding: 0;
-    margin-top: 5px; /* Reduce the gap between paragraph and slideshow */
+    margin-top: 10px;
 }
 
 .slide-image {
@@ -3561,7 +3561,7 @@ input, select, textarea {
 
     /* Reduce the size of the slideshow container for mobile */
     .slideshow-container {
-        height: 50%; /* Decrease the height to minimize the gap */
+        height: 60%; /* Decrease the height to minimize the gap */
         margin-top: 5px;
     }
 
@@ -3634,7 +3634,7 @@ input, select, textarea {
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    height: 450px; /* Decrease height for a smaller container */
+    height: 500px; /* Increase height for a larger thumbnail */
     padding: 0;
     box-sizing: border-box;
     overflow: hidden;
@@ -3645,7 +3645,7 @@ input, select, textarea {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 60%; /* Reduced height to minimize gap */
+    height: 70%; /* Increase height for a larger slideshow */
     position: relative;
     margin: 0; /* Remove margin to reduce gap */
     padding: 0; /* Remove padding to minimize gaps */
@@ -3705,7 +3705,7 @@ input, select, textarea {
         display: block;
         margin: 0 auto; /* Ensure no extra margin */
     }
-    
+
     .slideshow-container h2,
     .slideshow-container h3 {
         margin-top: 10px;
