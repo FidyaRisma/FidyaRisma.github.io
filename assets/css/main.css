@@ -3652,7 +3652,7 @@ input, select, textarea {
 
 .image-container .slideshow-container img {
     max-width: 200%;
-    max-height: 200%;
+    max-height: 100%;
     object-fit: contain;
     display: block;
     margin: 0; /* Remove margin to reduce gap */
