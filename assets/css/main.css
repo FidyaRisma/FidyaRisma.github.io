@@ -3508,7 +3508,7 @@ input, select, textarea {
 }
 
 /* Mobile view adjustments */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
     /* Modal body layout for mobile */
     .modal-body {
         display: flex;
