@@ -2589,7 +2589,7 @@ input, select, textarea {
 		.button.alt {
 			background-color: transparent;
 			box-shadow: inset 0 0 0 2px #e4e4e4;
-			color: #f875aa !important;
+			color: #AEDEFC !important;
 		}
 
 			input[type="submit"].alt:hover,
