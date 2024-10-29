@@ -3455,6 +3455,7 @@ input, select, textarea {
 
 .modal-description strong {
     display: block;
+    color: white;
     margin: 5px 0 5px;
 }
 
