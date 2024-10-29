@@ -3443,7 +3443,8 @@ input, select, textarea {
 }
 
 .modal-title {
-    color: #ffdfdf;
+    color: white;
+      -webkit-text-stroke: 2px #f875aa;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
