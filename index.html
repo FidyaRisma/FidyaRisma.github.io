@@ -749,27 +749,6 @@ document.addEventListener("keydown", function(event) {
     }
 });
 
-// JavaScript to navigate the slideshow using keyboard arrows
-document.addEventListener('keydown', function (event) {
-    // Check if the modal is currently open
-    const modal = document.querySelector('.modal.active');
-    if (modal) {
-        if (event.key === 'ArrowRight') {
-            // If right arrow key is pressed, move to next slide
-            const nextButton = modal.querySelector('.next-modal');
-            if (nextButton) {
-                nextButton.click();
-            }
-        } else if (event.key === 'ArrowLeft') {
-            // If left arrow key is pressed, move to previous slide
-            const prevButton = modal.querySelector('.prev-modal');
-            if (prevButton) {
-                prevButton.click();
-            }
-        }
-    }
-});
-</script>
 
 </script>
 
