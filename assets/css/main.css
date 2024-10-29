@@ -3354,10 +3354,10 @@ input, select, textarea {
 .slideshow-container {
     position: relative;
     width: 100%;
-    max-width: 600px;
+    max-width: 700px; /* Increased max-width to make thumbnail larger */
     margin: auto;
     padding: 0;
-    margin-top: 5px; /* Reduce the gap between paragraph and slideshow */
+    margin-top: 5px;
 }
 
 .slide-image {
@@ -3496,18 +3496,18 @@ input, select, textarea {
 }
 
 .prev-modal {
-    left: 5%;
+    left: 5%; /* Reverting to the original button position */
 }
 
 .next-modal {
-    right: 5%;
+    right: 5%; /* Reverting to the original button position */
 }
 
 .prev-modal:hover, .next-modal:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Mobile view adjustments for modal */
+/* Mobile view adjustments */
 @media screen and (max-width: 768px) {
     /* Modal body layout for mobile */
     .modal-body {
@@ -3515,42 +3515,31 @@ input, select, textarea {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        height: 100%;
         max-height: 100%;
-        overflow-y: auto;
     }
 
-    /* Modal content (image) positioned on top */
     .modal-content {
         width: 100%;
-        height: 50%; /* Take upper half of the modal */
+        max-height: 50%;
+        margin-bottom: 10px;
         object-fit: contain;
     }
 
-    /* Caption (description) positioned below */
     .modal-description {
         width: 100%;
         padding: 10px;
         background-color: rgba(0, 0, 0, 0.7);
         color: white;
-        height: 50%; /* Take lower half of the modal */
+        max-height: 50%;
         overflow-y: auto;
         text-align: left;
     }
 
-    /* Title styling inside the modal */
     .modal-title {
         color: white;
         font-size: 15px;
         font-weight: bold;
         margin-bottom: 5px;
-    }
-
-    /* Close button styling for mobile */
-    .close {
-        font-size: 30px;
-        top: 15px;
-        right: 15px;
     }
 
     #imageCaption {
@@ -3560,10 +3549,26 @@ input, select, textarea {
         font-size: 14px;
     }
 
+    .close {
+        font-size: 30px;
+        top: 15px;
+        right: 15px;
+    }
+
     .image-container {
         height: auto;
     }
-}
+
+    /* Reduce the size of the slideshow container for mobile */
+    .slideshow-container {
+        height: 60%; /* Slightly increased to make images larger on mobile */
+        margin-top: 5px;
+    }
+
+    #imageCaption {
+        height: 30%;
+        font-size: 12px;
+    }
 
     /* Navigation buttons on mobile modal view */
     .prev-modal, .next-modal {
@@ -3629,7 +3634,7 @@ input, select, textarea {
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    height: 550px;
+    height: 500px; /* Slightly increased to make container larger */
     padding: 0;
     box-sizing: border-box;
     overflow: hidden;
@@ -3640,10 +3645,10 @@ input, select, textarea {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 80%;
+    height: 70%; /* Increased height for larger image display */
     position: relative;
-    margin: 0; /* Remove margin to reduce gap */
-    padding: 0; /* Remove padding to minimize gaps */
+    margin: 0;
+    padding: 0;
 }
 
 .image-container .slideshow-container img {
@@ -3651,7 +3656,7 @@ input, select, textarea {
     max-height: 100%;
     object-fit: contain;
     display: block;
-    margin: 0; /* Remove margin to reduce gap */
+    margin: 0;
 }
 
 /* Caption/Description styling in thumbnail */
@@ -3686,21 +3691,21 @@ input, select, textarea {
 @media screen and (max-width: 768px) {
     /* Ensure no extra margins above or below paragraph and slideshow */
     .paragraph-above-slideshow {
-        margin-bottom: 0; /* Remove gap */
+        margin-bottom: 0;
     }
 
     .slideshow-container {
-        margin: 0 auto; /* Remove margin and center */
-        padding: 0; /* Remove padding */
+        margin: 0 auto;
+        padding: 0;
     }
 
     .slideshow-container img {
         max-width: 100%;
         height: auto;
         display: block;
-        margin: 0 auto; /* Ensure no extra margin */
+        margin: 0 auto;
     }
-    
+
     .slideshow-container h2,
     .slideshow-container h3 {
         margin-top: 10px;
