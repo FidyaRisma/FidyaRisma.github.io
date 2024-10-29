@@ -3668,14 +3668,15 @@ input, select, textarea {
     color: #333;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
-    height: 20%;
+    height: 20%W;
     box-sizing: border-box;
 }
 
 .image-title {
     color: black;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: bold
+    margin: 0 0;;
 }
 
 /* Remove extra margin or padding from the paragraph above and slideshow */
