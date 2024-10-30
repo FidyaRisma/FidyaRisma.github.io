@@ -3373,13 +3373,13 @@ input, select, textarea {
     width: 50px; /* Increased width for better usability */
     height: 50px; /* Increased height for better usability */
     padding: 10px; /* Added padding for better click area */
-    color: #AEDEFC;
+    color: #f875aa;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 18px;
     transition: 0.6s ease;
     border-radius: 50%; /* Changed to circular shape for aesthetics */
     user-select: none;
-    background-color: #f875aa; /* Blue background color */
+    background-color: #AEDEFC; /* Blue background color */
     z-index: 999; /* Ensure buttons stay on top */
     display: flex;
     align-items: center;
@@ -3389,17 +3389,17 @@ input, select, textarea {
 /* Positioning the navigation buttons */
 .next {
     right: 10px; /* Ensure some space from the edge for better accessibility */
-    border-radius: 30%; /* Circular button */
+    border-radius: 50%; /* Circular button */
 }
 
 .prev {
     left: 10px; /* Ensure some space from the edge for better accessibility */
-    border-radius: 30%; /* Circular button */
+    border-radius: 50%; /* Circular button */
 }
 
 /* Add a darker blue background color to the buttons on hover */
 .prev:hover, .next:hover {
-    background-color: #ffdfdf;
+    background-color: #AEDEFC;
 }
 
 /* Modal styles (hidden by default) */
