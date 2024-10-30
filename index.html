@@ -171,12 +171,12 @@
         <h4>Potential Fishing Zone (PFZ) Parameters Map <br> in the Southern Coastal of Java Island</h4>
         <p class="about-text">This project was developed to create a satellite data platform for sustainable ocean environment observation based on Challenge 7 (Sustainably expand the Global Ocean Observing System) and Challenge 8 (Create a digital representation of the ocean) of <a href="https://oceandecade.org/challenges/">Ocean Decade 10 Challenges.</a> The platform was built for sustainable fisheries by integrating various remote sensing data. The data available in this GEE Apps runs from 2022/01/01 until present. </p>
 <!-- Embed GEE Project using iframe -->
-<div id="three" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <div id="gee-wrapper" class="modal-content">
-        <iframe id="gee-iframe" src="https://ee-fidyarisma.projects.earthengine.app/view/pfz-parameters" allowfullscreen></iframe>
-    </div>
+<div class="iframe-container">
+    <iframe src="https://ee-fidyarisma.projects.earthengine.app/view/pfz-parameters" allowfullscreen></iframe>
 </div>
+
+        </div>
+    </div>
 </section>
 								
 						<!-- Four -->
@@ -764,35 +764,7 @@ document.addEventListener("keydown", function(event) {
     }
 });
 
-function adjustIframeSize() {
-        const modal = document.getElementById("gee-wrapper");
-        const iframe = document.getElementById("gee-iframe");
 
-        // Set iframe height dynamically based on the modal's width
-        const modalWidth = modal.clientWidth;
-        let newHeight = modalWidth * 0.5625; // Maintain 16:9 aspect ratio
-
-        if (window.innerWidth < 768) {
-            newHeight = modalWidth * 0.75; // Adjust aspect ratio for better view on smaller screens
-        }
-
-        iframe.style.height = newHeight + 'px';
-    }
-
-    // Event listeners to adjust iframe when the window is resized or the modal is opened
-    window.addEventListener('resize', adjustIframeSize);
-    window.addEventListener('load', adjustIframeSize);
-
-    function openModal() {
-        const modal = document.getElementById("three");
-        modal.style.display = "block";
-        adjustIframeSize(); // Adjust iframe size when modal is opened
-    }
-
-    function closeModal() {
-        const modal = document.getElementById("three");
-        modal.style.display = "none";
-    }
 </script>
 
 </body>
