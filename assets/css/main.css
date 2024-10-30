@@ -3741,8 +3741,8 @@ cotton {
 .iframe-container {
     position: relative;
     width: 100%;
+    padding-bottom: 56.25%; /* This maintains a 16:9 aspect ratio, adjust as needed */
     height: 0;
-    padding-bottom: 75%; /* Increase the padding for a taller aspect ratio */
     overflow: hidden;
 }
 
@@ -3754,11 +3754,3 @@ cotton {
     height: 100%;
     border: none;
 }
-
-/* Custom Media Query for Mobile Devices */
-@media only screen and (max-width: 768px) {
-    .iframe-container {
-        padding-bottom: 100%; /* Increase further to give more vertical space on mobile */
-    }
-}
-
