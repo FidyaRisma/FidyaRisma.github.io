@@ -3738,33 +3738,19 @@ cotton {
     }
 }
 
-/* General reset for HTML and body to remove any default margins and avoid overflow */
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden; /* Prevent scrolling for the entire page */
-}
-
-/* Container for responsive GEE iframe */
-.responsive-gee-container {
+.iframe-container {
     position: relative;
-    width: 100vw;  /* Full viewport width */
-    height: calc(100vh - 100px); /* Adjust height to fit within the viewport minus any top content */
-    max-width: 100%; /* Ensure it doesn't exceed viewport width */
-    max-height: 100%; /* Ensure it doesn't exceed viewport height */
-    overflow: hidden; /* Hide any overflowing content */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    padding-bottom: 56.25%; /* This maintains a 16:9 aspect ratio, adjust as needed */
+    height: 0;
+    overflow: hidden;
 }
 
-/* Make the iframe itself responsive */
-#gee-iframe {
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    border: none; /* Remove any border for a clean look */
-    transform-origin: center; /* Ensure scaling happens uniformly */
-    object-fit: cover; /* Ensure content fills the iframe properly without excess white space */
+    border: none;
 }
