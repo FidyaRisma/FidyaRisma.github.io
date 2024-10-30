@@ -3738,24 +3738,14 @@ cotton {
     }
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling of the body */
-}
-
-/* Container for the iframe */
 .iframe-container {
     position: relative;
     width: 100%;
-    max-width: 1200px; /* Set a maximum width to prevent over-expansion */
-    margin: 0 auto; /* Center the iframe on larger screens */
-    overflow: hidden;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    padding-bottom: 56.25%; /* This maintains a 16:9 aspect ratio, adjust as needed */
     height: 0;
+    overflow: hidden;
 }
 
-/* Styling the iframe itself */
 .iframe-container iframe {
     position: absolute;
     top: 0;
@@ -3763,17 +3753,4 @@ body {
     width: 100%;
     height: 100%;
     border: none;
-}
-
-/* Mobile-specific styles to make scrolling easier */
-@media only screen and (max-width: 768px) {
-    .iframe-container {
-        padding-bottom: 75%; /* Increase height slightly on mobile for better viewing */
-    }
-
-    /* Enable scrolling within the iframe on mobile */
-    .iframe-container iframe {
-        height: 100%;
-        overflow: auto;
-    }
 }
