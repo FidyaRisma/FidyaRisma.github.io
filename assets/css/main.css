@@ -226,7 +226,10 @@ input, select, textarea {
 			overflow-x: auto;
 			padding: 1em 1.5em;
 		}
-
+.text-blue {
+  color:#AEDEFC;
+  
+}
 	.align-left {
 		text-align: left;
 	}
