@@ -3741,8 +3741,7 @@ cotton {
 .iframe-container {
     position: relative;
     width: 100%;
-    height: 0;
-    padding-bottom: 75%; /* Increase the padding for a taller aspect ratio */
+    height: 100vh; /* Takes the full viewport height */
     overflow: hidden;
 }
 
@@ -3750,8 +3749,8 @@ cotton {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw; /* Takes the full viewport width */
+    height: 100vh; /* Takes the full viewport height */
     border: none;
 }
 
