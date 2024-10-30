@@ -3375,9 +3375,9 @@ input, select, textarea {
     padding: 10px; /* Added padding for better click area */
     color: #f875aa;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 15px;
     transition: 0.6s ease;
-    border-radius: 50%; /* Changed to circular shape for aesthetics */
+    border-radius: 90%; /* Changed to circular shape for aesthetics */
     user-select: none;
     background-color: rgba(255,255,255,0.4); /* Blue background color */
     z-index: 999; /* Ensure buttons stay on top */
@@ -3388,13 +3388,13 @@ input, select, textarea {
 
 /* Positioning the navigation buttons */
 .next {
-    right: 55px; /* Ensure some space from the edge for better accessibility */
-    border-radius: 50%; /* Circular button */
+    right: 15px; 
+    border-radius: 90%; /* Circular button */
 }
 
 .prev {
-    left: 55px; /* Ensure some space from the edge for better accessibility */
-    border-radius: 70%; /* Circular button */
+    left: 15px; 
+    border-radius: 90%; /* Circular button */
 }
 
 /* Add a darker blue background color to the buttons on hover */
