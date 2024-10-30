@@ -3379,7 +3379,7 @@ input, select, textarea {
     transition: 0.6s ease;
     border-radius: 50%; /* Changed to circular shape for aesthetics */
     user-select: none;
-    background-color: #AEDEFC; /* Blue background color */
+    background-color: #ffdfdf; /* Blue background color */
     z-index: 999; /* Ensure buttons stay on top */
     display: flex;
     align-items: center;
@@ -3388,13 +3388,13 @@ input, select, textarea {
 
 /* Positioning the navigation buttons */
 .next {
-    right: 10px; /* Ensure some space from the edge for better accessibility */
+    right: 15px; /* Ensure some space from the edge for better accessibility */
     border-radius: 50%; /* Circular button */
 }
 
 .prev {
-    left: 10px; /* Ensure some space from the edge for better accessibility */
-    border-radius: 50%; /* Circular button */
+    left: 15px; /* Ensure some space from the edge for better accessibility */
+    border-radius: 70%; /* Circular button */
 }
 
 /* Add a darker blue background color to the buttons on hover */
