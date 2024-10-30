@@ -110,7 +110,7 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		border-bottom: solid 2px #AEDEFC;
+		border-bottom: solid 2px #77CDFF;
 		color: inherit;
 		text-decoration: none;
 	}
@@ -227,7 +227,7 @@ input, select, textarea {
 			padding: 1em 1.5em;
 		}
 blue {
-  color:#AEDEFC;
+  color:#77CDFF;
   
 }
 	.align-left {
@@ -3408,7 +3408,7 @@ blue {
 
 /* Add a darker blue background color to the buttons on hover */
 .prev:hover, .next:hover {
-    background-color: #AEDEFC;
+    background-color: #77CDFF;
 }
 
 /* Modal styles (hidden by default) */
@@ -3472,7 +3472,7 @@ blue {
 
 .modal-description strong {
     display: block;
-    color: #AEDEFC;
+    color: #77CDFF;
     margin: 5px 0 5px;
 }
 
