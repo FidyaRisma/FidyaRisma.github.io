@@ -170,14 +170,13 @@
         <p class="about-text">This section features embedded interactive maps application developed using Google Earth Engine which is easy and free to use.</p>
         <h4>Potential Fishing Zone (PFZ) Parameters Map <br> in the Southern Coastal of Java Island</h4>
         <p class="about-text">This project was developed to create a satellite data platform for sustainable ocean environment observation based on Challenge 7 (Sustainably expand the Global Ocean Observing System) and Challenge 8 (Create a digital representation of the ocean) of <a href="https://oceandecade.org/challenges/">Ocean Decade 10 Challenges.</a> The platform was built for sustainable fisheries by integrating various remote sensing data. The data available in this GEE Apps runs from 2022/01/01 until present. </p>
-<!-- Embed GEE Project using iframe -->
-<div class="iframe-container">
-    <iframe src="https://ee-fidyarisma.projects.earthengine.app/view/pfz-parameters" allowfullscreen></iframe>
-</div>
-
+<!-- Updated iframe container with dynamic resizing -->
+        <div class="dynamic-gee-container">
+            <iframe id="dynamic-gee-iframe" src="https://ee-fidyarisma.projects.earthengine.app/view/pfz-parameters" allowfullscreen></iframe>
         </div>
     </div>
 </section>
+
 								
 						<!-- Four -->
 							<section id="four">
@@ -764,7 +763,25 @@ document.addEventListener("keydown", function(event) {
     }
 });
 
+ function resizeIframe() {
+        const container = document.querySelector('.dynamic-gee-container');
+        const iframe = document.getElementById('dynamic-gee-iframe');
+        
+        // Get the container's width
+        let containerWidth = container.clientWidth;
+        
+        // Calculate height based on 16:9 aspect ratio
+        let newHeight = containerWidth * 0.5625; // 16:9 ratio
+        
+        // Set iframe width and height
+        iframe.style.width = containerWidth + 'px';
+        iframe.style.height = newHeight + 'px';
+    }
 
+    // Resize iframe when the page loads
+    window.addEventListener('load', resizeIframe);
+    // Resize iframe whenever the window is resized
+    window.addEventListener('resize', resizeIframe);
 </script>
 
 </body>
