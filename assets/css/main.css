@@ -3738,19 +3738,37 @@ cotton {
     }
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll for body */
+}
+
 .iframe-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* This maintains a 16:9 aspect ratio, adjust as needed */
-    height: 0;
-    overflow: hidden;
+    height: auto; /* Allow the container to expand based on content */
+    min-height: 800px; /* Set a sensible minimum height for the container */
+    margin: 0 auto;
+    overflow: hidden; /* Hide any extra overflow initially */
 }
 
 .iframe-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh; /* Allow the iframe to take full height of the viewport */
     border: none;
+    overflow: scroll; /* Ensure iframe can scroll if necessary */
+}
+
+/* Mobile adjustments to enhance viewing experience */
+@media only screen and (max-width: 768px) {
+    .iframe-container {
+        height: auto; /* Allow it to fit content */
+        min-height: 600px; /* A smaller min-height for mobile if needed */
+    }
+
+    .iframe-container iframe {
+        height: 1200px; /* Make iframe taller so content can be easily scrolled */
+    }
 }
