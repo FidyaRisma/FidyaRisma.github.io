@@ -3388,12 +3388,12 @@ input, select, textarea {
 
 /* Positioning the navigation buttons */
 .next {
-    right: 15px; 
+    right: -50px; 
     border-radius: 90%; /* Circular button */
 }
 
 .prev {
-    left: 15px; 
+    left: -50px; 
     border-radius: 90%; /* Circular button */
 }
 
