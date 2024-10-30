@@ -3738,19 +3738,22 @@ cotton {
     }
 }
 
-.iframe-container {
+/* Container for the GEE iframe */
+.gee-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* This maintains a 16:9 aspect ratio, adjust as needed */
-    height: 0;
-    overflow: hidden;
+    max-width: 1200px;  /* Set a reasonable limit for the desktop view */
+    margin: 0 auto;     /* Center the container on the page */
+    height: 0;          /* To use padding for aspect ratio */
+    padding-top: 56.25%;  /* Aspect ratio of 16:9 for the container */
 }
 
-.iframe-container iframe {
+/* Styling for the iframe itself */
+#gee-iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border: none;
+    border: none; /* Remove the border to have a clean look */
 }
