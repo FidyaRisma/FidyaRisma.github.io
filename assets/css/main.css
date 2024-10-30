@@ -3738,19 +3738,20 @@ cotton {
     }
 }
 
-.iframe-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* This maintains a 16:9 aspect ratio, adjust as needed */
-    height: 0;
-    overflow: hidden;
-}
-
-.iframe-container iframe {
-    position: absolute;
+/* Full-screen iframe container */
+.gee-container {
+    position: fixed;
     top: 0;
     left: 0;
+    width: 100vw;  /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* No scrolling */
+    z-index: 9999; /* Ensure it appears above other content */
+}
+
+/* Full-screen iframe styling */
+#gee-iframe {
     width: 100%;
     height: 100%;
-    border: none;
+    border: none;  /* No border for a clean look */
 }
