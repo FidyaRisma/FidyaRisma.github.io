@@ -228,10 +228,12 @@ input, select, textarea {
 		}
 blue {
   color:#77CDFF;
+  font-weight: 600;
   
 }
 cotton {
   color:#f875aa;
+  font-weight: 600;
   
 }
 	.align-left {
