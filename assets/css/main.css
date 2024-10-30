@@ -3352,6 +3352,9 @@ input, select, textarea {
 .about-text {
     text-align: justify;
 }
+.download-text {
+    text-align: justify;
+}
 
 /* Style for the slideshow container */
 .slideshow-container {
