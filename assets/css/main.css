@@ -3365,34 +3365,41 @@ input, select, textarea {
     cursor: pointer;
 }
 
+/* Navigation buttons */
 .prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
+    width: 50px; /* Increased width for better usability */
+    height: 50px; /* Increased height for better usability */
+    padding: 10px; /* Added padding for better click area */
+    color: #f875aa;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    border-radius: 50%; /* Changed to circular shape for aesthetics */
     user-select: none;
+    background-color: #AEDEFC; /* Blue background color */
+    z-index: 999; /* Ensure buttons stay on top */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the arrow icon within the button */
 }
 
+/* Positioning the navigation buttons */
 .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+    right: 10px; /* Ensure some space from the edge for better accessibility */
+    border-radius: 50%; /* Circular button */
 }
 
 .prev {
-    left: 0;
-    border-radius: 3px 0 0 3px;
+    left: 10px; /* Ensure some space from the edge for better accessibility */
+    border-radius: 50%; /* Circular button */
 }
 
-/* Add a background color to the buttons on hover */
+/* Add a darker blue background color to the buttons on hover */
 .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #AEDEFC;
 }
 
 /* Modal styles (hidden by default) */
