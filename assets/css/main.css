@@ -3532,33 +3532,33 @@ cotton {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Mobile view adjustments */
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
     /* Modal body layout for mobile */
     .modal-body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        max-height: 100%;
+        display: block;
+        height: 100vh; /* Full screen height */
     }
 
     .modal-content {
+        display: block;
         width: 100%;
-        max-height: 50%;
-        margin-bottom: 10px;
-        object-fit: contain;
+        height: 50vh; /* Take the upper half */
+        object-fit: cover;
+        margin-bottom: 10px; /* Add space between image and description */
     }
 
     .modal-description {
+        display: block;
         width: 100%;
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0.7);
+        padding: 15px;
+        background-color: rgba(0, 0, 0, 0.9);
         color: white;
-        max-height: 50%;
         overflow-y: auto;
-        text-align: left;
+        height: calc(50vh - 20px); /* Take the remaining half minus the margin */
+        box-sizing: border-box; /* Ensure padding is included in height */
     }
+}
+
 
     .modal-title {
         color: white;
