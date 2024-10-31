@@ -142,13 +142,15 @@
     </div>
 </div>
 
-<!-- Modal View with Navigation Buttons -->
 <div id="imageModal" class="modal">
     <span class="close" onclick="closeModal()">&times;</span>
     <div class="modal-body">
-        <img class="modal-content" id="fullImage" />
+        <!-- New container for the image -->
+        <div class="modal-image-container">
+            <img class="modal-image" id="fullImage" src="images/pic01_thumb.jpg" alt="Project Image">
+        </div>
 
-        <!-- Title and Description -->
+        <!-- Container for title and description -->
         <div class="modal-description">
             <h2 id="modalTitle" class="modal-title">Title for Image</h2>
             <div id="descriptionModal" class="image-description">
@@ -157,9 +159,10 @@
         </div>
     </div>
     <!-- Navigation Buttons for Modal View -->
-    <a class="prev-modal" onclick="plusSlidesModal(-1)" style="position: absolute; left: 0;">&#10094;</a> <!-- Prev Button on Left -->
-    <a class="next-modal" onclick="plusSlidesModal(1)" style="position: absolute; right: 0;">&#10095;</a> <!-- Next Button on Right -->
+    <a class="prev-modal" onclick="plusSlidesModal(-1)" style="position: absolute; left: 0;">&#10094;</a> <!-- Prev Button -->
+    <a class="next-modal" onclick="plusSlidesModal(1)" style="position: absolute; right: 0;">&#10095;</a> <!-- Next Button -->
 </div>
+
 							</section>
 
 
