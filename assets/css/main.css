@@ -3444,10 +3444,8 @@ cotton {
     width: 90%;
     max-height: 80%;
     flex-direction: row;
-    align-items: center; /* Vertically center the content */
-    justify-content: center; /* Horizontally center the content */
     position: relative;
-    top: 0; /* Reset the offset to keep content centered */
+    top: 60px; /* Push the modal content below the title bar on mobile */
 }
 
 /* Image container for modal */
@@ -3462,7 +3460,7 @@ cotton {
 .modal-body .modal-content {
     width: 100%;
     max-height: 100%;
-    object-fit: contain; /* Ensure that the image fits properly */
+    object-fit: contain;
 }
 
 /* Caption (description) */
@@ -3474,7 +3472,6 @@ cotton {
     word-wrap: break-word;
     max-height: 80%;
     background-color: rgba(0, 0, 0, 0.9);
-    box-sizing: border-box;
 }
 
 .modal-title {
@@ -3603,11 +3600,6 @@ cotton {
         top: 0; /* Start at the very top for fullscreen */
     }
 
-    .modal-body {
-        justify-content: center; /* Ensure content is centered */
-        align-items: center; /* Ensure content is vertically centered */
-    }
-
     .modal-title {
         color: white;
         font-size: 24px;
@@ -3625,13 +3617,7 @@ cotton {
         font-size: 16px;
         line-height: 1.5;
     }
-
-    .modal-image-container {
-        justify-content: center; /* Center the image horizontally */
-        align-items: center; /* Center the image vertically */
-    }
 }
-
 
     #imageCaption {
         width: 100%;
