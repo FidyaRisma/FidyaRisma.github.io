@@ -3444,8 +3444,9 @@ cotton {
     width: 90%;
     max-height: 80%;
     flex-direction: row;
-    position: relative;
-    top: 60px; /* Push the modal content below the title bar on mobile */
+    margin: 0 auto; /* Center modal body horizontally */
+    justify-content: center; /* Center content */
+    align-items: center; /* Center content vertically */
 }
 
 /* Image container for modal */
@@ -3458,9 +3459,12 @@ cotton {
 }
 
 .modal-body .modal-content {
-    width: 100%;
+    max-width: 100%;
     max-height: 100%;
-    object-fit: contain;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Keep image ratio while ensuring it fits in the container */
+    margin: 0 auto; /* Center image horizontally */
 }
 
 /* Caption (description) */
@@ -3474,28 +3478,12 @@ cotton {
     background-color: rgba(0, 0, 0, 0.9);
 }
 
+/* Title adjustments */
 .modal-title {
     color: white;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
-}
-
-.modal-description p {
-    margin: 5px 0 5px;
-    color: white;
-}
-
-.modal-description strong {
-    display: block;
-    color: #77CDFF;
-    margin: 5px 0 5px;
-}
-
-.modal-description .image-description {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-top: 10px;
 }
 
 /* Close Button */
@@ -3514,7 +3502,8 @@ cotton {
 }
 
 /* Navigation buttons */
-.prev-modal, .next-modal {
+.prev-modal,
+.next-modal {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -3537,7 +3526,8 @@ cotton {
     right: 5%;
 }
 
-.prev-modal:hover, .next-modal:hover {
+.prev-modal:hover,
+.next-modal:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -3618,6 +3608,7 @@ cotton {
         line-height: 1.5;
     }
 }
+
 
     #imageCaption {
         width: 100%;
