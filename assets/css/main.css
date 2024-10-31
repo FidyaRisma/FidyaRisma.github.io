@@ -3429,7 +3429,7 @@ cotton {
     height: 100%; /* Full height for background coverage */
     background-color: rgba(255, 255, 255, 0.9);
     justify-content: center;
-    align-items: center;
+    align-items: center; /* Center both vertically and horizontally */
     overflow: hidden;
 }
 
@@ -3444,8 +3444,8 @@ cotton {
     width: 90%;
     max-height: 80%;
     flex-direction: row;
-    position: relative;
-    top: 60px; /* Push the modal content below the title bar on mobile */
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
 }
 
 /* Image container for modal */
@@ -3472,6 +3472,7 @@ cotton {
     word-wrap: break-word;
     max-height: 80%;
     background-color: rgba(0, 0, 0, 0.9);
+    margin: 0 auto; /* Centering the description container */
 }
 
 .modal-title {
@@ -3618,6 +3619,7 @@ cotton {
         line-height: 1.5;
     }
 }
+
 
     #imageCaption {
         width: 100%;
