@@ -3424,15 +3424,14 @@ cotton {
     position: fixed;
     z-index: 1000;
     left: 0;
-    top: 60px; /* Offset by the height of the titlebar */
+    top: 0;
     width: 100%;
-    height: calc(100% - 60px); /* Subtract the titlebar height from the total height */
-    background-color: rgba(255, 255, 255, 0.9);
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Use a darker background for better focus */
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
-
 
 /* Show modal when active */
 .modal.active {
@@ -3443,10 +3442,12 @@ cotton {
 .modal-body {
     display: flex;
     width: 90%;
-    max-height: 80%;
+    height: 90%;
+    max-height: 100%;
     flex-direction: row;
 }
 
+/* Image container */
 .modal-image-container {
     width: 65%;
     max-height: 100%;
@@ -3455,6 +3456,7 @@ cotton {
     align-items: center;
 }
 
+/* Image content */
 .modal-body .modal-content {
     width: 100%;
     max-height: 100%;
@@ -3468,32 +3470,16 @@ cotton {
     color: white;
     overflow-y: auto;
     word-wrap: break-word;
-    max-height: 80%;
+    max-height: 90%;
     background-color: rgba(0, 0, 0, 0.9);
 }
 
+/* Title styling */
 .modal-title {
     color: white;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
-}
-
-.modal-description p {
-    margin: 5px 0 5px;
-    color: white;
-}
-
-.modal-description strong {
-    display: block;
-    color: #77CDFF;
-    margin: 5px 0 5px;
-}
-
-.modal-description .image-description {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-top: 10px;
 }
 
 /* Close Button */
@@ -3538,6 +3524,7 @@ cotton {
 .prev-modal:hover, .next-modal:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
 
 /* Mobile view adjustments */
 @media screen and (max-width: 960px) {
