@@ -3587,6 +3587,7 @@ cotton {
  
     #imageCaption {
         width: 100%;
+        height: 30%;
         padding-left: 0;
         max-height: 40%;
         font-size: 14px;
@@ -3607,12 +3608,6 @@ cotton {
         margin-top: 5px;
     }
 
-    #imageCaption {
-        height: 30%;
-        font-size: 12px;
-    }
-
-    
     /* Navigation buttons on mobile modal view */
     .prev-modal, .next-modal {
         font-size: 18px;
