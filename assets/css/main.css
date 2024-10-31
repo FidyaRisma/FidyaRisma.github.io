@@ -3754,23 +3754,3 @@ cotton {
     height: 100%;
     border: none;
 }
-
-@media screen and (max-width: 736px) {
-  .modal-image-container {
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center;
-  }
-
-  .modal-image {
-    width: 100%;
-    height: auto;
-  }
-
-  .modal-caption {
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    order: 1; /* Ensures caption is below the image */
-  }
-}
