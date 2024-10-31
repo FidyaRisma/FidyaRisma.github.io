@@ -3445,18 +3445,16 @@ cotton {
     max-height: 80%;
     flex-direction: row;
     position: relative;
-    align-items: center; /* Vertically center the content */
-    justify-content: center; /* Horizontally center the content */
+    top: 60px; /* Push the modal content below the title bar on mobile */
 }
 
 /* Image container for modal */
 .modal-image-container {
-    width: 60%; /* Adjusted to ensure better balance between image and description */
+    width: 65%;
     max-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 2%; /* Add some space between image and description */
 }
 
 .modal-body .modal-content {
@@ -3467,17 +3465,13 @@ cotton {
 
 /* Caption (description) */
 .modal-description {
-    width: 38%; /* Adjusted to keep the balance with the image */
+    width: 35%;
     padding: 20px;
     color: white;
     overflow-y: auto;
     word-wrap: break-word;
     max-height: 80%;
     background-color: rgba(0, 0, 0, 0.9);
-    display: flex;
-    align-items: center; /* Vertically center the text */
-    justify-content: center; /* Horizontally center the text */
-    box-sizing: border-box;
 }
 
 .modal-title {
@@ -3583,9 +3577,6 @@ cotton {
         overflow-y: auto;
         font-size: 3.5vw; /* Responsive font size based on viewport width for small devices */
         line-height: 1.5;
-        display: flex;
-        align-items: center; /* Center the text vertically */
-        justify-content: center; /* Center the text horizontally */
     }
 
     .modal-title {
@@ -3609,11 +3600,6 @@ cotton {
         top: 0; /* Start at the very top for fullscreen */
     }
 
-    .modal-body {
-        justify-content: center; /* Ensure content is centered */
-        align-items: center; /* Ensure content is vertically centered */
-    }
-
     .modal-title {
         color: white;
         font-size: 24px;
@@ -3625,22 +3611,35 @@ cotton {
         font-size: 16px;
         line-height: 1.5;
         padding: 20px;
-        display: flex;
-        align-items: center; /* Vertically center the text */
-        justify-content: center; /* Horizontally center the text */
-        box-sizing: border-box;
     }
 
     .image-description {
         font-size: 16px;
         line-height: 1.5;
     }
-
-    .modal-image-container {
-        justify-content: center; /* Center the image horizontally */
-        align-items: center; /* Center the image vertically */
-    }
 }
+
+    #imageCaption {
+        width: 100%;
+        padding-left: 0;
+        max-height: 300%;
+        font-size: 14px;
+    }
+
+    .close {
+        font-size: 30px;
+        top: 15px;
+        right: 15px;
+    }
+
+    .image-container {
+        height: auto;
+    }
+
+    .slideshow-container {
+        height: auto;
+        margin-top: 5px;
+    }
 
     /* Navigation buttons on mobile modal view */
     .prev-modal, .next-modal {
