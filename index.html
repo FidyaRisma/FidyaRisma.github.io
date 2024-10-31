@@ -725,17 +725,16 @@ function openModal(project, slideIndex) {
 
     // Display the modal
     modal.classList.add("active");
-}
 
+    // Adjust modal layout based on screen size
+    adjustModalLayout();
+}
 
 // Function to close the modal
 function closeModal() {
     var modal = document.getElementById("imageModal");
     modal.classList.remove("active");
 }
-
-
-
 
 // Function to navigate between slides inside the modal view
 function plusSlidesModal(n) {
@@ -764,6 +763,18 @@ document.addEventListener("keydown", function(event) {
     }
 });
 
+// Function to adjust modal layout based on screen size
+function adjustModalLayout() {
+    var modalBody = document.querySelector(".modal-body");
+    if (window.innerWidth <= 960) {
+        modalBody.style.flexDirection = "column";
+    } else {
+        modalBody.style.flexDirection = "row";
+    }
+}
+
+// Adjust the modal layout on window resize
+window.addEventListener("resize", adjustModalLayout);
 
 </script>
 
