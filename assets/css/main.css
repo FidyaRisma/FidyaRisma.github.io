@@ -3418,26 +3418,34 @@ cotton {
     background-color: #77CDFF;
 }
 
-/* Modal styles (hidden by default) */
+/* Modal styles */
 .modal {
     display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
-    top: 60px; /* Offset by the height of the titlebar */
+    top: 0;
     width: 100%;
-    height: calc(100% - 60px); /* Subtract the titlebar height from the total height */
+    height: 100%;
     background-color: rgba(255, 255, 255, 0.9);
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
 
-
 /* Show modal when active */
 .modal.active {
     display: flex;
 }
+
+/* Modal fullscreen only on desktop */
+@media screen and (min-width: 960px) {
+    .modal {
+        width: 100vw; /* Full width of the viewport */
+        height: 100vh; /* Full height of the viewport */
+    }
+}
+
 
 /* Modal body layout */
 .modal-body {
