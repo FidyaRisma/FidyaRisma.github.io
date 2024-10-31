@@ -3429,7 +3429,7 @@ cotton {
     height: 100%; /* Full height for background coverage */
     background-color: rgba(255, 255, 255, 0.9);
     justify-content: center;
-    align-items: center;
+    align-items: center; /* Vertically center the content */
     overflow: hidden;
 }
 
@@ -3438,14 +3438,16 @@ cotton {
     display: flex;
 }
 
-/* Modal body layout */
+/* Modal body layout for desktop view */
 .modal-body {
     display: flex;
     width: 90%;
     max-height: 80%;
     flex-direction: row;
-    position: relative;
-    top: 60px; /* Push the modal content below the title bar on mobile */
+    position: absolute;
+    top: 50%; /* Start from the middle of the screen */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Shift the modal content to be exactly centered */
 }
 
 /* Image container for modal */
@@ -3455,12 +3457,14 @@ cotton {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .modal-body .modal-content {
-    width: 100%;
+    width: auto;
     max-height: 100%;
-    object-fit: contain;
+    max-width: 100%;
+    object-fit: contain; /* Ensure the image fits within the container while keeping the aspect ratio */
 }
 
 /* Caption (description) */
@@ -3549,6 +3553,9 @@ cotton {
         width: 100%;
         height: 100%; /* Full height of the modal */
         max-height: 100%;
+        position: relative; /* Ensure proper positioning on mobile */
+        top: 0; /* No offset on mobile view */
+        transform: none; /* Prevent undesired transformations on mobile */
     }
 
     .modal-image-container {
@@ -3600,6 +3607,12 @@ cotton {
         top: 0; /* Start at the very top for fullscreen */
     }
 
+    .modal-body {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Position centrally on desktop view */
+    }
+
     .modal-title {
         color: white;
         font-size: 24px;
@@ -3618,6 +3631,7 @@ cotton {
         line-height: 1.5;
     }
 }
+
 
     #imageCaption {
         width: 100%;
