@@ -3429,7 +3429,7 @@ cotton {
     height: 100%; /* Full height for background coverage */
     background-color: rgba(255, 255, 255, 0.9);
     justify-content: center;
-    align-items: center;
+    align-items: center; /* Vertically center the content */
     overflow: hidden;
 }
 
@@ -3442,10 +3442,10 @@ cotton {
 .modal-body {
     display: flex;
     width: 90%;
-    max-height: 80%;
+    max-height: 90%;
     flex-direction: row;
-    position: relative;
-    top: 60px; /* Push the modal content below the title bar on mobile */
+    justify-content: center;
+    align-items: center; /* Center both horizontally and vertically */
 }
 
 /* Image container for modal */
@@ -3455,12 +3455,13 @@ cotton {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .modal-body .modal-content {
     width: 100%;
     max-height: 100%;
-    object-fit: contain;
+    object-fit: contain; /* Ensure the image fits within the container */
 }
 
 /* Caption (description) */
@@ -3470,7 +3471,7 @@ cotton {
     color: white;
     overflow-y: auto;
     word-wrap: break-word;
-    max-height: 80%;
+    max-height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
 }
 
@@ -3598,6 +3599,10 @@ cotton {
         width: 100vw; /* Full width of the viewport */
         height: 100vh; /* Full height of the viewport */
         top: 0; /* Start at the very top for fullscreen */
+    }
+
+    .modal-body {
+        top: 0; /* Remove any offset to center the content properly */
     }
 
     .modal-title {
