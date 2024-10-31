@@ -3433,6 +3433,7 @@ cotton {
     overflow: hidden;
 }
 
+
 /* Show modal when active */
 .modal.active {
     display: flex;
@@ -3591,12 +3592,6 @@ cotton {
 
 /* Default styling for larger screens */
 @media screen and (min-width: 961px) {
-    .modal {
-        width: 100vw; /* Full width of the viewport */
-        height: 100vh; /* Full height of the viewport */
-        top: 0; /* Start at the very top for fullscreen */
-    }
-
     .modal-title {
         color: white;
         font-size: 24px;
@@ -3615,7 +3610,6 @@ cotton {
         line-height: 1.5;
     }
 }
-
 
     #imageCaption {
         width: 100%;
