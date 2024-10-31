@@ -3587,9 +3587,8 @@ cotton {
  
     #imageCaption {
         width: 100%;
-        height: 30%;
         padding-left: 0;
-        max-height: 40%;
+        max-height: 300%;
         font-size: 14px;
     }
 
