@@ -3429,7 +3429,7 @@ cotton {
     height: 100%; /* Full height for background coverage */
     background-color: rgba(255, 255, 255, 0.9);
     justify-content: center;
-    align-items: center; /* Center the modal content vertically and horizontally */
+    align-items: center;
     overflow: hidden;
 }
 
@@ -3444,6 +3444,7 @@ cotton {
     width: 90%;
     max-height: 80%;
     flex-direction: row;
+    justify-content: center; /* Ensure the content is horizontally centered */
     align-items: center; /* Ensure the content is vertically centered */
 }
 
@@ -3600,6 +3601,11 @@ cotton {
         top: 0; /* Start at the very top for fullscreen */
     }
 
+    .modal-body {
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+    }
+
     .modal-title {
         color: white;
         font-size: 24px;
@@ -3618,6 +3624,7 @@ cotton {
         line-height: 1.5;
     }
 }
+
 
     #imageCaption {
         width: 100%;
