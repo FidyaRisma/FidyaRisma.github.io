@@ -3443,10 +3443,19 @@ cotton {
     display: flex;
     width: 90%;
     max-height: 80%;
+    flex-direction: row;
+}
+
+.modal-image-container {
+    width: 65%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-body .modal-content {
-    width: 65%;
+    width: 100%;
     max-height: 100%;
     object-fit: contain;
 }
@@ -3454,9 +3463,6 @@ cotton {
 /* Caption (description) */
 .modal-description {
     width: 35%;
-    position: absolute;
-    top: 10%;
-    right: 0;
     padding: 20px;
     color: white;
     overflow-y: auto;
@@ -3534,39 +3540,29 @@ cotton {
 
 /* Mobile view adjustments */
 @media screen and (max-width: 960px) {
-    /* Modal body layout for mobile */
     .modal-body {
-        display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
-        max-height: 100%;
     }
 
-    .modal-content {
+    .modal-image-container {
         width: 100%;
         max-height: 50%;
-        margin-bottom: 10px;
-        object-fit: contain;
     }
 
     .modal-description {
         width: 100%;
         padding: 10px;
         background-color: rgba(0, 0, 0, 0.7);
-        color: white;
         max-height: 50%;
         overflow-y: auto;
-        text-align: left;
     }
 
     .modal-title {
-        color: white;
-        font-size: 15px;
-        font-weight: bold;
-        margin-bottom: 5px;
+        font-size: 18px;
     }
 
+ 
     #imageCaption {
         width: 100%;
         padding-left: 0;
@@ -3593,7 +3589,10 @@ cotton {
         height: 30%;
         font-size: 12px;
     }
-
+ .image-description {
+        font-size: 10px;
+        line-height: 1.6;
+    }
     /* Navigation buttons on mobile modal view */
     .prev-modal, .next-modal {
         font-size: 18px;
@@ -3624,15 +3623,8 @@ cotton {
         left: auto;
     }
 
-    .modal-description {
-        padding: 10px;
-        max-height: 40%;
-    }
 
-    .image-description {
-        font-size: 10px;
-        line-height: 1.6;
-    }
+   
 
     /* Adjust spacing for the slideshow and paragraph above */
     .paragraph-above-slideshow {
