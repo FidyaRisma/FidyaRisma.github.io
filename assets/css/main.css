@@ -3424,15 +3424,14 @@ cotton {
     position: fixed;
     z-index: 1000;
     left: 0;
-    top: 60px; /* Offset by the height of the titlebar */
+    top: 0; /* Start at the very top for the background */
     width: 100%;
-    height: calc(100% - 60px); /* Subtract the titlebar height from the total height */
+    height: 100%; /* Full height for background coverage */
     background-color: rgba(255, 255, 255, 0.9);
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
-
 
 /* Show modal when active */
 .modal.active {
@@ -3445,8 +3444,11 @@ cotton {
     width: 90%;
     max-height: 80%;
     flex-direction: row;
+    position: relative;
+    top: 60px; /* Push the modal content below the title bar on mobile */
 }
 
+/* Image container for modal */
 .modal-image-container {
     width: 65%;
     max-height: 100%;
@@ -3592,6 +3594,12 @@ cotton {
 
 /* Default styling for larger screens */
 @media screen and (min-width: 961px) {
+    .modal {
+        width: 100vw; /* Full width of the viewport */
+        height: 100vh; /* Full height of the viewport */
+        top: 0; /* Start at the very top for fullscreen */
+    }
+
     .modal-title {
         color: white;
         font-size: 24px;
