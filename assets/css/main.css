@@ -3532,7 +3532,7 @@ cotton {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 763px) {
   .modal-body {
     display: flex;
     flex-direction: column;
