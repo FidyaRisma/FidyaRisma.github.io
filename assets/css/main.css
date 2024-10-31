@@ -3738,21 +3738,19 @@ cotton {
     }
 }
 
-/* Container for the GEE iframe */
-#gee-iframe-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.iframe-container {
+    position: relative;
     width: 100%;
-    height: 70vh; /* Use 70% of the viewport height */
-    max-width: 1000px; /* Constrain width for larger screens */
-    margin: 0 auto; /* Center the iframe on larger screens */
-    overflow: hidden; /* Ensure no scroll bars appear */
+    padding-bottom: 56.25%; /* This maintains a 16:9 aspect ratio, adjust as needed */
+    height: 0;
+    overflow: hidden;
 }
 
-/* Styling for the GEE iframe */
-#gee-iframe {
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    border: none; /* No border for a cleaner look */
+    border: none;
 }
