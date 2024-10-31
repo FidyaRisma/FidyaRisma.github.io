@@ -3417,7 +3417,6 @@ cotton {
 .prev:hover, .next:hover {
     background-color: #77CDFF;
 }
-
 /* Modal styles (hidden by default) */
 .modal {
     display: none;
@@ -3471,28 +3470,61 @@ cotton {
     background-color: rgba(0, 0, 0, 0.9);
 }
 
+/* Modal title styling */
 .modal-title {
     color: white;
-    font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.modal-description p {
-    margin: 5px 0 5px;
-    color: white;
+/* Responsive font size for title */
+@media screen and (max-width: 480px) {
+    .modal-title {
+        font-size: 4vw; /* Adjust for smaller devices */
+    }
 }
 
-.modal-description strong {
-    display: block;
-    color: #77CDFF;
-    margin: 5px 0 5px;
+@media screen and (min-width: 481px) and (max-width: 960px) {
+    .modal-title {
+        font-size: 2.5vw; /* Moderate size for tablets */
+    }
 }
 
-.modal-description .image-description {
-    font-size: 16px;
+@media screen and (min-width: 961px) {
+    .modal-title {
+        font-size: 24px; /* Larger size for desktop */
+    }
+}
+
+/* Responsive font size for description text */
+.image-description {
     line-height: 1.5;
-    margin-top: 10px;
+}
+
+/* Default for desktop and larger tablets */
+.image-description {
+    font-size: 18px;
+}
+
+/* Mobile-specific adjustments */
+@media screen and (max-width: 480px) {
+    .image-description {
+        font-size: 3.5vw; /* Small phones: Responsive to the screen width */
+    }
+}
+
+/* Tablet adjustments */
+@media screen and (min-width: 481px) and (max-width: 960px) {
+    .image-description {
+        font-size: 2.5vw; /* Tablets: Adjust for readability */
+    }
+}
+
+/* Desktop adjustments */
+@media screen and (min-width: 961px) {
+    .image-description {
+        font-size: 18px; /* Fixed font size for larger devices */
+    }
 }
 
 /* Close Button */
@@ -3503,7 +3535,7 @@ cotton {
     color: #fff;
     background-color: rgba(255, 0, 0, 0.9);
     padding: 15px;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     border-radius: 50%;
     z-index: 2000;
@@ -3549,7 +3581,7 @@ cotton {
 
     .modal-image-container {
         width: 100%;
-        height: 30%; /* Fixed height to occupy the upper half of the modal */
+        height: 50%; /* Fixed height to occupy the upper half of the modal */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -3573,88 +3605,77 @@ cotton {
 
     .modal-title {
         color: white;
-        font-size: 18px;
         font-weight: bold;
         margin-bottom: 5px;
+        font-size: 18px; /* Responsive font size for smaller screens */
     }
 
     .image-description {
-        font-size: 10px;
+        font-size: 10px; /* Responsive font size for smaller screens */
         line-height: 1.5;
     }
 }
 
- 
-    #imageCaption {
-        width: 100%;
-        padding-left: 0;
-        max-height: 40%;
-        font-size: 14px;
-    }
+/* Thumbnail adjustments */
+#imageCaption {
+    width: 100%;
+    padding-left: 0;
+    max-height: 40%;
+    font-size: 14px;
+}
 
-    .close {
-        font-size: 30px;
-        top: 15px;
-        right: 15px;
-    }
+.image-container {
+    height: auto;
+}
 
-    .image-container {
-        height: auto;
-    }
+.slideshow-container {
+    height: auto;
+    margin-top: 5px;
+}
 
-    .slideshow-container {
-        height: auto;
-        margin-top: 5px;
-    }
+#imageCaption {
+    height: 30%;
+    font-size: 12px;
+}
 
-    #imageCaption {
-        height: 30%;
-        font-size: 12px;
-    }
+/* Navigation buttons on mobile modal view */
+.prev-modal, .next-modal {
+    font-size: 18px;
+    padding: 8px;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+}
 
-    
-    /* Navigation buttons on mobile modal view */
-    .prev-modal, .next-modal {
-        font-size: 18px;
-        padding: 8px;
-        color: white;
-        font-weight: bold;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 999;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(0, 0, 0, 0.5);
-    }
+/* Auto-align navigation buttons */
+.prev-modal {
+    left: 5%;
+    right: auto;
+}
 
-    /* Auto-align navigation buttons */
-    .prev-modal {
-        left: 5%;
-        right: auto;
-    }
+.next-modal {
+    right: 5%;
+    left: auto;
+}
 
-    .next-modal {
-        right: 5%;
-        left: auto;
-    }
+/* Adjust spacing for the slideshow and paragraph above */
+.paragraph-above-slideshow {
+    margin-bottom: 0; /* Remove extra gap */
+}
 
-
-   
-
-    /* Adjust spacing for the slideshow and paragraph above */
-    .paragraph-above-slideshow {
-        margin-bottom: 0; /* Remove extra gap */
-    }
-
-    .slideshow-container {
-        margin-top: 0; /* Remove top margin */
-        padding: 0; /* Remove padding */
-    }
+.slideshow-container {
+    margin-top: 0; /* Remove top margin */
+    padding: 0; /* Remove padding */
 }
 
 /* Ensure "Fidya Rismayatika" stays on one line */
