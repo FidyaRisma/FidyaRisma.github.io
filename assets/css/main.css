@@ -3603,25 +3603,7 @@ cotton {
         line-height: 1.5;
     }
 
-    .modal-title {
-        font-size: 3.5vw;
-        margin-bottom: 5px;
-    }
 
-    .modal-description p,
-    .modal-description .image-description {
-    margin: 5px 0;
-    color: white;
-    font-size: 3vw;
-    line-height: 1.5;
-    }
-
-    .modal-description strong {
-    display: block;
-    color: #77CDFF;
-    margin: 3px 0;
-    font-size: 3vw;
-  }
 
     /* Navigation buttons on mobile modal view */
     .prev-modal, .next-modal {
@@ -3650,6 +3632,28 @@ cotton {
 }
 }
 
+/* Mobile view adjustments */
+@media screen and (max-width: 760px) {
+      .modal-title {
+        font-size: 3.5vw;
+        margin-bottom: 5px;
+    }
+
+    .modal-description p,
+    .modal-description .image-description {
+    margin: 5px 0;
+    color: white;
+    font-size: 3vw;
+    line-height: 1.5;
+    }
+
+    .modal-description strong {
+    display: block;
+    color: #77CDFF;
+    margin: 3px 0;
+    font-size: 3vw;
+  }
+}
 /* Adjust spacing for the slideshow and paragraph above */
 .paragraph-above-slideshow {
     margin-bottom: 0;
