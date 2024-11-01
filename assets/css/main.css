@@ -3579,8 +3579,8 @@ cotton {
         height: 100%;
         margin: 0;
         padding: 0;
-        top: 10 px;
-        left: -10 px;
+        top: 0;
+        left: 0;
         transform: none; /* Remove translations to avoid misalignment */
     }
 
