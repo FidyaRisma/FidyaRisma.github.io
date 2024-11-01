@@ -3475,6 +3475,7 @@ cotton {
     overflow-y: auto;
     word-wrap: break-word;
     background-color: rgba(0, 0, 0, 0.9);
+    font-size: 16px;
 }
 
 .modal-title {
@@ -3608,9 +3609,6 @@ cotton {
         margin-bottom: 5px;
     }
 
-    .image-description {
-        font-size: 1 vw;
-    }
 
     /* Navigation buttons on mobile modal view */
     .prev-modal, .next-modal {
