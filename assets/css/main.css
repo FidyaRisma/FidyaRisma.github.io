@@ -3626,14 +3626,14 @@ cotton {
     }
     .close {
     position: absolute;
-    top: 30px;
+    top: 40px;
     right: 30px;
     color: #fff;
     background-color: rgba(255, 0, 0, 0.9);
-    padding: 10px;
+    padding: 5px;
     font-size: 25px;
     font-weight: bold;
-    border-radius: 70%;
+    border-radius: 90%;
     z-index: 2000;
     cursor: pointer;
 }
