@@ -3517,7 +3517,7 @@ cotton {
 .prev-modal, .next-modal {
     cursor: pointer;
     position: absolute;
-    top: 40%;
+    top: 45%;
     transform: translateY(-50%);
     padding: 16px;
     color: white;
@@ -3604,7 +3604,7 @@ cotton {
     }
 
     .modal-title {
-        font-size: 4vw;
+        font-size: 3vw;
         margin-bottom: 5px;
     }
 
