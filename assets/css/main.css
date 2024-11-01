@@ -3608,9 +3608,20 @@ cotton {
         margin-bottom: 5px;
     }
 
-    .image-description {
-        font-size: 1 vw;
+    .modal-description p,
+    .modal-description .image-description {
+    margin: 5px 0;
+    color: white;
+    font-size: 3vw;
+    line-height: 1.5;
     }
+
+    .modal-description strong {
+    display: block;
+    color: #77CDFF;
+    margin: 3px 0;
+    font-size: 3vw;
+  }
 
     /* Navigation buttons on mobile modal view */
     .prev-modal, .next-modal {
