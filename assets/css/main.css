@@ -3431,6 +3431,7 @@ cotton {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 /* Show modal when active */
@@ -3448,6 +3449,7 @@ cotton {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Center the modal content */
+    box-sizing: border-box;
 }
 
 /* Image container for modal */
@@ -3458,6 +3460,7 @@ cotton {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .modal-body .modal-content {
@@ -3465,6 +3468,7 @@ cotton {
     max-height: 100%;
     max-width: 100%;
     object-fit: contain; /* Ensure the image fits within the container while keeping the aspect ratio */
+    box-sizing: border-box;
 }
 
 /* Caption (description) */
@@ -3476,6 +3480,7 @@ cotton {
     word-wrap: break-word;
     max-height: 80%;
     background-color: rgba(0, 0, 0, 0.9);
+    box-sizing: border-box;
 }
 
 .modal-title {
@@ -3531,6 +3536,7 @@ cotton {
     user-select: none;
     background: rgba(0, 0, 0, 0.5);
     z-index: 999;
+    box-sizing: border-box;
 }
 
 .prev-modal {
@@ -3563,6 +3569,7 @@ cotton {
         top: 60px; /* Start below the title bar to avoid overlap */
         left: 50%;
         transform: translateX(-50%);
+        box-sizing: border-box;
     }
 
     .modal-image-container {
@@ -3572,6 +3579,7 @@ cotton {
         align-items: center;
         justify-content: center;
         overflow: hidden;
+        box-sizing: border-box;
     }
 
     .modal-content {
@@ -3580,6 +3588,7 @@ cotton {
         width: auto;
         height: 100%; /* Ensure image fits within the container */
         object-fit: contain; /* Keep the aspect ratio while ensuring it fits */
+        box-sizing: border-box;
     }
 
     .modal-description {
@@ -3591,6 +3600,7 @@ cotton {
         overflow-y: auto;
         font-size: 3.5vw; /* Responsive font size based on viewport width for small devices */
         line-height: 1.5;
+        box-sizing: border-box;
     }
 
     .modal-title {
@@ -3618,6 +3628,7 @@ cotton {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%); /* Position centrally on desktop view */
+        box-sizing: border-box;
     }
 
     .modal-title {
