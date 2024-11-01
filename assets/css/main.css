@@ -3488,7 +3488,7 @@ cotton {
 .modal-description .image-description {
     margin: 5px 0;
     color: white;
-    font-size: 16px;
+    font-size: 19px;
     line-height: 1.5;
 }
 
@@ -3633,9 +3633,9 @@ cotton {
 }
 
 /* Mobile view adjustments */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
       .modal-title {
-        font-size: 3.5vw;
+        font-size: 3vw;
         margin-bottom: 5px;
     }
 
@@ -3643,7 +3643,7 @@ cotton {
     .modal-description .image-description {
     margin: 5px 0;
     color: white;
-    font-size: 3vw;
+    font-size: 2.7vw;
     line-height: 1.5;
     }
 
@@ -3651,7 +3651,7 @@ cotton {
     display: block;
     color: #77CDFF;
     margin: 3px 0;
-    font-size: 3vw;
+    font-size: 2.7vw;
   }
 }
 /* Adjust spacing for the slideshow and paragraph above */
