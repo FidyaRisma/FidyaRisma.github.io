@@ -3505,10 +3505,10 @@ cotton {
     right: 15px;
     color: #fff;
     background-color: rgba(255, 0, 0, 0.9);
-    padding: 15px;
-    font-size: 30px;
+    padding: 12px;
+    font-size: 40px;
     font-weight: bold;
-    border-radius: 50%;
+    border-radius: 30%;
     z-index: 2000;
     cursor: pointer;
 }
