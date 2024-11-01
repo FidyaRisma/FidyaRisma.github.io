@@ -3599,17 +3599,17 @@ cotton {
         height: 50vh; /* Fixed height to occupy the lower 50% of the screen */
         padding: 10px;
         background-color: rgba(0, 0, 0, 0.7);
-        font-size: 3.5vw; /* Responsive font size based on viewport width for small devices */
+        font-size: 2.5vw; /* Responsive font size based on viewport width for small devices */
         line-height: 1.5;
     }
 
     .modal-title {
-        font-size: 3.5vw;
+        font-size: 3vw;
         margin-bottom: 5px;
     }
 
     .image-description {
-        font-size: 3vw;
+        font-size: 2.5vw;
     }
 
     /* Navigation buttons on mobile modal view */
