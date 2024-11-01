@@ -3633,7 +3633,7 @@ cotton {
 }
 
 /* Mobile view adjustments */
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 700px) {
       .modal-title {
         font-size: 3.5vw;
         margin-bottom: 5px;
