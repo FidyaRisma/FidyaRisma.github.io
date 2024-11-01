@@ -3609,14 +3609,14 @@ cotton {
     }
 
     .image-description {
-        font-size: 3.2vw;
+        font-size: 3vw;
     }
 
     /* Navigation buttons on mobile modal view */
     .prev-modal, .next-modal {
         font-size: 18px;
         padding: 8px;
-        top: 45%;
+        top: 42%;
         border-radius: 50%;
         width: 30px;
         height: 30px;
