@@ -3502,11 +3502,11 @@ cotton {
 .close {
     position: absolute;
     top: 20px;
-    right: 15px;
+    right: 20px;
     color: #fff;
     background-color: rgba(255, 0, 0, 0.9);
     padding: 12px;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: bold;
     border-radius: 60%;
     z-index: 2000;
