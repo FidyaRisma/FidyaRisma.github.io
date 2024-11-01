@@ -3431,6 +3431,7 @@ cotton {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 /* Show modal when active */
@@ -3445,9 +3446,10 @@ cotton {
     max-height: 80%;
     flex-direction: row;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the modal content */
+    top: 50%; /* Start from the middle of the screen */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Shift the modal content to be exactly centered */
+    box-sizing: border-box;
 }
 
 /* Image container for modal */
@@ -3458,13 +3460,17 @@ cotton {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .modal-body .modal-content {
     width: auto;
-    max-height: 100%;
+    height: auto; /* Allow the image to adjust based on container */
     max-width: 100%;
+    max-height: 100%;
     object-fit: contain; /* Ensure the image fits within the container while keeping the aspect ratio */
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent any overflow from cropping */
 }
 
 /* Caption (description) */
@@ -3476,6 +3482,7 @@ cotton {
     word-wrap: break-word;
     max-height: 80%;
     background-color: rgba(0, 0, 0, 0.9);
+    box-sizing: border-box;
 }
 
 .modal-title {
@@ -3531,6 +3538,7 @@ cotton {
     user-select: none;
     background: rgba(0, 0, 0, 0.5);
     z-index: 999;
+    box-sizing: border-box;
 }
 
 .prev-modal {
@@ -3563,6 +3571,7 @@ cotton {
         top: 60px; /* Start below the title bar to avoid overlap */
         left: 50%;
         transform: translateX(-50%);
+        box-sizing: border-box;
     }
 
     .modal-image-container {
@@ -3572,6 +3581,7 @@ cotton {
         align-items: center;
         justify-content: center;
         overflow: hidden;
+        box-sizing: border-box;
     }
 
     .modal-content {
@@ -3580,6 +3590,8 @@ cotton {
         width: auto;
         height: 100%; /* Ensure image fits within the container */
         object-fit: contain; /* Keep the aspect ratio while ensuring it fits */
+        box-sizing: border-box;
+        overflow: hidden;
     }
 
     .modal-description {
@@ -3591,6 +3603,7 @@ cotton {
         overflow-y: auto;
         font-size: 3.5vw; /* Responsive font size based on viewport width for small devices */
         line-height: 1.5;
+        box-sizing: border-box;
     }
 
     .modal-title {
@@ -3618,6 +3631,7 @@ cotton {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%); /* Position centrally on desktop view */
+        box-sizing: border-box;
     }
 
     .modal-title {
