@@ -3429,7 +3429,7 @@ cotton {
     height: 100%; /* Full height for background coverage */
     background-color: rgba(255, 255, 255, 0.9);
     justify-content: center;
-    align-items: center; /* Vertically center the content */
+    align-items: center;
     overflow: hidden;
 }
 
@@ -3441,22 +3441,18 @@ cotton {
 /* Modal body layout */
 .modal-body {
     display: flex;
-    width: 95%;
-    max-width: 100vw; /* Prevent overflow beyond viewport width */
-    max-height: 90vh; /* Ensure there's padding from the top and bottom */
+    width: 90%;
+    max-height: 80%;
     flex-direction: row;
-    align-items: center; /* Center content vertically */
     position: absolute;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Shift to the center */
-    overflow: hidden; /* Hide any overflowing content */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the modal content */
 }
 
 /* Image container for modal */
 .modal-image-container {
     width: 65%;
-    max-width: 100%; /* Ensure the container doesn't overflow */
     max-height: 100%;
     display: flex;
     justify-content: center;
@@ -3465,12 +3461,10 @@ cotton {
 }
 
 .modal-body .modal-content {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
+    width: auto;
     max-height: 100%;
-    object-fit: contain; /* Keep the aspect ratio */
-    overflow: hidden; /* Prevent overflow */
+    max-width: 100%;
+    object-fit: contain; /* Ensure the image fits within the container while keeping the aspect ratio */
 }
 
 /* Caption (description) */
@@ -3480,7 +3474,7 @@ cotton {
     color: white;
     overflow-y: auto;
     word-wrap: break-word;
-    max-height: 100%; /* Ensure the description doesn't exceed modal height */
+    max-height: 80%;
     background-color: rgba(0, 0, 0, 0.9);
 }
 
@@ -3565,10 +3559,10 @@ cotton {
         align-items: center;
         width: 100%;
         height: 100%; /* Full height of the modal */
-        top: 0; /* Remove offset to ensure full-screen modal */
-        left: 0;
-        transform: none; /* No transform needed for mobile */
-        margin: 0;
+        max-height: calc(100% - 60px); /* Full height minus the title bar height */
+        top: 60px; /* Start below the title bar to avoid overlap */
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .modal-image-container {
@@ -3586,7 +3580,6 @@ cotton {
         width: auto;
         height: 100%; /* Ensure image fits within the container */
         object-fit: contain; /* Keep the aspect ratio while ensuring it fits */
-        overflow: hidden;
     }
 
     .modal-description {
@@ -3622,8 +3615,6 @@ cotton {
     }
 
     .modal-body {
-        width: 95%; /* Ensures modal stays within the viewport */
-        max-width: 95vw; /* Avoid extending beyond the viewport */
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%); /* Position centrally on desktop view */
@@ -3646,10 +3637,30 @@ cotton {
         font-size: 16px;
         line-height: 1.5;
     }
-}
 
-/* Navigation buttons on mobile modal view */
-@media screen and (max-width: 768px) {
+    #imageCaption {
+        width: 100%;
+        padding-left: 0;
+        max-height: 300%;
+        font-size: 14px;
+    }
+
+    .close {
+        font-size: 30px;
+        top: 15px;
+        right: 15px;
+    }
+
+    .image-container {
+        height: auto;
+    }
+
+    .slideshow-container {
+        height: auto;
+        margin-top: 5px;
+    }
+
+    /* Navigation buttons on mobile modal view */
     .prev-modal, .next-modal {
         font-size: 18px;
         padding: 8px;
@@ -3668,23 +3679,29 @@ cotton {
         background: rgba(0, 0, 0, 0.5);
     }
 
+    /* Auto-align navigation buttons */
     .prev-modal {
         left: 5%;
+        right: auto;
     }
 
     .next-modal {
         right: 5%;
+        left: auto;
     }
+
+
 }
 
-/* Adjust spacing for the slideshow and paragraph above */
-.paragraph-above-slideshow {
-    margin-bottom: 0; /* Remove extra gap */
-}
+    /* Adjust spacing for the slideshow and paragraph above */
+    .paragraph-above-slideshow {
+        margin-bottom: 0; /* Remove extra gap */
+    }
 
-.slideshow-container {
-    margin-top: 0; /* Remove top margin */
-    padding: 0; /* Remove padding */
+    .slideshow-container {
+        margin-top: 0; /* Remove top margin */
+        padding: 0; /* Remove padding */
+    }
 }
 
 /* Ensure "Fidya Rismayatika" stays on one line */
