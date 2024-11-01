@@ -3575,7 +3575,7 @@ cotton {
         width: 100%;
         height: calc(100% - 60px); /* Full height minus the title bar height */
         top: 60px; /* Start below the title bar to avoid overlap */
-        left: 60%;
+        left: 50%;
         transform: translateX(-50%);
     }
 
