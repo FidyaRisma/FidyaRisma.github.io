@@ -3501,7 +3501,7 @@ cotton {
 /* Close Button */
 .close {
     position: absolute;
-    top: 30px;
+    top: 20px;
     right: 20px;
     color: #fff;
     background-color: rgba(255, 0, 0, 0.9);
@@ -3624,6 +3624,19 @@ cotton {
         align-items: center;
         justify-content: center;
     }
+    .close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    background-color: rgba(255, 0, 0, 0.9);
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 70%;
+    z-index: 2000;
+    cursor: pointer;
+}
 }
 
 /* Adjust spacing for the slideshow and paragraph above */
