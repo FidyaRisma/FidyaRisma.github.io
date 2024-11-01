@@ -3444,8 +3444,10 @@ cotton {
     width: 90%;
     max-height: 80%;
     flex-direction: row;
-    position: relative;
-    top: 60px; /* Push the modal content below the title bar on mobile */
+    position: absolute;
+    top: 50%; /* Start from the middle of the screen */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Shift the modal content to be exactly centered */
 }
 
 /* Image container for modal */
@@ -3455,12 +3457,14 @@ cotton {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .modal-body .modal-content {
-    width: 100%;
+    width: auto;
     max-height: 100%;
-    object-fit: contain;
+    max-width: 100%;
+    object-fit: contain; /* Ensure the image fits within the container while keeping the aspect ratio */
 }
 
 /* Caption (description) */
@@ -3541,14 +3545,17 @@ cotton {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Mobile view adjustments */
+/* Mobile view adjustments (Restored like the reference) */
 @media screen and (max-width: 960px) {
     .modal-body {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        height: 100%; /* Full height of the modal */
+        height: auto;
         max-height: 100%;
+        position: relative; /* Ensure proper stacking on mobile */
+        top: 60px; /* Push the modal content below the title bar on mobile */
+        transform: none; /* Remove transform for mobile view */
     }
 
     .modal-image-container {
@@ -3600,6 +3607,12 @@ cotton {
         top: 0; /* Start at the very top for fullscreen */
     }
 
+    .modal-body {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Position centrally on desktop view */
+    }
+
     .modal-title {
         color: white;
         font-size: 24px;
@@ -3617,7 +3630,6 @@ cotton {
         font-size: 16px;
         line-height: 1.5;
     }
-}
 
     #imageCaption {
         width: 100%;
@@ -3640,7 +3652,7 @@ cotton {
         height: auto;
         margin-top: 5px;
     }
-
+}
     /* Navigation buttons on mobile modal view */
     .prev-modal, .next-modal {
         font-size: 18px;
