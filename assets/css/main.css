@@ -3501,7 +3501,7 @@ cotton {
 /* Close Button */
 .close {
     position: absolute;
-    top: 20px;
+    top: 30px;
     right: 20px;
     color: #fff;
     background-color: rgba(255, 0, 0, 0.9);
