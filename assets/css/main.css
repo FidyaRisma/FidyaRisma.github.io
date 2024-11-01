@@ -3580,7 +3580,7 @@ cotton {
     }
 
     .modal-image-container {
-        width: 95%;
+        width: 90%;
         height: 50vh; /* Fixed height to occupy the upper 50% of the screen */
         display: flex;
         align-items: center;
@@ -3589,7 +3589,7 @@ cotton {
     }
 
     .modal-content {
-        max-width: 95%;
+        max-width: 90%;
         height: 100%;
         object-fit: contain;
     }
