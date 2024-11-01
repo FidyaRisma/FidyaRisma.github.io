@@ -3444,10 +3444,8 @@ cotton {
     width: 90%;
     max-height: 80%;
     flex-direction: row;
-    position: absolute;
-    top: 50%; /* Start from the middle of the screen */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Shift the modal content to be exactly centered */
+    position: relative;
+    top: 60px; /* Push the modal content below the title bar on mobile */
 }
 
 /* Image container for modal */
@@ -3457,14 +3455,12 @@ cotton {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
 .modal-body .modal-content {
-    width: auto;
+    width: 100%;
     max-height: 100%;
-    max-width: 100%;
-    object-fit: contain; /* Ensure the image fits within the container while keeping the aspect ratio */
+    object-fit: contain;
 }
 
 /* Caption (description) */
@@ -3550,14 +3546,9 @@ cotton {
     .modal-body {
         flex-direction: column;
         align-items: center;
-        width: 90%;
-        height: auto; /* Ensure modal body takes appropriate height */
+        width: 100%;
+        height: 100%; /* Full height of the modal */
         max-height: 100%;
-        position: relative; /* Adjust position for mobile view */
-        top: 0; /* Remove top offset for mobile */
-        left: 0; /* Remove left offset for mobile */
-        transform: none; /* Remove transform for mobile view */
-        margin: auto; /* Ensure the modal body is centered properly on mobile */
     }
 
     .modal-image-container {
@@ -3609,12 +3600,6 @@ cotton {
         top: 0; /* Start at the very top for fullscreen */
     }
 
-    .modal-body {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); /* Position centrally on desktop view */
-    }
-
     .modal-title {
         color: white;
         font-size: 24px;
@@ -3632,6 +3617,7 @@ cotton {
         font-size: 16px;
         line-height: 1.5;
     }
+
 
     #imageCaption {
         width: 100%;
