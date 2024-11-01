@@ -3565,8 +3565,7 @@ cotton {
     .modal {
         width: 100vw;
         height: 100vh;
-    top: 10;
-        left: 10;
+        top: 0;
         overflow: hidden;
         display: flex;
         justify-content: center;
@@ -3580,8 +3579,8 @@ cotton {
         height: 100%;
         margin: 0;
         padding: 0;
-        top: 10;
-        left: 10;
+        top: 0;
+        left: 0;
         transform: none; /* Remove translations to avoid misalignment */
     }
 
