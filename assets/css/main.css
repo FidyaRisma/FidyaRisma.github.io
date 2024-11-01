@@ -3565,24 +3565,23 @@ cotton {
     .modal {
         width: 100vw; /* Full width of the viewport */
         height: 100vh; /* Full height of the viewport */
-        top: 0;
-        overflow: hidden; /* Prevent overflow */
+        top: 0; /* Start at the very top for fullscreen */
+        overflow: hidden;
     }
 
     .modal-body {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        height: 100%; /* Full height of the modal */
-        top: 0;
-        left: 0;
-        transform: none; /* Remove any translations for proper positioning */
-        overflow: hidden; /* Prevent scrolling issues */
+        height: calc(100% - 60px); /* Full height minus the title bar height */
+        top: 60px; /* Start below the title bar to avoid overlap */
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .modal-image-container {
         width: 100%;
-        height: 60vh; /* Fixed height to occupy upper part of the screen, ensuring enough space */
+        height: 50vh; /* Fixed height to occupy the upper 50% of the screen */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -3590,31 +3589,27 @@ cotton {
     }
 
     .modal-content {
-        width: auto;
-        height: auto;
         max-width: 100%;
-        max-height: 100%;
-        object-fit: contain; /* Maintain aspect ratio and prevent cropping */
+        height: 100%;
+        object-fit: contain;
     }
 
     .modal-description {
         width: 100%;
-        height: calc(40vh - 20px); /* Fixed height to occupy the lower part of the screen */
+        height: 50vh; /* Fixed height to occupy the lower 50% of the screen */
         padding: 10px;
         background-color: rgba(0, 0, 0, 0.7);
-        color: white;
-        overflow-y: auto;
         font-size: 3.5vw; /* Responsive font size based on viewport width for small devices */
         line-height: 1.5;
     }
 
     .modal-title {
-        font-size: 4vw; /* Responsive font size for the title */
+        font-size: 4vw;
         margin-bottom: 5px;
     }
 
     .image-description {
-        font-size: 3.5vw; /* Responsive font size for the description */
+        font-size: 3.5vw;
     }
 
     /* Navigation buttons on mobile modal view */
@@ -3627,19 +3622,6 @@ cotton {
         display: flex;
         align-items: center;
         justify-content: center;
-        background: rgba(0, 0, 0, 0.5);
-        position: fixed;
-        top: 50%;
-        transform: translateY(-50%);
-        color: white;
-    }
-
-    .prev-modal {
-        left: 5%;
-    }
-
-    .next-modal {
-        right: 5%;
     }
 }
 
