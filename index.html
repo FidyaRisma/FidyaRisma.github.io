@@ -24,8 +24,8 @@
 				<nav id="nav">
 					<ul>
 						<li><a href="#about-me" class="active">About Me</a></li>
-						<li><a href="#two">Geospatial Portfolio</a></li>
-						<li><a href="#three">Interactive Map - GEE Apps</a></li>
+						<li><a href="#geospatial-portfolio">Geospatial Portfolio</a></li>
+						<li><a href="#GEE-map">Interactive Map - GEE Apps</a></li>
 						<li><a href="#four">Additional Material</a></li>
 					</ul>
 				</nav>
@@ -72,7 +72,7 @@
 
 					<!-- Two -->
 <!-- Geospatial Portfolio Section -->
-<section id="two">
+<section id="geospatial-portfolio">
     <div class="container">
         <h3>Geospatial Portfolio</h3>
         <p class="about-text">This section lists the geospatial analysis I have done in the past. Each project includes an image slideshow with descriptions. Click on any image to see more details from each portfolio.</p>
@@ -166,7 +166,7 @@
 
 
 						<!-- Three -->
-							<section id="three">
+							<section id="GEE-map">
 							   <div class="container">
 							<h3>Interactive Map - Google Earth Engine</h3>
         <p class="about-text">This section features embedded interactive maps application developed using Google Earth Engine (GEE) Apps which is easy and free to use. The embedded GEE Apps on this section is only adapted for portfolio purpose. For full size, please click on the portfolio title. <cotton>It is recommended to open the GEE Apps on Desktop.</cotton></p>
@@ -812,6 +812,45 @@ document.addEventListener("keydown", function(event) {
         }
     }
 });
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Define all sections and their desired URLs
+    const sections = {
+      "#about-me": "/about-me",
+      "#geospatial-portfolio": "/geospatial-portfolio",
+      "#GEE-map": "/GEE-map" // Add more sections as needed
+    };
+
+    // Check the initial hash when the page loads
+    const hash = window.location.hash;
+    if (sections[hash]) {
+      // Change the URL path without reloading
+      window.history.replaceState(null, null, sections[hash]);
+      
+      // Scroll to the section
+      const sectionElement = document.querySelector(hash);
+      if (sectionElement) {
+        sectionElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+
+    // Listen for hash changes (e.g., when user clicks a link with a hash)
+    window.addEventListener("hashchange", function () {
+      const newHash = window.location.hash;
+      if (sections[newHash]) {
+        // Change the URL path without reloading
+        window.history.replaceState(null, null, sections[newHash]);
+
+        // Scroll to the section
+        const newSectionElement = document.querySelector(newHash);
+        if (newSectionElement) {
+          newSectionElement.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    });
+  });
+</script>
 
 
 </script>
