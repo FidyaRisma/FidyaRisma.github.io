@@ -3530,11 +3530,11 @@ cotton {
 }
 
 .prev-modal {
-    left: 10%;
+    left: 2%;
 }
 
 .next-modal {
-    right: 10%;
+    right: 2%;
 }
 
 .prev-modal:hover, .next-modal:hover {
