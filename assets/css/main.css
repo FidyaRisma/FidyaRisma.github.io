@@ -3519,7 +3519,7 @@ cotton {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    padding: 16px;
+    padding: 10px;
     color: white;
     font-weight: bold;
     font-size: 24px;
@@ -3530,15 +3530,15 @@ cotton {
 }
 
 .prev-modal {
-    left: 5%;
+    left: 10%;
 }
 
 .next-modal {
-    right: 5%;
+    right: 10%;
 }
 
 .prev-modal:hover, .next-modal:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Default styling for larger screens */
