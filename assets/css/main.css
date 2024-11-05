@@ -3528,7 +3528,7 @@ purple {
 .modal-body {
     display: flex;
     width: 90%;
-    max-height: 720px;
+    max-height: 150%px;
     flex-direction: row;
     position: absolute;
     top: 50%;
@@ -3648,7 +3648,7 @@ purple {
 }
 
 /* Mobile view adjustments */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 750px) {
     .modal {
         width: 100vw; /* Full width of the viewport */
         height: 100vh; /* Full height of the viewport */
