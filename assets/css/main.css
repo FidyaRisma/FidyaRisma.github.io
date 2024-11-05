@@ -3601,7 +3601,8 @@ cotton {
         padding: 10px;
         background-color: rgba(0, 0, 0, 0.7);
         font-size: 1vw; /* Responsive font size based on viewport width for small devices */
-        line-height: 1.5;
+        line-height: 1.5
+        overflow-y: visible;
     }
 
 
