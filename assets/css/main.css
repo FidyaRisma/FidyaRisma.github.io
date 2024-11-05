@@ -3742,8 +3742,9 @@ purple {
 }
 
 .image-title {
-    color: black;
-    font-size: 100%;
+    color: white;
+    background-color: rgba(0,0,0,0.7); /* Blue background color */
+    font-size: 25;
     font-weight: bold;
     margin-top: 0;
 }
@@ -3817,12 +3818,7 @@ purple {
     box-sizing: border-box;
 }
 
-.image-title {
-    color: black;
-    font-size: 100%;
-    font-weight: bold;
-    margin-top: 0; 
-}
+
 
 /* Remove extra margin or padding from the paragraph above and slideshow */
 .paragraph-above-slideshow, .slideshow-container {
