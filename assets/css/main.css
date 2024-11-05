@@ -3604,14 +3604,14 @@ purple {
         align-items: center;
         width: 100%;
         height: calc(100% - 60px); /* Full height minus the title bar height */
-        top: 50px; /* Start below the title bar to avoid overlap */
+        top: 60px; /* Start below the title bar to avoid overlap */
         left: 50%;
         transform: translateX(-50%);
     }
 
     .modal-image-container {
         width: 90%;
-        height: 30vh; /* Fixed height to occupy the upper 50% of the screen */
+        height: 50vh; /* Fixed height to occupy the upper 50% of the screen */
         display: flex;
         align-items: center;
         justify-content: center;
