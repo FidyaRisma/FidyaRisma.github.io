@@ -157,8 +157,8 @@ input, select, textarea {
 	}
 
 	h4 {
-		font-size: 30px;
-		line-height: 1em;
+		font-size: 1.25px;
+		line-height: 1.5em;
     text-align: center;
     margin-top: 5px;
     margin-bottom: 10px;
@@ -3498,7 +3498,7 @@ purple {
     background-color: rgba(100, 149, 237,0.8);  
     width: 100%;
     text-align: center;
-    font-size: 20px;
+    font-size: 1em;
     font-weight: bold;
     margin-top: 30px;
 }
