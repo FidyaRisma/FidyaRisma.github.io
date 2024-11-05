@@ -3376,8 +3376,8 @@ purple {
 }
 
 .thumbnail {
-    width: 200%;
-    height: 200%;
+    width: 300%;
+    height: 300%;
     object-fit: cover;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -3399,7 +3399,7 @@ purple {
 .slideshow-container {
     position: relative;
     width: 100%;
-    max-width: 750px;
+    max-width: 1000px;
     margin: 0px;
     padding: 0;
     margin-top: 0px; /* Reduce the gap between paragraph and slideshow */
@@ -3770,15 +3770,7 @@ purple {
         margin-top: 10px;
         margin-bottom: 5px;
     }
-}
-
-
-/* Ensure "Fidya Rismayatika" stays on one line */
-#logo a {
-    white-space: nowrap;
-}
-
-/* Container for the slideshow and its description */
+    /* Container for the slideshow and its description */
 .image-container {
     position: relative;
     display: flex;
@@ -3839,6 +3831,15 @@ purple {
     padding-top: 0;
     padding-bottom: 0;
 }
+
+}
+
+
+/* Ensure "Fidya Rismayatika" stays on one line */
+#logo a {
+    white-space: nowrap;
+}
+
 
 /* Mobile view adjustments to reduce gap */
 @media screen and (max-width: 768px) {
