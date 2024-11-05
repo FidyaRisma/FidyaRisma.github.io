@@ -3743,8 +3743,10 @@ purple {
 
 .image-title {
     color: white;
-    background-color: rgba(0,0,0,0.7); /* Blue background color */
-    font-size: 25;
+    background-color: rgba(0,0,0,0.7); 
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
     font-weight: bold;
     margin-top: 0;
 }
