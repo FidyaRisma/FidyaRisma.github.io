@@ -3470,8 +3470,8 @@ cotton {
 /* Caption (description) */
 .modal-description {
     width: 35%;
-    height: 700px;    
-    padding: 20px;
+    height: 720px;    
+    padding: 10px;
     color: white;
     overflow-y: auto;
     word-wrap: break-word;
