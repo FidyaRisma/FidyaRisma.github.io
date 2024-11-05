@@ -3668,7 +3668,7 @@ purple {
 
     .modal-image-container {
         width: 90%;
-        height: 50vh; /* Fixed height to occupy the upper 50% of the screen */
+        height: 45vh; /* Fixed height to occupy the upper 50% of the screen */
         display: flex;
         align-items: center;
         justify-content: center;
