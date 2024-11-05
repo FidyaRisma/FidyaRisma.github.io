@@ -3469,7 +3469,7 @@ cotton {
 
 /* Caption (description) */
 .modal-description {
-    width: 35%;
+    width: 600px;
     height: 720px;    
     padding: 10px;
     color: white;
