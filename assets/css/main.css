@@ -3446,6 +3446,13 @@ purple {
     background-color: #77CDFF;
 }
 
+.image-title {
+    color: white;
+    background-color: rgba(126, 96, 191,0.9); 
+    width: 100%;
+    text-align: center
+    margin-top: 20px;
+}
 
 /* Container for the slideshow and its description */
 .image-container {
@@ -3501,6 +3508,7 @@ purple {
     font-weight: bold;
     margin-top: 20px;
 }
+
 
 /* Modal styles (hidden by default) */
 .modal {
