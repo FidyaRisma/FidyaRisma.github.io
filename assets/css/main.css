@@ -3170,7 +3170,7 @@ purple {
 			}
 
 			h4 {
-				font-size: 1em;
+				font-size: 1.5em;
 			}
 
 		/* Image */
@@ -3648,7 +3648,7 @@ purple {
 }
 
 /* Mobile view adjustments */
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 800px) {
     .modal {
         width: 100vw; /* Full width of the viewport */
         height: 100vh; /* Full height of the viewport */
