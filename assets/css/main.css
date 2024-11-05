@@ -3748,7 +3748,7 @@ purple {
     text-align: center;
     font-size: 25px;
     font-weight: bold;
-    margin-top: 0;
+    margin-top: 10px;
 }
 
 /* Mobile view adjustments to reduce gap */
