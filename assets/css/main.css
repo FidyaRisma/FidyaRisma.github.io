@@ -3611,7 +3611,7 @@ purple {
 
     .modal-image-container {
         width: 90%;
-        height: calc(100% - 60px);  /* Fixed height to occupy the upper 50% of the screen */
+        height: 50vh; /* Fixed height to occupy the upper 50% of the screen */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -3741,7 +3741,12 @@ purple {
     height: 20%;
 }
 
-
+.image-title {
+    color: black;
+    font-size: 100%;
+    font-weight: bold;
+    margin-top: 0;
+}
 
 /* Mobile view adjustments to reduce gap */
 @media screen and (max-width: 768px) {
@@ -3813,11 +3818,10 @@ purple {
 }
 
 .image-title {
-    color: white;
-    background-color: black;
-    font-size: 20px;
+    color: black;
+    font-size: 100%;
     font-weight: bold;
-    margin-top: 5 px; 
+    margin-top: 0; 
 }
 
 /* Remove extra margin or padding from the paragraph above and slideshow */
