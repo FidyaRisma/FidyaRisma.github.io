@@ -3528,7 +3528,7 @@ purple {
 .modal-body {
     display: flex;
     width: 90%;
-    max-height: 150%px;
+    max-height: 120%;
     flex-direction: row;
     position: absolute;
     top: 50%;
