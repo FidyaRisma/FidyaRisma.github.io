@@ -3719,7 +3719,7 @@ purple {
 }
 
       .modal-title {
-        font-size: 30px;
+        font-size: 20px;
         margin-bottom: 5px;
     }
 
@@ -3735,7 +3735,7 @@ purple {
     display: block;
     color: #6495ED;
     margin: 3px 0;
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 /* Adjust spacing for the slideshow and paragraph above */
