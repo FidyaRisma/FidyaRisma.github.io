@@ -3442,7 +3442,7 @@ cotton {
 .modal-body {
     display: flex;
     width: 90%;
-    max-height: 80%;
+    max-height: 720px;
     flex-direction: row;
     position: absolute;
     top: 50%;
@@ -3453,7 +3453,7 @@ cotton {
 /* Image container for modal */
 .modal-image-container {
     width: 65%;
-    max-height: 750px;
+    max-height: 720px;
     display: flex;
     justify-content: center;
     align-items: center;
