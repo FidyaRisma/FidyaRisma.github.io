@@ -602,7 +602,7 @@ var projects = {
 
 // Object to store titles for each project
 var titles = {
-    1: ["Land Use Land Cover - Magetan", "Land Use Land Cover - Jepara", "Drought Level (Multimap)","Typhoon Namadol (2022) and Wind Field","Spring Drought Duration over 30 years (Multimap)","Ice Condition on North Pole and South Pole","Global Current Velocity (Pacific)"],
+    1: ["Land Use Land Cover - Magetan", "Land Use Land Cover - Jepara", "Drought Level (Multimap)","Typhoon Tracks, Wind Field, and Sea Surface Temperature","Spring Drought Duration over 30 years (Multimap)","Ice Condition on North Pole and South Pole","Global Current Velocity (Pacific)"],
     2: ["Random Forest Classification for LULC Mapping in Yunlin County", "Georeferencing 1960s Soil Type Map", "Dimensional Reduction - EOF & PCA for Spatial Data"],
     3: ["Project 3 - Image 1", "Project 3 - Image 2", "Project 3 - Image 3"],
     4: ["Project 4 - Image 1", "Project 4 - Image 2", "Project 4 - Image 3"]
@@ -671,7 +671,15 @@ var captions = {
         `
     ],
     2: [
-        "<p>Project 2 - Image 1 description.</p>",
+        `
+        <p><strong>Introduction:</strong></p>
+        <p class="about-text"> This map presented Land Use Land Cover (LULC) in Jepara Regency, Central Java, Indonesia. The map comprises of the similar cartography elements with the previous LULC map of Magetan Regency. However, this map highlights another map component that can be included into a more comprehensive map, which is <blue> the inclusion of vertical profile derived from elevation </blue>. <cotton> The combination between vertical profile and LULC will provide insights on how human activities affected by the change in elevation, from mountainous area into coastline area </cotton>. Jepara Regency has this unique topographic characteristics having both high elevation and progressively lowered down to coastline. </p>
+        <p><strong>Dataset:</strong></p>
+         <p class="about-text">This map was produced using Land Use Land Cover (LULC) at 1:25.000 scale from Badan Informasi Geospasial's <a href="https://tanahair.indonesia.go.id/portal-web/">Inageoportal</a>  and Indonesia's national Digital Elevation Model at 5-8 m spatial resolution from <a href="https://code.earthengine.google.com/aef11a548688fe3e02f4eda0413706dc">GEE Script for LULC Yunlin.</a> </p>
+        
+        <p><strong>Visualization Tools:</strong></p>
+        <p class="about-text">ArcMap 10.6.</p>
+        `,
         "<p>Project 2 - Image 2 description.</p>",
         "<p>Project 2 - Image 3 description.</p>"
     ],
