@@ -3687,7 +3687,7 @@ purple {
 
     .modal-description {
         width: 100%;
-        height: 50vh; /* Fixed height to occupy the lower 50% of the screen */
+        height: 47.5vh; /* Fixed height to occupy the lower 50% of the screen */
         padding: 20px;
         background-color: rgba(0, 0, 0, 1);
         font-size: 1vw; /* Responsive font size based on viewport width for small devices */
