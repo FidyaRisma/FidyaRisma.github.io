@@ -3368,9 +3368,8 @@ purple {
     text-align: center;
     margin-bottom: 8px;
     color: 	white;
-    outline-width: 5px;
-    outline-color: black;
-    outline-style: solid;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black; /* Can be changed in the live sample */
     background-color: rgba(100, 149, 237,0.8);  
     width: 100%;
 }
