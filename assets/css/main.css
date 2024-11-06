@@ -3368,7 +3368,7 @@ purple {
     text-align: center;
     margin-bottom: 8px;
     color: 	white;
-  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: black; /* Can be changed in the live sample */
     background-color: rgba(100, 149, 237,0.8);  
     width: 100%;
