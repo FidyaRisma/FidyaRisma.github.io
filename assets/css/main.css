@@ -3356,9 +3356,11 @@ purple {
 
 	}
 .project-border{
-  border-style: solid;
-  border-width: 5px;
+  border-width: 5px 5px;
   border-color: #6495ED;;
+   border-top-style: solid;
+  border-right-style: solid;
+  border-left-style: solid;
 }
 
   
