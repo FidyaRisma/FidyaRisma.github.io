@@ -3767,6 +3767,7 @@ purple {
     .slideshow-container {
         margin: 0 auto;
         padding: 0;
+            height: 550px;
     }
 
     .slideshow-container img {
