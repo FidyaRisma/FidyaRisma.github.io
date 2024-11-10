@@ -9,7 +9,7 @@
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-pre, a, abbr, acronym, address, big, cite,
+pre, a, abbr, acronym, address, b, big, cite,
 code, del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b,
 u, i, center, dl, dt, dd, ol, ul, li, fieldset,
@@ -2848,6 +2848,22 @@ purple {
 					}
 
 						#header > nav ul li a.active {
+							background: #FFF6F6;
+							color: #f875aa !important;
+						}
+						#header > nav ul li b {
+							-moz-transition: none;
+							-webkit-transition: none;
+							-ms-transition: none;
+							transition: none;
+							border: 0;
+							color: #f875aa !important;
+							background: #77CDFF;
+							display: block;
+							padding: 0.85em 0;
+							text-decoration: none;
+						}
+						#header > nav ul li b.active {
 							background: #FFF6F6;
 							color: #f875aa !important;
 						}
