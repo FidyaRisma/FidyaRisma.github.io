@@ -2876,8 +2876,8 @@ purple {
     -ms-transition: none;
     transition: color 0.3s ease, background 0.3s ease; /* Add smooth transition */
     border: 0;
-    color: #f875aa !important;
-    background: #77CDFF;
+    color: #77CDFF !important;
+    background: #fff6f6;
     display: block;
     padding: 0.85em 0;
     text-decoration: none;
