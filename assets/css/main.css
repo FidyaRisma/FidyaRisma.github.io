@@ -2876,8 +2876,8 @@ purple {
     -ms-transition: none;
     transition: color 0.3s ease, background 0.3s ease; /* Add smooth transition */
     border: 0;
-    color: #77CDFF !important;
-    background: #fff6f6;
+    color: #fff6f6 !important;
+    background: #77CDFF;
     display: block;
     padding: 0.85em 0;
     text-decoration: none;
@@ -2885,13 +2885,8 @@ purple {
 }
 
 #header > nav ul li b:hover {
-    color: #ffffff !important; /* Change color on hover for visibility */
-    background: #77CDFF; /* Optional: Adjust to match desired hover color */
-}
-
-#header > nav ul li b.active {
-    background: #FFF6F6;
-    color: #77CDFF !important;
+    color: #77CDFF !important; /* Change color on hover for visibility */
+    background: #fff6f6; /* Optional: Adjust to match desired hover color */
 }
 
 
