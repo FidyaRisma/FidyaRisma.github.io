@@ -157,7 +157,7 @@ input, select, textarea {
 	}
 
 	h4 {
-		font-size: 1.5em;
+		font-size: 1.4em;
 		line-height: 1.5em;
     text-align: center;
     margin-top: 5px;
@@ -1750,8 +1750,8 @@ purple {
 
 	.container {
 		margin: 0 auto;
-		max-width: calc(100% - 4.5em);
-		width: 45em;
+		max-width: calc(100% - 5em);
+		width: 50em;
 	}
 
 		.container.xsmall {
@@ -2720,13 +2720,13 @@ purple {
 		.features article .inner {
 			display: inline-block;
 			vertical-align: middle;
-			width: 50%;
+			width: 69%;
 		}
 		/* Image container to make all logos the same size */
 .logo-container {
     display: inline-block;
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     overflow: hidden;
     vertical-align: middle;
 }
@@ -2751,7 +2751,7 @@ purple {
 .features article .inner {
     display: inline-block;
     vertical-align: middle;
-    width: 50%;
+    width: 69%;
 }
 
 .features article .inner > :last-child {
@@ -2942,7 +2942,7 @@ purple {
 	}
 
 		#main > section > .container {
-			padding: 6em 0 4em 0;
+			padding: 3em 0 2em 0;
 		}
 
 		#main > section:first-child {
@@ -3016,7 +3016,7 @@ purple {
 		/* Main */
 
 			#main > section > .container {
-				padding: 4em 0 2em 0;
+				padding: 3em 0 2em 0;
 			}
 
 	}
@@ -3466,6 +3466,17 @@ purple {
 .about-text {
     text-align: justify;
     	font-weight: 400;
+}
+
+.about-text-article {
+    text-align: justify;
+    margin: 0 0 0 0;
+    	font-weight: 400;
+		line-height: 1.6em;
+		word-wrap: break-word; /* Forces text to break within words if necessary */
+		word-break: break-word; /* Optional: breaks words that are too long */
+		overflow-wrap: break-word; /* Modern property for breaking long words */
+	}
 }
 .download-text {
     text-align: justify;
