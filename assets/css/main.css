@@ -2763,9 +2763,8 @@ purple {
 
 
 		#header header p {
-			background-color: #77CDFF !important; /* Change color on hover for visibility */
-			color: #fff6f6; /* Optional: Adjust to match desired hover color */
-			padding: 10px
+			color: #77CDFF !important; /* Change color on hover for visibility */
+			background: #fff6f6; /* Optional: Adjust to match desired hover color */
 		}
 
 		#header a {
