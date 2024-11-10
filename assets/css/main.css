@@ -3747,8 +3747,8 @@ purple {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        height: calc(100% - 60px); /* Full height minus the title bar height */
-        top: 60px; /* Start below the title bar to avoid overlap */
+        height: calc(100% - 2em); /* Full height minus the title bar height */
+        top: 2em; /* Start below the title bar to avoid overlap */
         left: 50%;
         transform: translateX(-50%);
     }
