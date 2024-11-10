@@ -2772,6 +2772,13 @@ purple {
 			#header a:hover {
 				color: #ffffff !important;
 			}
+			#header b {
+				color: #FFF6F6;
+			}
+	
+				#header b:hover {
+					color: #ffffff !important;
+				}
 
 		#header > header {
 			-moz-flex-shrink: 0;
