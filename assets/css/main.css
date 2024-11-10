@@ -2772,17 +2772,8 @@ purple {
 			#header a:hover {
 				color: #ffffff !important;
 			}
-		
-#header b {
-    color: #FFF6F6;
-    cursor: pointer; /* Add pointer cursor for interactivity */
-    transition: color 0.3s ease, background 0.3s ease; /* Add smooth transition */
-}
 
-#header b:hover {
-    color: #ffffff !important;
-    background: rgba(255, 255, 255, 0.2); /* Optional: Adding a background hover effect */
-}
+
 		#header > header {
 			-moz-flex-shrink: 0;
 			-webkit-flex-shrink: 0;
@@ -2861,8 +2852,22 @@ purple {
 							background: #FFF6F6;
 							color: #f875aa !important;
 						}
-				/* Header styles for 'b' tags to match 'a' */
 
+
+					#header > nav ul li:first-child {
+						border-top: 0;
+					}
+/* Header styles for 'b' tags to match 'a' */
+#header b {
+    color: #FFF6F6;
+    cursor: pointer; /* Add pointer cursor for interactivity */
+    transition: color 0.3s ease, background 0.3s ease; /* Add smooth transition */
+}
+
+#header b:hover {
+    color: #ffffff !important;
+  
+}
 
 /* Update 'b' tag styles within navigation to make it interactive */
 #header > nav ul li b {
@@ -2881,7 +2886,7 @@ purple {
 
 #header > nav ul li b:hover {
     color: #ffffff !important; /* Change color on hover for visibility */
-    background: #f875aa; /* Optional: Adjust to match desired hover color */
+    background: #77CDFF; /* Optional: Adjust to match desired hover color */
 }
 
 #header > nav ul li b.active {
@@ -2890,9 +2895,7 @@ purple {
 }
 
 
-					#header > nav ul li:first-child {
-						border-top: 0;
-					}
+
 
 /* Wrapper */
 
