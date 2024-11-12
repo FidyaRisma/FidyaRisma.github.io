@@ -128,7 +128,9 @@ input, select, textarea {
 	em, i {
 		font-style: italic;
 	}
-
+	v { 
+		font-size: 0px;
+	}
 	p {
 		margin: 0 0 1.2em 0;
 	}
@@ -146,7 +148,13 @@ input, select, textarea {
 			text-decoration: none;
 		}
 
-	h2 {
+		h1 {
+			font-size: 1.4em;
+			line-height: 1em;
+		}
+	
+	
+		h2 {
 		font-size: 2em;
 		line-height: 1.5em;
 	}
@@ -162,7 +170,6 @@ input, select, textarea {
     text-align: center;
     margin-top: 5px;
     margin-bottom: 8px;
-}
 	}
 
 	h5 {
@@ -248,6 +255,15 @@ yellow {
   
 }
 
+peach {
+	color: #f875aa;
+	background-color: white;
+	padding:1em;
+	
+  }
+
+ 
+
 turq {
   color:#40E0D0;
   font-weight: 600;
@@ -265,6 +281,8 @@ purple {
   font-weight: 600;
   
 }
+
+
 
 	.align-left {
 		text-align: left;
@@ -2783,6 +2801,18 @@ purple {
 				height: 40px; 
 				overflow: hidden;
 			}
+			.app-container1 {
+				display: inline-block;
+				width: 250px; 
+				height: 250px; 
+				overflow: hidden;
+				text-align: center;
+				vertical-align: top;
+				margin-bottom: 20px; 
+				box-sizing: border-box;
+				border: 0px solid #ddd; 
+				padding: 10px; 
+			}
 			
 			
 			
@@ -3332,11 +3362,12 @@ purple {
 			}
 
 				#header > header {
-					padding: 2em;
+					padding: 0em;
+					margin-bottom: 10em;
 				}
 
 					#header > header .avatar {
-						margin: 0 auto 1.6875em auto;
+						margin: 0 auto 2em auto;
 						width: 6em;
 					}
 
@@ -3349,6 +3380,7 @@ purple {
 					}
 
 				#header > footer {
+					margin-top: 15em;
 					padding: 1.5em;
 				}
 
@@ -3500,6 +3532,8 @@ purple {
     text-align: justify;
     	font-weight: 400;
 }
+
+
 
 .about-text-article {
 	font-size: 0.9em;
@@ -3950,16 +3984,28 @@ purple {
         width: 150px;
         height: 150px;
         object-fit: contain; 
-        margin-bottom: 5px; /* Space between image and title */
+        margin-bottom: 3px; /* Space between image and title */
     }
 
     .app-title {
         font-size: 0.9em; 
         color: #333;
-        height: 40px;
+        height: 30px;
         overflow: hidden;
         text-align: center;
     }
+	.app-container1 {
+		display: inline-block;
+		width: 0px; 
+		height: 0px; 
+		overflow: hidden;
+		text-align: center;
+		vertical-align: top;
+		margin-bottom:px; 
+		box-sizing: border-box;
+		border: 0px solid #ddd; 
+		padding: 0px; 
+	}
 }
 
 

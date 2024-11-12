@@ -3318,10 +3318,11 @@ purple {
 
 				#header > header {
 					padding: 2em;
+					margin-bottom: 5em;
 				}
 
 					#header > header .avatar {
-						margin: 0 auto 1.6875em auto;
+						margin: 0 auto 1.675em auto;
 						width: 6em;
 					}
 
@@ -3334,6 +3335,7 @@ purple {
 					}
 
 				#header > footer {
+					margin-top: 15em;
 					padding: 1.5em;
 				}
 
