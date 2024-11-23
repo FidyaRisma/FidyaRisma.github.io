@@ -45,10 +45,10 @@
 					<div id="main">
 
 						<!-- One -->
+						<div class="image main" data-position="center">
+							<img src="images/banner.jpg" alt="" />
+						</div>
 							<section id="about-me">
-								<div class="image main" data-position="center">
-									<img src="images/banner.jpg" alt="" />
-								</div>
 								<div class="container">
 									<header class="major">
 										<h2>Fidya Rismayatika <blue>(利小貓)</blue></h2>
@@ -72,66 +72,74 @@
 <section id="geospatial-portfolio">
     <div class="container">
         <h3>Geospatial Portfolio</h3>
-        <p class="about-text">This section lists the geospatial analysis I have done in the past. Each project includes an image slideshow with descriptions. Click on any image to see more details from each portfolio.</p>
-
-<!-- Project 1 -->
-<div class="project">
-    <h4> Map Layouting (Cartography)</h4>
-      <p class="about-text">This portfolio group includes several maps I produced with various cartography styles. As a geographer, <cotton>it is important to be able to visualize your idea and data into easily understandble maps for reader. </cotton> The map layouting was done mostly on ArcMap 10.6 and MATLAB R2024a via <a href="https://www-old.eoas.ubc.ca/~rich/map.html"target="_blank">m_map package.</a> </p>
-      
-
-<!-- Thumbnail View with Navigation Buttons -->
-<div class="project">
-    <div class="image-container">
-        <div class="slideshow-container">
-            <!-- Thumbnail Image for Project 1 -->
-            <img id="currentImage1" src="images/port_1/pic01_thumb.jpg" class="slide-image" alt="Project Image 1" onclick="openModal(1, 0)">
-            <!-- Navigation Buttons for Thumbnail View -->
-            <a class="prev" onclick="plusSlides(-1, 1)" style="position: absolute; left: 0;">&#10094;</a> <!-- Prev Button on Left -->
-            <a class="next" onclick="plusSlides(1, 1)" style="position: absolute; right: 0;">&#10095;</a> <!-- Next Button on Right -->
+        <p class="about-text">This section lists the geospatial analysis I have done in the past. Each project includes an image slideshow with descriptions. 
+			The portfolio were split into three groups listed below. Click on any image to see more details from each portfolio.</p>
+        <h5><a href="#geospatial-portfolio-1">• Map Layouting (Cartography)</a></h5>
+		<p class="about-text">Contents: Maps with various cartographic styles.</p>
+		<p></p>
+		<h5><a href="#geospatial-portfolio-2">• Spatial Analysis & Processing</a></h5>
+		<p class="about-text">Contents: Various spatial analysis and geospatial data processsing.</p>
+		<p></p>
+		<h5><a href="#geospatial-portfolio-3">• Additional Data Visualization</a></h5>
+		<p class="about-text">Contents: Non-geospatial data visualization derived from geospatial data for research purposes.</p>
+		<br>
+	   <!-- Project 1 -->
+        <div class="project" id="geospatial-portfolio-1">
+				<h4>Map Layouting (Cartography)</h4>
+				<p class="about-text">This portfolio group includes several maps I produced with various cartography styles. 
+					As a geographer, <cotton>it is important to be able to visualize your idea and data into easily understandble maps for reader.</cotton> 
+					The map layouting was done mostly on ArcMap 10.6 and MATLAB R2024a via <a href="https://www-old.eoas.ubc.ca/~rich/map.html" target="_blank">m_map package.</a></p>
+					
+                <!-- Slideshow -->
+                <div class="image-container">
+                    <div class="slideshow-container">
+                        <img id="currentImage1" src="images/port_1/pic01_thumb.jpg" class="slide-image" alt="Project Image 1" onclick="openModal(1, 0)">
+                        <a class="prev" onclick="plusSlides(-1, 1)" style="position: absolute; left: 0;">&#10094;</a> 
+                        <a class="next" onclick="plusSlides(1, 1)" style="position: absolute; right: 0;">&#10095;</a>  
+                    </div>
+                    <p id="imageTitle1" class="image-title">Title for Image 1</p>
+                </div>
             </div>
-        <!-- Title section below thumbnail for Project 1 -->
-        <p id="imageTitle1" class="image-title">Title for Image 1</p>
-    </div>
-</div>
-</div>
-
+        
 
 <!-- Project 2 -->
-<div class="project">
-    <h4> Spatial Analysis & Image Processing</h4>
-      <p class="about-text">This portfolio group includes several geospatial analysis for either visualization and research analysis purposes. The analysis mostly was done to support further endeavor in identifying a feedback, pattern, or supporting visualization. The map analysis was done mostly on ArcMap 10.6, Google Earth Engine, and MATLAB R2024a using various MATLAB packages and toolboxes, which can be found on each image description.</a> </p>
-      
+<div class="project" id="geospatial-portfolio-2">
+    <h4> Spatial Analysis & Processing</h4>
+	<p class="about-text">This portfolio group includes several geospatial analysis for either visualization and research analysis purposes. 
+		The analysis mostly was done to support further endeavor in identifying a feedback, pattern, or supporting visualization. The map analysis was done mostly on ArcMap 10.6, 
+		Google Earth Engine, and MATLAB R2024a using various MATLAB packages and toolboxes, which can be found on each image description.</a> </p>
+	
 
-<!-- Thumbnail View with Navigation Buttons -->
+<!-- Slideshow -->
 <div class="project">
     <div class="image-container">
         <div class="slideshow-container">
             <img id="currentImage2" src="images/port_2/pic01.jpg" class="slide-image" alt="Project Image 2" onclick="openModal(1, 0)">
-            <a class="prev" onclick="plusSlides(-1, 2)" style="position: absolute; left: 0;">&#10094;</a> <!-- Prev Button on Left -->
-            <a class="next" onclick="plusSlides(1, 2)" style="position: absolute; right: 0;">&#10095;</a> <!-- Next Button on Right -->
+            <a class="prev" onclick="plusSlides(-1, 2)" style="position: absolute; left: 0;">&#10094;</a>  
+            <a class="next" onclick="plusSlides(1, 2)" style="position: absolute; right: 0;">&#10095;</a>  
             </div>
         <p id="imageTitle2" class="image-title">Title for Image 1</p>
     </div>
 </div>
 </div>
-
+<br>
+	<br>
 
 <!-- Project 3 -->
-<div class="project">
+<div class="project" id="geospatial-portfolio-3">
    <h4>Additional Data Visualization</h4>
    <p class="about-text">This portfolio group includes several additional visualization and analysis using for research analysis purposes. 
 	The analysis mostly was done to support further endeavor in identifying a feedback, pattern, or supporting visualization. 
 	The map analysis was done mostly on MATLAB R2024a using various MATLAB packages and toolboxes, which can be found on each image description.</a> </p>
+	
       
-
-   <!-- Thumbnail View with Navigation Buttons -->
+   <!-- Slideshow -->
    <div class="project">
 	   <div class="image-container">
 		   <div class="slideshow-container">
 			   <img id="currentImage3" src="images/port_3/pic01.jpg" class="slide-image" alt="Project Image 3" onclick="openModal(1, 0)">
-			   <a class="prev" onclick="plusSlides(-1, 3)" style="position: absolute; left: 0;">&#10094;</a> <!-- Prev Button on Left -->
-			   <a class="next" onclick="plusSlides(1, 3)" style="position: absolute; right: 0;">&#10095;</a> <!-- Next Button on Right -->
+			   <a class="prev" onclick="plusSlides(-1, 3)" style="position: absolute; left: 0;">&#10094;</a>  
+			   <a class="next" onclick="plusSlides(1, 3)" style="position: absolute; right: 0;">&#10095;</a>  
 			   </div>
 		   <p id="imageTitle3" class="image-title">Title for Image 1</p>
 	   </div>
@@ -155,22 +163,24 @@
         </div>
     </div>
     <!-- Navigation Buttons for Modal View -->
-    <a class="prev-modal" onclick="plusSlidesModal(-1)">&#10094;</a> <!-- Prev Button on Left -->
-    <a class="next-modal" onclick="plusSlidesModal(1)">&#10095;</a> <!-- Next Button on Right -->
+    <a class="prev-modal" onclick="plusSlidesModal(-1)">&#10094;</a>  
+    <a class="next-modal" onclick="plusSlidesModal(1)">&#10095;</a>  
 </div>
 	</section>
 
 
-						<!-- Three -->
+						<!-- Three 
 							<section id="maps">
 							   <div class="container">
 							     <div class="project">
 							<h3>Interactive Map - Google Earth Engine</h3>
-        <p class="about-text">This section features embedded interactive maps application developed using Google Earth Engine (GEE) Apps which is easy and free to use. The embedded GEE Apps on this section is only adapted for portfolio purpose. For full size, please click on the portfolio title. <cotton>It is recommended to open the GEE Apps on Desktop.</cotton></p>
+        <p class="about-text">This section features embedded interactive maps application developed using Google Earth Engine (GEE) Apps which is easy and free to use. 
+		The embedded GEE Apps on this section is only adapted for portfolio purpose. For full size, please click on the portfolio title. <cotton>It is recommended to open the GEE Apps on Desktop.</cotton></p>
         <h4><a href="https://ee-fidyarisma.projects.earthengine.app/view/pfz-parameters"target="_blank">Potential Fishing Zone (PFZ) Parameters Map <br> in the Southern Coastal of Java Island</a></h4>
-        <p class="about-text">This project was developed to create a satellite data platform for sustainable ocean environment observation based on Challenge 7 (Sustainably expand the Global Ocean Observing System) and Challenge 8 (Create a digital representation of the ocean) of <a href="https://oceandecade.org/challenges/"target="_blank">Ocean Decade 10 Challenges.</a> The platform was built for sustainable fisheries by integrating various remote sensing data. The data available in this GEE Apps runs from 2022/01/01 until present. 
-<!-- Embed GEE Project using iframe -->
-<div class="iframe-container">
+        <p class="about-text">This project was developed to create a satellite data platform for sustainable ocean environment observation based on Challenge 7 
+		(Sustainably expand the Global Ocean Observing System) and Challenge 8 (Create a digital representation of the ocean) of <a href="https://oceandecade.org/challenges/"target="_blank">Ocean Decade 10 Challenges.
+		</a> The platform was built for sustainable fisheries by integrating various remote sensing data. The data available in this GEE Apps runs from 2022/01/01 until present. </p>
+		<div class="iframe-container">
     <iframe src="https://ee-fidyarisma.projects.earthengine.app/view/pfz-portfolio" allowfullscreen></iframe>
 </div>
 </div>
@@ -622,7 +632,7 @@ var captions = {
     1: [
         `
         <p><strong>Introduction:</strong></p>
-        <p class="about-text"> This map presented Land Use Land Cover (LULC) in Magetan Regency, East Java, Indonesia. The cartography elements in this map were the most basic elements that should be included in a map such as the title, inset, north arrow, scale bar, legend, source, and the related institution. The legend was visualized following a standart in Indonesia mapping, such as dashed blue-white for rice field land use, orange for settlement, green for forest, and yellow for bare soil.  </p>
+        <p class="about-text"> This map presents Land Use Land Cover (LULC) in Magetan Regency, East Java, Indonesia. The cartography elements in this map were the most basic elements that should be included in a map such as the title, inset, north arrow, scale bar, legend, source, and the related institution. The legend was visualized following a standart in Indonesia mapping, such as dashed blue-white for rice field land use, orange for settlement, green for forest, and yellow for bare soil.  </p>
         <p><strong>Dataset:</strong></p>
         <p class="about-text">This map was produced using Land Use Land Cover (LULC) at 1:25.000 scale from Badan Informasi Geospasial's <a href="https://tanahair.indonesia.go.id/portal-web/" target="_blank">Inageoportal.</a> </p>
         <p><strong>Visualization Tools:</strong></p>
@@ -630,7 +640,10 @@ var captions = {
         `,
         `
         <p><strong>Introduction:</strong></p>
-        <p class="about-text"> This map presented Land Use Land Cover (LULC) in Jepara Regency, Central Java, Indonesia. The map comprises of the similar cartography elements with the previous LULC map of Magetan Regency. However, this map highlights another map component that can be included into a more comprehensive map, which is <blue> the inclusion of vertical profile derived from elevation </blue>. <cotton> The combination between vertical profile and LULC will provide insights on how human activities affected by the change in elevation, from mountainous area into coastline area. </cotton> Jepara Regency has this unique topographic characteristics having both high elevation and progressively lowered down to coastline. </p>
+        <p class="about-text"> This map presents Land Use Land Cover (LULC) in Jepara Regency, Central Java, Indonesia. 
+			The map comprises of the similar cartography elements with the previous LULC map of Magetan Regency. However, this map highlights another map component that can be included into a more comprehensive map,
+			 which is the inclusion of vertical profile derived from elevation. The combination between vertical profile and LULC will provide insights on how human activities affected by the change in elevation, 
+			 from mountainous area into coastline area. Jepara Regency has this unique topographic characteristics having both high elevation and progressively lowered down to coastline. </p>
         <p><strong>Dataset:</strong></p>
          <p class="about-text">This map was produced using Land Use Land Cover (LULC) at 1:25.000 scale from Badan Informasi Geospasial's <a href="https://tanahair.indonesia.go.id/portal-web/" target="_blank">Inageoportal</a>  and Indonesia's national Digital Elevation Model (DEM) at 5-8 m spatial resolution from <a href=" https://big.go.id/en/content/product/demnas/" target="_blank">DEMNAS.</a> </p>
         
@@ -651,37 +664,43 @@ var captions = {
         <p class="about-text">ArcMap 10.6.</p>
         `,
         `
-        <p><strong>Introduction:</strong></p>
-        <p>This project was developed to create a satellite data platform for sustainable ocean environment observation...</p>
-        <p><strong>Dataset:</strong></p>
-        <p>Satellite imagery, GIS layers, environmental data...</p>
-        <p><strong>Visualization Tools:</strong></p>
-        <p>Google Earth Engine (GEE), ArcGIS, and MATLAB.</p>
+		<p><strong>Introduction:</strong></p> 
+		<p class="about-text">These maps showcase the tracks and associated meteorological parameters of Typhoon Namadol and Typhoon Hinnamnor during 
+			their active periods in 2022. The map comprises two panels: (a) depicting the wind field overlay during Typhoon Namadol on September 17, 2022, and 
+			(b) representing the Sea Surface Temperature (SST) difference observed during Typhoon Hinnamnor from August 28 and September 3, 2022. 
+			The typhoon tracks are marked using the official data from the Regional Specialized Meteorological Center (RSMC) Tokyo, with intensity (knot) denoted by varying color scales along the track. 
+			The wind field and SST are critical factors affecting the intensity and progression of tropical cyclones.</p> 
+			<p><strong>Dataset:</strong></p> <p class="about-text">The typhoon tracks were sourced from the 
+				<a href="https://www.jma.go.jp/jma/jma-eng/jma-center/rsmc-hp-pub-eg/RSMC_HP.html" target="_blank">RSMC Tokyo - Typhoon Center</a>. 
+				Wind field data was derived from <a href="https://www.remss.com/announcement/AMSR2-TC-winds-v8.2-released/" target="_blank">AMSR-2 Tropical Cyclone Wind Speed Data </a>, 
+				while the Sea Surface Temperature (SST) data was obtained from <a href="https://www.remss.com/measurements/sea-surface-temperature/oisst-description/" target="_blank">Optimally Interpolated SST Products. </a> </p> 
+				<p><strong>Visualization Tools:</strong></p> <p class="about-text">The maps and analyses were produced using MATLAB 2024a via m_map packages. Wind vectors were plotted using the <code>m_quiver</code> function, and typhoon track points were visualized using the self-scripted <code>Plotallpoint</code> function.</p>
         `,
         `
-        <p><strong>Introduction:</strong></p>
-        <p>This project was developed to create a satellite data platform for sustainable ocean environment observation...</p>
-        <p><strong>Dataset:</strong></p>
-        <p>Satellite imagery, GIS layers, environmental data...</p>
-        <p><strong>Visualization Tools:</strong></p>
-        <p>Google Earth Engine (GEE), ArcGIS, and MATLAB.</p>
+        <p><strong>Introduction:</strong></p> <p class="about-text">These maps present the spatiotemporal variability of meteorological drought frequency in Taiwan from 1993 to 2022. Each map represents the yearly Total Drought Duration (TDD), calculated using the Palmer Drought Severity Index (PDSI). 
+			TDD is expressed as the total number of months within January–May where PDSI values are less than -2, indicating moderate drought conditions. Significant drought years include 1994, 1996, 2004, 2005, 2015, and 2021, where some regions experienced drought continuously from January to May. 
+			For example, during the 2021 spring drought, most of Taiwan faced five consecutive months of drought. These patterns reveal a decadal cycle of high-frequency drought event.</p> <p><strong>Dataset:</strong></p> 
+			<p class="about-text">The PDSI data was obtained from the <a href="https://www.climatologylab.org/terraclimate.html" target="_blank">TerraClimate</a> dataset. TerraClimate provides high-resolution climate data for global-scale studies. The Total Drought Duration (TDD) 
+			was calculated based on PDSI values. Yearly TDD and the combined TDD for the period from 1993 to 2022 were computed. Higher TDD values indicate more frequent droughts in specific areas.
+			</p> <p><strong>Visualization Tools:</strong></p> <p class="about-text">The maps and analysis were created using MATLAB 2024a via m_map packages. Self-scripted functions were used to calculate and visualize Total Drought Duration. These functions applied the PDSI threshold of less than -2 to identify drought conditions and compute the TDD values.</p>
         `,
        `
-        <p><strong>Introduction:</strong></p>
-        <p class="about-text"> This map presented Land Use Land Cover (LULC) in Jepara Regency, Central Java, Indonesia. The map comprises of the similar cartography elements with the previous LULC map of Magetan Regency. However, this map highlights another map component that can be included into a more comprehensive map, which is <blue> the inclusion of vertical profile derived from elevation </blue>. <cotton> The combination between vertical profile and LULC will provide insights on how human activities affected by the change in elevation, from mountainous area into coastline area </cotton>. Jepara Regency has this unique topographic characteristics having both high elevation and progressively lowered down to coastline. </p>
-        <p><strong>Dataset:</strong></p>
-         <p class="about-text">This map was produced using Land Use Land Cover (LULC) at 1:25.000 scale from Badan Informasi Geospasial's <a href="https://tanahair.indonesia.go.id/portal-web/">Inageoportal</a>  and Indonesia's national Digital Elevation Model at 5-8 m spatial resolution from <a href=" https://big.go.id/en/content/product/demnas/">DEMNAS.</a> </p>
-        
-        <p><strong>Visualization Tools:</strong></p>
-        <p class="about-text">ArcMap 10.6.</p>
+        <p><strong>Introduction:</strong></p> <p class="about-text">These maps highlight sea ice characteristics for the Arctic and Antarctic regions in 2020. Panel (a) shows the ice thickness in January 2020 over the Arctic, while panel (b) illustrates the ice concentration in August 2020 around Antarctica. 
+			Ice thickness is measured in meters, and ice concentration is represented as fractions, indicating the proportion of the area covered by ice. These maps provide valuable insights into seasonal sea ice variability and climate impacts.</p> 
+			<p><strong>Dataset:</strong></p> <p class="about-text">The data used to produce these maps was sourced from the <a href="https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2021.698876/full" target="_blank">GLORYS12 Reanalysis</a>. This dataset provides high-resolution ocean and sea ice reanalysis, 
+			which is well-suited for monitoring sea ice thickness and concentration changes.</p> <p><strong>Visualization Tools:</strong></p> <p class="about-text">The maps were created using MATLAB 2024a with the 
+				m_map package for geospatial plotting. The Arctic and Antarctic projections were visualized using the stereographic projection settings from the <code>m_proj</code> function. 
+				This ensured accurate spatial representation of polar regions.</p>
         `,
         `
-        <p><strong>Introduction:</strong></p>
-        <p>This project was developed to create a satellite data platform for sustainable ocean environment observation...</p>
-        <p><strong>Dataset:</strong></p>
-        <p>Satellite imagery, GIS layers, environmental data...</p>
-        <p><strong>Visualization Tools:</strong></p>
-        <p>Google Earth Engine (GEE), ArcGIS, and MATLAB.</p>
+        <p><strong>Introduction:</strong></p> <p class="about-text">This map illustrates the global ocean current velocity, derived from Sea Surface Height (SSH) data, with a focus on geostrophic velocity anomalies. 
+			The velocity magnitude is represented in meters per second, calculated as the combined effect of meridional (V) and zonal (U) velocity components. Bright regions indicate areas with higher current velocity, 
+			such as the Equatorial Current and the Antarctic Circumpolar Current. These ocean currents play a vital role in regulating global climate and ocean circulation patterns.</p> 
+			<p><strong>Dataset:</strong></p> <p class="about-text">The data was obtained from the <a href="https://data.marine.copernicus.eu/product/SEALEVEL_GLO_PHY_L4_NRT_008_046/description" target="_blank">
+			Copernicus Marine Environment Monitoring Service</a>. The dataset includes Sea Level Anomalies (SLA) and geostrophic velocity anomalies, 
+			which are used to compute the global ocean current velocity. The velocity magnitude was calculated using rooted square of squared U & V component.</p>
+			 <p><strong>Visualization Tools:</strong></p> <p class="about-text">The map was generated using MATLAB with the m_map package. The Robinson projection was applied  with longitude and latitude bounds set to cover the entire globe
+			with Pacific Ocean as the center of the map.</p>
         `
     ],
     2: [
