@@ -630,25 +630,19 @@ var titles = {
 // Object to store detailed captions with sections for each project
 var captions = {
     1: [
-        `
-        <p><strong>Introduction:</strong></p>
-        <p class="about-text"> This map presents Land Use Land Cover (LULC) in Magetan Regency, East Java, Indonesia. The cartography elements in this map were the most basic elements that should be included in a map such as the title, inset, north arrow, scale bar, legend, source, and the related institution. The legend was visualized following a standart in Indonesia mapping, such as dashed blue-white for rice field land use, orange for settlement, green for forest, and yellow for bare soil.  </p>
-        <p><strong>Dataset:</strong></p>
-        <p class="about-text">This map was produced using Land Use Land Cover (LULC) at 1:25.000 scale from Badan Informasi Geospasial's <a href="https://tanahair.indonesia.go.id/portal-web/" target="_blank">Inageoportal.</a> </p>
-        <p><strong>Visualization Tools:</strong></p>
-        <p class="about-text">ArcMap 10.6.</p>
-        `,
-        `
-        <p><strong>Introduction:</strong></p>
-        <p class="about-text"> This map presents Land Use Land Cover (LULC) in Jepara Regency, Central Java, Indonesia. 
-			The map comprises of the similar cartography elements with the previous LULC map of Magetan Regency. However, this map highlights another map component that can be included into a more comprehensive map,
-			 which is the inclusion of vertical profile derived from elevation. The combination between vertical profile and LULC will provide insights on how human activities affected by the change in elevation, 
-			 from mountainous area into coastline area. Jepara Regency has this unique topographic characteristics having both high elevation and progressively lowered down to coastline. </p>
-        <p><strong>Dataset:</strong></p>
-         <p class="about-text">This map was produced using Land Use Land Cover (LULC) at 1:25.000 scale from Badan Informasi Geospasial's <a href="https://tanahair.indonesia.go.id/portal-web/" target="_blank">Inageoportal</a>  and Indonesia's national Digital Elevation Model (DEM) at 5-8 m spatial resolution from <a href=" https://big.go.id/en/content/product/demnas/" target="_blank">DEMNAS.</a> </p>
-        
-        <p><strong>Visualization Tools:</strong></p>
-        <p class="about-text">ArcMap 10.6.</p>
+		`<p><strong>Introduction:</strong></p> <p class="about-text">This map depicts the Land Use Land Cover (LULC) of Magetan Regency, East Java, Indonesia. Key cartographic elements included are the title, 
+		inset map, north arrow, scale bar, legend, source, and institutional affiliation. The legend adheres to Indonesian mapping standards, with dashed blue-white representing irrigated rice fields, orange for 
+		settlements, green for forests, and yellow for bare soil.</p> <p><strong>Dataset:</strong></p> <p class="about-text">The map was created using LULC data at a 1:25,000 scale sourced from the 
+		<a href="https://tanahair.indonesia.go.id/portal-web/" target="_blank">Badan Informasi Geospasial (BIG) Inageoportal</a>.</p> <p><strong>Visualization Tools:</strong></p> 
+		<p class="about-text"> The map was generated and styled using ArcMap 10.6.</p>1`,
+
+        `<p><strong>Introduction:</strong></p> <p class="about-text">This map illustrates the Land Use Land Cover (LULC) of Jepara Regency, Central Java, Indonesia. Similar to the LULC map of Magetan Regency, this map 
+			incorporates essential cartographic elements such as a title, legend, inset map, scale bar, and north arrow. Additionally, it includes a vertical profile derived from elevation data, offering a comprehensive 
+			perspective on how human activities are influenced by elevation changes. Jepara Regency features unique topographic characteristics, transitioning from high mountainous areas to low-lying coastal zones, 
+			which is reflected in the combination of LULC and elevation profiles.</p> <p><strong>Dataset:</strong></p> 
+			<p class="about-text">The map was created using LULC data at a 1:25,000 scale from the <a href="https://tanahair.indonesia.go.id/portal-web/" target="_blank">Badan Informasi Geospasial (BIG) Inageoportal</a> and
+				 Indonesia’s National Digital Elevation Model (DEMNAS) with a spatial resolution of 5-8 meters, available from <a href="https://big.go.id/en/content/product/demnas/" target="_blank">DEMNAS</a>.</p> 
+				 <p><strong>Visualization Tools:</strong></p> <p class="about-text">The map was generated using ArcMap 10.6 and the vertical profile was made using Clip Studio Paint</p>
         `,
         `
         <p><strong>Introduction:</strong></p>
@@ -704,7 +698,15 @@ var captions = {
         `
     ],
     2: [
-        `
+		`<p><strong>Introduction:</strong></p> <p class="about-text">The soil map of Kabupaten Magetan was generated from a 1966 soil map of East Java Province through georeferencing and digitization. 
+			This process adapted the historical map for modern geospatial analysis.</p> 
+			<p><strong>Process:</strong></p> <p class="about-text">(a) The original 1966 map was traced and aligned into a map layout to prepare for georeferencing. This step involved overlaying the historical map 
+				onto a defined spatial reference system.<br> (b) Georeferencing was performed by linking control points on the map to known geographic coordinates, ensuring accurate alignment with modern datasets.<br>
+				 (c) After georeferencing, the map was digitized into a shapefile by manually tracing soil type boundaries and their classifications. This step produced a structured and editable digital format of 
+				 the map. <br>(d) The final map was styled with labeled boundaries and color-coded classifications to reflect soil distribution in Kabupaten Magetan.</p> 
+				 <p><strong>Source:</strong></p> <p class="about-text">The original soil map was sourced from the <a href="https://esdac.jrc.ec.europa.eu/content/peta-tanah-tinjau-propinski-jawa-timur-lembaga-penelitian-tanah" target="_blank">European Soil Data Centre (ESDAC)</a>.
+				</p> <p><strong>Tools:</strong></p> <p class="about-text">The geoprocessing workflow, including georeferencing and digitization, was carried out using ArcGIS 10.6.</p>`
+        ,`
         <p><strong>Introduction:</strong></p>
         <p class="about-text"> This map presented Land Use Land Cover (LULC) in Jepara Regency, Central Java, Indonesia. The map comprises of the similar cartography elements with the previous LULC map of Magetan Regency. However, this map highlights another map component that can be included into a more comprehensive map, which is <blue> the inclusion of vertical profile derived from elevation </blue>. <cotton> The combination between vertical profile and LULC will provide insights on how human activities affected by the change in elevation, from mountainous area into coastline area </cotton>. Jepara Regency has this unique topographic characteristics having both high elevation and progressively lowered down to coastline. </p>
         <p><strong>Dataset:</strong></p>
@@ -728,14 +730,62 @@ var captions = {
 				 <p><strong>Visualization Tools:</strong></p> <p class="about-text">The boxplots were generated using the MATLAB <a href="https://www.mathworks.com/matlabcentral/fileexchange/88733-boxplotpro" 
 					target="_blank">BoxPlotPro</a> package, which allows enhanced visualization of distribution characteristics such as mean, median, and percentile limits. </p>
         `,
-        "<p>Project 2 - Image 2 description.</p>",
-        "<p>Project 2 - Image 3 description.</p>"
-    ],
-    4: [
-        "<p>Project 4 - Image 1 description.</p>",
-        "<p>Project 4 - Image 2 description.</p>",
-        "<p>Project 4 - Image 3 description.</p>"
-    ]
+        `<p><strong>Introduction:</strong></p> <p class="about-text">This figure illustrates vertical profiles of (a) nitrate concentration in the Atlantic Ocean (25°W) and (b) phosphate concentration in the 
+			Pacific Ocean (160°W). The profiles show the variation of nutrient concentrations with latitude and depth, offering insights into biogeochemical processes in these ocean basins. 
+			Higher concentrations of nitrate and phosphate are observed near the ocean surface and at specific depths, reflecting their roles in supporting marine ecosystems.</p> 
+			<p><strong>Key Observations:</strong></p> <p class="about-text">In the Atlantic (panel a), nitrate concentrations peak at mid-depth (200–1000 m) and decrease significantly near the surface in 
+			tropical regions due to nutrient depletion. The Pacific (panel b) shows phosphate concentrations peaking below the surface layer, with gradual declines toward deeper waters, highlighting
+			 differences in nutrient cycling between basins.</p> 
+			 <p><strong>Dataset:</strong></p> <p class="about-text">The nitrate and phosphate concentrations were obtained from the <a href="https://www.mercator-ocean.eu" target="_blank">
+			BIORYS biogeochemical reanalysis</a>. BIORYS is part of the Copernicus Marine Environment Monitoring Service (CMEMS) and provides high-resolution ocean biogeochemical data using the PISCES model. </p> 
+			 <p><strong>Visualization Tools:</strong></p> <p class="about-text">The maps were generated using MATLAB with customized colormaps to represent 
+			nutrient gradients. Latitude and depth were plotted to reveal spatial and vertical patterns. </p>`,
+		`<p><strong>Introduction:</strong></p> <p class="about-text">This figure presents Hovmöller diagrams visualizing the temporal and spatial variability of oceanographic parameters along a specific longitude 
+			(145.825°E to 175.825°E). The panels show (from left to right): (1) Absolute Dynamic Topography, (2) Sea Level Anomaly, (3) Absolute Geostrophic Velocity (zonal component), and (4) 
+			Absolute Geostrophic Velocity (meridional component). These diagrams provide insights into seasonal and spatial variations across months of the year.</p> 
+			<p><strong>Key Observations:</strong></p> <p class="about-text"> Picture 1: Absolute Dynamic Topography shows seasonal fluctuations 
+			in surface height due to ocean circulation. <br> Picture 2: Sea Level Anomaly highlights deviations caused by dynamic processes like eddies and seasonal winds. <br>Picture 3: Zonal Geostrophic Velocity 
+			displays east-west flow variability with alternating positive (eastward) and negative (westward) trends. <br>Picture 4: Meridional Geostrophic Velocity reveals north-south flow variability influenced
+			by regional currents and topography. </p> 
+			<p><strong>Dataset:</strong></p> <p class="about-text">The data used in these diagrams were sourced from the <a href="https://data.marine.copernicus.eu/product/SEALEVEL_GLO_PHY_L4_MY_008_047/description" target="_blank">
+			Copernicus Marine Environment Monitoring Service (CMEMS)</a>. This dataset offers global reanalysis of sea surface height and geostrophic velocities at high temporal and spatial resolutions.</p> 
+			 <p class="about-text"> 
+			<p><strong>Visualization Tools:</strong></p> 
+			<p class="about-text">The diagrams were generated using MATLAB with custom scripts to process and visualize time-series data. 
+			Color scales were applied to represent the magnitude of the respective variables, ensuring clear differentiation of spatial and temporal patterns.</p>`
+   		 , `<p><strong>Introduction:</strong></p> <p class="about-text">This diagram visualizes monthly precipitable water (mm) from 1988 to 2021 at longitude 125.5°E across a latitude range of 15.5°N to 27.5°N. 
+			The x-axis represents time, while the y-axis shows latitude, allowing for the analysis of both temporal and spatial variations in atmospheric water vapor. Precipitable water indicates the total columnar 
+			amount of water vapor in the atmosphere, essential for understanding regional climate patterns and hydrological processes.</p>
+			<p><strong>Key Observations:</strong></p> <p class="about-text">Precipitable water values show seasonal variation, with higher values near 24.5°N and lower values around 18.5°N and 27.5°N, 
+			reflecting regional climate patterns and long-term stability without significant anomalies.</p>
+			<p><strong>Dataset:</strong></p> 
+			<p class="about-text">The data was sourced from the <a href="https://www.remss.com/measurements/atmospheric-water-vapor/tpw-1-deg-product/" target="_blank">Remote Sensing Systems (RSS) Total Precipitable 
+			Water (TPW) 1° product</a>. This dataset provides global measurements of atmospheric water vapor at a 1-degree spatial resolution based on satellite observations.</p> 
+			<p><strong>Visualization Tools:</strong></p> <p class="about-text">The diagram was generated using MATLAB, with a gradient color scale representing the magnitude of precipitable water.</p>`,
+		`<p><strong>Introduction:</strong></p> <p class="about-text">This graph depicts the monthly variation of surface partial pressure of carbon dioxide (spCO₂) in seawater for two locations during 2022. 
+			The blue line represents spCO₂ at 119.75°E, 24.75°N, and the green line represents spCO₂ at 122°E, 23.5°N. The left y-axis shows spCO₂ in micro-atmospheres (µatm), while the right y-axis reflects changes 
+			in alignment for visual comparison between the two sites over time.</p>
+			<p><strong>Key Observations:</strong></p> <p class="about-text"> 1. The spCO₂ levels increase steadily from January to August, peaking in late summer for both locations. 2. After reaching a peak,
+			the spCO₂ levels decline toward the end of the year. 3. Location at 119.75°E, 24.75°N (blue line) exhibits lower spCO₂ levels throughout the year compared to 122°E, 23.5°N (green line), 
+			highlighting spatial variability in oceanic CO₂ concentrations. </p> <p><strong>Visualization Tools:</strong></p> 
+			 <p><strong>Dataset:</strong></p> <p class="about-text">The data was sourced from the <a href="https://data.marine.copernicus.eu/product/MULTIOBS_GLO_BIO_CARBON_SURFACE_MYNRT_015_008/description" 
+			target="_blank">Copernicus Marine Environment Monitoring Service (CMEMS) MULTIOBS Global Carbon Surface dataset</a>. This dataset provides high-resolution spCO₂ data for global marine environments,
+			 enabling analysis of carbon cycling and ocean-atmosphere CO₂ exchanges.</p> 
+			<p class="about-text">The graph was generated using MATLAB, with dual y-axes to allow comparison between spCO₂ trends at both locations.</p>`,
+			`<p><strong>Introduction:</strong></p> <p class="about-text">This figure presents the principal component analysis (PCA) and wavelet coherence (WTC) analysis of SWAT (Surface Water Availability and 
+			Temperature, derived from MODIS products) and MEI (Multivariate ENSO Index) across different climate zones based on the Köppen classification, including Taiwan. The PCA captures the dominant 
+			variability (PC-1) in SWAT, while the WTC identifies coherence between PC-1 of SWAT and MEI across time and frequency domains.</p>
+			<p><strong>Dataset:</strong></p> <p class="about-text"> - MEI 
+			(Multivariate ENSO Index): Sourced from the NOAA MEI repository at <a href="https://psl.noaa.gov/enso/mei/" target="_blank">https://psl.noaa.gov/enso/mei/</a>. <br> - SWAT (Surface Water 
+			Availability and Temperature): Calculated using MODIS products: Terra Surface Reflectance (MOD09A1.061) andTerra Land Surface Temperature and Emissivity (MOD11A2.061) <br> - Climate Classification:
+			Obtained from the GloH2O Köppen dataset at <a href="https://www.gloh2o.org/koppen/" target="_blank">https://www.gloh2o.org/koppen/</a>. </p> 
+			<p><strong>Key Observations:</strong></p> <p class="about-text"> Af and Cfa zones exhibit 3-5 year coherence cycles, with high energy from 2012–2021 and 2017–2021, respectively. Aw and Cwa zones show 
+			coherence over 5-6 year (2011–2020) and 3-4 year (2016–2021) periods. Am shows coherence in a consistent 5-year cycle (2005–2021), while Cwb displays 4-5 year coherence from 2002–2017. Cfb stands out 
+			with the highest energy, showing 5-year (2002–2017) and 3-5 year (2008–2017) cycles. Taiwan demonstrates strong coherence at 5-6 year cycles from 2007–2019. </p> 
+			<p><strong>Tools:</strong></p> <p class="about-text"> - PCA was performed using the <a href="https://www.mathworks.com/matlabcentral/fileexchange/70338-climate-data-toolbox-for-matlab" 
+			target="_blank">Climate Data Toolbox for MATLAB</a>. <br> - WTC analysis was conducted using the <a href="https://www.mathworks.com/matlabcentral/fileexchange/47985-cross-wavelet-and-wavelet-coherence" target="_blank">Wavelet Coherence Toolbox for MATLAB</a>. </p>`	
+			
+			]
 };
 
 
