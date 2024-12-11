@@ -709,14 +709,15 @@ var captions = {
 				 <p><strong>Source:</strong></p> <p class="about-text">The original soil map was sourced from the <a href="https://esdac.jrc.ec.europa.eu/content/peta-tanah-tinjau-propinski-jawa-timur-lembaga-penelitian-tanah" target="_blank">European Soil Data Centre (ESDAC)</a>.
 				</p> <p><strong>Tools:</strong></p> <p class="about-text">The geoprocessing workflow was carried out using ArcGIS 10.6 and the initial digitization was done using Clip Studio Paint.</p>`
         ,`
-        <p><strong>Introduction:</strong></p>
-        <p class="about-text"> This map presented Land Use Land Cover (LULC) in Jepara Regency, Central Java, Indonesia. The map comprises of the similar cartography elements with the previous LULC map of Magetan Regency. However, this map highlights another map component that can be included into a more comprehensive map, which is <blue> the inclusion of vertical profile derived from elevation </blue>. <cotton> The combination between vertical profile and LULC will provide insights on how human activities affected by the change in elevation, from mountainous area into coastline area </cotton>. Jepara Regency has this unique topographic characteristics having both high elevation and progressively lowered down to coastline. </p>
-        <p><strong>Dataset:</strong></p>
-         <p class="about-text">This map was produced using Land Use Land Cover (LULC) at 1:25.000 scale from Badan Informasi Geospasial's <a href="https://tanahair.indonesia.go.id/portal-web/">Inageoportal</a>  and Indonesia's national Digital Elevation Model at 5-8 m spatial resolution from <a href="https://code.earthengine.google.com/aef11a548688fe3e02f4eda0413706dc"target="_blank">GEE Script for LULC Yunlin.</a> </p>
-        
-        <p><strong>Visualization Tools:</strong></p>
-        <p class="about-text">ArcMap 10.6.</p>
-        `,
+		<p><strong>Introduction:</strong></p> <p class="about-text">This visualization demonstrates the Random Forest Classification process for Land Use Land Cover (LULC) mapping in Yunlin County, Taiwan, using 
+			Sentinel-2 imagery and Google Earth Engine. The workflow involves data preprocessing, feature extraction (NDWI, NDVI, NDBI), training, and validation, resulting in a classified LULC map with accuracy 
+			metrics.</p> 
+			<p><strong>Dataset:</strong></p> <p class="about-text"> - Sentinel-2 Surface Reflectance (COPERNICUS/S2): <a href="https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR_HARMONIZED" 
+			target="_blank">Dataset Link</a>. <br> - Feature collections: Training data for water, agriculture, bare soil, forest, and built-up areas, merged manually for analysis. </p> 
+			<p><strong>Key Observations:</strong></p> <p class="about-text"> 1. The Random Forest classifier achieved an overall accuracy (OA) of 92.36% and a Kappa statistic of 0.897. 2. The classified map successfully 
+				distinguishes key land cover types, including water, vegetation, bare soil, and urban areas. 3. Feature extraction using NDVI, NDWI, and NDBI bands improves classification reliability and accuracy. </p> 
+				<p><strong>Tools:</strong></p> <p class="about-text"> - Google Earth Engine for data processing and classification: <a href="https://code.earthengine.google.com/aef11a548688fe3e02f4eda0413706dc" 
+					target="_blank">Code Link</a>. - Random Forest algorithm with 100 decision trees for supervised classification. </p>`,
         "<p>Project 2 - Image 2 description.</p>",
         "<p>Project 2 - Image 3 description.</p>"
     ],
