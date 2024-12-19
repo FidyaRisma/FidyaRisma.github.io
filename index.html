@@ -603,7 +603,7 @@ var projects = {
     2: [
 		{ src: "images/port_2/pic02.jpg", modalSrc: "images/port_2/pic02.jpg" },
         { src: "images/port_2/pic01.jpg", modalSrc: "images/port_2/pic01.jpg" },
-        { src: "images/port_2/pic03.jpg", modalSrc: "images/port_2/pic03.jpg" },
+        //{ src: "images/port_2/pic03.jpg", modalSrc: "images/port_2/pic03.jpg" },
 		{ src: "images/port_2/pic04.jpg", modalSrc: "images/port_2/pic04.jpg" },
 		{ src: "images/port_2/pic05.jpg", modalSrc: "images/port_2/pic05.jpg" },
 		{ src: "images/port_2/pic06.jpg", modalSrc: "images/port_2/pic06.jpg" }
@@ -623,7 +623,8 @@ var projects = {
 // Object to store titles for each project
 var titles = {
     1: ["Land Use Land Cover - Magetan", "Land Use Land Cover - Jepara", "Drought Level (Multimap)","Typhoon Tracks, Wind Field, and Sea Surface Temperature","Spring Drought Duration over 30 years (Multimap)","Ice Condition on North Pole and South Pole","Global Current Velocity (Pacific)"],
-    2: [ "Georeferencing 1960s Soil Type Map", "Random Forest Classification for LULC Mapping in Yunlin County","Dimensional Reduction - EOF & PCA for Spatial Data","Zengwen Reservoir Surface Water Monitoring using MNDWI","IDW Interpolation for Precipitation","UAV Imagery Processing (AUTEL Drone)"],
+    2: [ "Georeferencing 1960s Soil Type Map", "Random Forest Classification for LULC Mapping in Yunlin County",//"Dimensional Reduction - EOF & PCA for Spatial Data",
+	"Zengwen Reservoir Surface Water Monitoring using MNDWI","IDW Interpolation for Precipitation","UAV Imagery Processing (AUTEL Drone)"],
     3: ["Boxplot from 2D Array Data (Map)", "Vertical Profile (Depth) of Nitrate and Phospate in Ocean", "Hovmöller Diagram of Sea Level Components","Hovmöller Diagram of Long-term Monthly Precipitable Water","Monthly Variations of Surface CO<sup>2</sup>","Graphic of PC Scores and Cross Wavelet Transformation (WTC)"],
 };
 
@@ -718,8 +719,34 @@ var captions = {
 				distinguishes key land cover types, including water, vegetation, bare soil, and urban areas. 3. Feature extraction using NDVI, NDWI, and NDBI bands improves classification reliability and accuracy. </p> 
 				<p><strong>Tools:</strong></p> <p class="about-text"> Google Earth Engine for data processing and classification: <a href="https://code.earthengine.google.com/aef11a548688fe3e02f4eda0413706dc" 
 					target="_blank">Code Link</a>. - Random Forest algorithm with 100 decision trees for supervised classification. </p>`,
-        "<p>Project 2 - Image 2 description.</p>",
-        "<p>Project 2 - Image 3 description.</p>"
+		`<p><strong>Introduction:</strong></p> <p class="about-text">This analysis monitors the water surface area of Zengwen Reservoir, Taiwan, from 2020 to 2022 using Landsat-8 imagery and the Modified Normalized 
+			Difference Water Index (MNDWI). Zengwen Reservoir, completed in 1973, serves as a vital resource for irrigation, power generation, flood control, and tourism. Its full capacity reaches 700 million cubic 
+			meters, with a surface area of 17 km². The study focuses on the spring season to capture annual variations in water availability during spring season in taiwan.</p> 
+			<p><strong>Dataset & Methods:</strong></p> <p class="about-text"> - Landsat-8 imagery &  MNDWI, calculated as (ρGreen - ρSWIR1)/(ρGreen + ρSWIR1), distinguishes water bodies (MNDWI > 0) from non-water areas. 
+			The acquisition date was chosen in spring season to represent the lowest water capacity during the period. </p>
+			<p><strong>Key Observations:</strong></p> <p class="about-text"> In May 2020, the surface water area was approximately 5.3 km², covering 31.17% of the total reservoir area, concentrated in the 
+			southwestern part. By May 2021, the surface water reduced to 3.57 km² (21% of the area), further concentrating in the southwestern region. In April 2022, the surface water area increased 
+			significantly to 11.7 km² (68.8% of the area), extending northeastward. </p> 
+			 <p><strong>Visualization Tools:</strong></p>
+        <p class="about-text">ArcMap 10.6.</p>`,
+		`
+<p><strong>Introduction:</strong></p> <p class="about-text">The figures visualize rainfall distribution using the Inverse Distance Weighting (IDW) method for (a) Magetan Regency, Indonesia, and (b) Taoyuan, Taiwan. 
+	The IDW technique interpolates rainfall station data to estimate spatial rainfall variability over the region.</p> 
+	<p><strong>Dataset:</strong></p> <p class="about-text"> - Magetan Precipitation: Data processed using built-in IDW tools in ArcMap. <br> - Taoyuan Precipitation: Data processed using a self-scripted IDW 
+		function in MATLAB (<a href="https://github.com/FidyaRisma/IDW" target="_blank">GitHub Repository</a>). </p> <p><strong>Key Observations:</strong></p> <p class="about-text"> 1. For Magetan, May and 
+		September show higher rainfall intensity, with values exceeding 100 mm concentrated in the central region, while June to August experienced lower rainfall, mostly below 60 mm. 2. For Taoyuan, 
+		the IDW interpolation highlights clear spatial variability, with higher rainfall levels in the northern regions and lower values in the south. 3. The IDW method effectively estimates rainfall 
+		distribution across regions based solely on rainfall station data. </p> <p><strong>Tools:</strong></p> <p class="about-text"> - ArcMap's built-in IDW tool for Magetan rainfall interpolation. <br> -
+		self-scripted IDW function in MATLAB for Taoyuan rainfall analysis (<a href="https://github.com/FidyaRisma/IDW" target="_blank">GitHub Repository</a>). </p>`,
+        `<p><strong>Introduction:</strong></p> <p class="about-text">This study uses UAV-based surveys near Wenhua Road, Zhongli District, Taoyuan City, to generate high-resolution Digital Elevation Models (DEMs) 
+		and orthomosaics using Autel Robotics EVO-II drones. The captured images were processed using Agisoft Metashape to analyze terrain characteristics and surface details. The UAV survey was conducted at <cotton>an altitude</cotton>
+		of 40 meters with 75% <cotton>side overlap</cotton> and 85% <cotton>front overlap.</cotton></p> 
+		<p><strong>Dataset:</strong></p> <p class="about-text"> <cotton>- UAV:</cotton> Autel Robotics EVO-II Quadcopter UAV. <br> <cotton>- Image specifications:</cotton> 48 MP sensor, resolution 4000 x 3000 pixels, and focal length 4.74 mm.<br> <cotton>
+		- Flight details:</cotton> Altitude: 42 m, <blue>Coverage:</blue> 0.0251 km², <blue>Ground resolution:</blue> 1.36 cm/pixel. <br> <cotton>- Output:</cotton> <blue> DEM:</blue> 14,288 x 14,591 pixels (WGS 84, EPSG:4326). <blue> 
+		Orthomosaic:</blue> 15,906 x 15,390 pixels (WGS 84, EPSG:4326). </p>
+	 	<p><strong>Key Observations:</strong></p> <p class="about-text"> 1.The DEM shows riverbed elevation values ranging from 9.6 to 12.08 meters. <br> 2. The orthomosaic provides detailed surface features for
+		the surveyed area. <br> 3. The workflow resulted in a reprojection error of 0.578 pixels. </p> <p><strong>Tools and Workflow:</strong></p> 
+		<p class="about-text"> - Image acquisition: Self-deployed Autel Robotics EVO-II UAV with a predefined flight plan. <br> - Image processing: Agisoft Metashape for point cloud generation, DEM creation, and orthomosaic stitching. </p>`
     ],
     3: [
         `
